@@ -228,3 +228,19 @@ h1 {
   background: linear-gradient(135deg, #333, #222);
   box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
