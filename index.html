@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nine</title>
+    <link rel="icon" type="image/png" href="public/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+    <link rel="shortcut icon" href="public/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Nine" />
+    <link rel="manifest" href="public/site.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body data-theme="light">
+    <div class="theme-switcher">
+      <input type="checkbox" id="theme-toggle" class="theme-checkbox" />
+      <label for="theme-toggle" class="theme-label">
+        <span class="toggle-icon checked"><i class="fas fa-moon"></i></span>
+        <span class="toggle-icon"><i class="fas fa-sun"></i></span>
+      </label>
+    </div>
+
+    <div class="container">
+      <h1>Hello, I'm Nine 👋</h1>
+
+      <div class="social-icons">
+        <a href="https://github.com/NineLEL" title="Github" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://discord.com/users/584264698367705116"
+          title="Discord"
+          target="_blank"
+          ><i class="fab fa-discord"></i
+        ></a>
+        <a href="https://me.notnine.xyz" title="About Me" target="_blank"
+          ><i class="fas fa-link"></i
+        ></a>
+      </div>
+    </div>
+
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      function setTheme(theme) {
+        body.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        themeToggle.checked = theme === "dark";
+      }
+
+      const savedTheme = localStorage.getItem("theme") || "light";
+      setTheme(savedTheme);
+
+      themeToggle.addEventListener("change", () => {
+        if (themeToggle.checked) {
+          setTheme("dark");
+        } else {
+          setTheme("light");
+        }
+      });
+    </script>
+  </body>
+</html>
