@@ -235,20 +235,20 @@ h1 {
   }
 
   h1 {
-    font-size: 2.3em;
+    font-size: 2.2em;
   }
 
   :root {
-    --icon-size: 2em;
+    --icon-size: 1.5em;
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 2.5;
+    font-size: 2.2;
   }
 
   :root {
-    --icon-size: 1.6em;
+    --icon-size: 1.5em;
   }
 }
