@@ -22,32 +22,36 @@
   </head>
 
   <body data-theme="light">
-    <div class="theme-switcher">
-      <input type="checkbox" id="theme-toggle" class="theme-checkbox" />
-      <label for="theme-toggle" class="theme-label">
-        <span class="toggle-icon checked"><i class="fas fa-moon"></i></span>
-        <span class="toggle-icon"><i class="fas fa-sun"></i></span>
-      </label>
-    </div>
-
-    <div class="container">
-      <h1>Hello, I'm Nine 👋</h1>
-
-      <div class="social-icons">
-        <a href="https://github.com/NineLEL" title="Github" target="_blank"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a
-          href="https://discord.com/users/584264698367705116"
-          title="Discord"
-          target="_blank"
-          ><i class="fab fa-discord"></i
-        ></a>
-        <a href="https://me.notnine.xyz" title="About Me" target="_blank"
-          ><i class="fas fa-link"></i
-        ></a>
+    <header role="banner">
+      <div class="theme-switcher">
+        <input type="checkbox" id="theme-toggle" class="theme-checkbox" />
+        <label for="theme-toggle" class="theme-label">
+          <span class="toggle-icon checked"><i class="fas fa-moon"></i></span>
+          <span class="toggle-icon"><i class="fas fa-sun"></i></span>
+        </label>
       </div>
-    </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>Hello, I'm Nine 👋</h1>
+
+        <nav class="social-icons" role="navigation">
+          <a href="https://github.com/NineLEL" title="Github" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://discord.com/users/584264698367705116"
+            title="Discord"
+            target="_blank"
+            ><i class="fab fa-discord"></i
+          ></a>
+          <a href="https://me.notnine.xyz" title="About Me" target="_blank"
+            ><i class="fas fa-link"></i
+          ></a>
+        </nav>
+      </div>
+    </main>
 
     <script>
       const themeToggle = document.getElementById("theme-toggle");
