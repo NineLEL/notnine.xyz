@@ -1,79 +1,149 @@
-<deck name="เศรษฐศาสตร์ Summative"><fields><text name='Front' sides='11'></text><text name='Back' sides='01'></text></fields><cards><card><text name='Front'>ต้นทุนเสียโอกาส</text><text name='Back'>มูลค่าของทางเลือกที่ต้องสละไปเมื่อเลือกสิ่งหนึ่ง</text></card><card><text name='Front'>อดัม สมิธ</text><text name='Back'>- บิดาเศรษฐศาสตร์
-- The Wealth of Nations
-- ตลาดเสรี
-- Invisible Hand</text></card><card><text name='Front'>อัลเฟรด มาร์แชล</text><text name='Back'>- บิดาเศรษฐศาสตร์จุลภาค
+<deck name="เศรษฐศาสตร์ Summative"><fields><text name='Front' sides='11'></text><text name='Back' sides='01'></text></fields><cards><card><text name='Front'>How</text><text name='Back'>- ผลิตด้วยวิธีการใด
+- ผลิตยังไง</text></card><card><text name='Front'>การเพิ่มอรรถประโยชน์</text><text name='Back'>การทำให้ของไม่มีค่า ไม่มีประโยชน์ ให้ตอบสนองประโยชน์ของเราได้</text></card><card><text name='Front'>ทุน</text><text name='Back'>- สิ่งที่มนุษย์สร้างขึ้นเพื่อใช้ในการผลิต
+- เครื่องมือ อุปกรณ์ โรงงาน **สัตว์
+- ตอบแทนเป็น ดอกเบี้ย</text></card><card><text name='Front'>อุปทาน (Supply)</text><text name='Back'>ปริมาณเสนอขายสินค้าที่ผู้ผลิตเต็มใจผลิต</text></card><card><text name='Front'>ระบบเงินตรา (Money system)</text><text name='Back'>ของแลกเงิน</text></card><card><text name='Front'>อุปสงค์ตลาด / อุปสงค์รวม</text><text name='Back'>การนำอุปสงค์ส่วนบุคคลมารวมไว้ด้วยกัน</text></card><card><text name='Front'>ลงทุนต่ำ ลงแรงต่ำ ผลตอบแทนสูง</text><text name='Back'>ตติยภูมิ</text></card><card><text name='Front'>สินค้าคลับ</text><text name='Back'>มีการกีดกัน ไม่เป็นปฏิปักษ์
+- เคเบิลทีวี Netflix โรงหนัง Spotify Gym ทางด่วน</text></card><card><text name='Front'>ที่ดิน</text><text name='Back'>- ที่ดิน + ทรัพยากรทั้งหมดในที่ดินนั้น 
+- ตอบแทนเป็น ค่าเช่า</text></card><card><text name='Front'>สินค้าสาธารณะ / สินค้ามหาชน</text><text name='Back'>ไม่กีดกัน ไม่เป็นปฏิปักษ์
+- ถนน สวนสาธารณะ การป้องกันประเทศ</text></card><card><text name='Front'>เศรษฐศาสตร์กับบริหารธุรกิจ</text><text name='Back'>- ผลิตอะไร อย่างไร เพื่อใคร
+- ใช้เพื่อตัดสินใจประกอบธุรกิจ เพื่อกำไรสูงสุด</text></card><card><text name='Front'>ประกันราคา</text><text name='Back'>กำหนดราคาขั้นต่ำ</text></card><card><text name='Front'>สินค้าปกติ</text><text name='Back'>ของที่เราซื้อบริโภคอยู่ปกติ
+- ยิ่งระดับรายได้สูง ของก็จะราคาสูง</text></card><card><text name='Front'>ระบบการค้าแบบหักบัญชี (Account Trade)</text><text name='Back'>1. ของแลกกัน (Barter)
+2. ลงบัญชีเอาไว้ เชื่อใจกัน (Credit)
+3. ครบกำหนดเวลาก็เอาบัญชีมาหักลบกลบหนี้กัน ขาดเหลือเท่าไหร่ก็จ่ายไปเป็นเงิน (Money)</text></card><card><text name='Front'>จุดดุลยภาพ</text><text name='Back'>ราคาที่ต้องการซื้อ = ปริมาณสินค้าที่ผลิต
+- ราคาที่กำลังดี happy ทั้งผู้ขายผู้ซื้อ</text></card><card><text name='Front'>อัลเฟรด มาร์แชล</text><text name='Back'>- บิดาเศรษฐศาสตร์จุลภาค
 - Theory of the firms
-- Supply-Demand</text></card><card><text name='Front'>จอห์น เมย์นาร์ด เคนส์</text><text name='Back'>- บิดาเศรษฐศาสตร์มหภาค
-- General Theory
-- โต้แย้ง Adam โดยบอกว่ารัฐต้องแทรกแซงบ้าง</text></card><card><text name='Front'>พระยาสุริยานุวัตร</text><text name='Back'>- ทรัพย์ศาสตร์ (ตำราเศรษฐศาสตร์เล่มแรกของไทย; 2454; โดยแบนโดย ร.6)</text></card><card><text name='Front'>กรมหมื่นสรรควิไสยนรบดี</text><text name='Back'>จบปริญญาเอกทางเศรษฐศาสตร์คนแรก</text></card><card><text name='Front'>กรมหมื่นพิทยาลงกรณ์</text><text name='Back'>- บิดาสหกรณ์ไทย
-- หนังสือ "ตลาดเงินตรา"
-- สหกรณ์วัดจันทร์ ไม่จำกัดสินใช้ จ. พิษณุโลก</text></card><card><text name='Front'>จุลภาค</text><text name='Back'>- ทฤษฎีราคา
-- การตัดสินใจของเอกชน</text></card><card><text name='Front'>มหภาค</text><text name='Back'>- ทฤษฎีรายได้ประชาชาติ
-- การตัดสินใจภาครัฐ</text></card><card><text name='Front'>เศรษฐศาสตร์วิเคราะห์</text><text name='Back'>- วิเคราะห์สภาพ
+- Supply-Demand</text></card><card><text name='Front'>เปลี่ยนรูป</text><text name='Back'>- ข้าวสารเป็นข้าวสุก
+- ดินเป็นเซรามิก</text></card><card><text name='Front'>เศรษฐศาสตร์วิเคราะห์</text><text name='Back'>- วิเคราะห์สภาพ
 - บ่งชี้ปัญหา
 - การระบุปัญหาของเศรษฐกิจ
 - การหาสาเหตุ
-- ปัจจุบัน</text></card><card><text name='Front'>เศรษฐศาสตร์นโยบาย</text><text name='Back'>- ระบุแนวทางการแก้ปัญหา
-- เสนอสิ่งที่ดีกว่า
-- การดำเนินนโยบายแก้
-- Future</text></card><card><text name='Front'>เศรษฐศาสตร์กับนิติศาสตร์</text><text name='Back'>- ออกกฎหมายเกี่ยวกับเศรษฐกิจ
-- กฎหมายควบคุมราคา</text></card><card><text name='Front'>เศรษฐศาสตร์กับรัฐศาสตร์</text><text name='Back'>- การกินดีอยู่ดีทำให้สังคมสงบสุขมั่นคง
-- การทำนโยบายคนละครึ่ง</text></card><card><text name='Front'>เศรษฐศาสตร์กับบริหารธุรกิจ</text><text name='Back'>- ผลิตอะไร อย่างไร เพื่อใคร
-- ใช้เพื่อตัดสินใจประกอบธุรกิจ เพื่อกำไรสูงสุด</text></card><card><text name='Front'>ปัญหาพื้นฐานทาง เศรษฐศาสตร์</text><text name='Back'>- What
-- How
-- For whom</text></card><card><text name='Front'>What</text><text name='Back'>- ผลิตอะไรดี</text></card><card><text name='Front'>How</text><text name='Back'>- ผลิตด้วยวิธีการใด
-- ผลิตยังไง</text></card><card><text name='Front'>For whom</text><text name='Back'>- กระจายสินค้ายังไง
-- กลุ่มลูกค้าคือใคร
-- ขายใครดี
-- ลูกค้าอาศัยอยู่ตรงไหน</text></card><card><text name='Front'>อรรถประโยชน์</text><text name='Back'>ความพึงพอใจที่มนุษย์เราได้รับจากการใช้ประโยชน์สินค้าหรือบริการ</text></card><card><text name='Front'>กฎการลดน้อยถอยลงของอรรถประโยชน์</text><text name='Back'>ยิ่งบริโภคมาก ความพึงพอใจเราน้อยลง</text></card><card><text name='Front'>การเพิ่มอรรถประโยชน์</text><text name='Back'>การทำให้ของไม่มีค่า ไม่มีประโยชน์ ให้ตอบสนองประโยชน์ของเราได้</text></card><card><text name='Front'>เปลี่ยนรูป</text><text name='Back'>- ข้าวสารเป็นข้าวสุก
-- ดินเป็นเซรามิก</text></card><card><text name='Front'>เปลี่ยนสถานที่</text><text name='Back'>- ของฝากต่างแดน
-- หาง่ายถูก หายากแพง
-- น้ำในสนามบิน</text></card><card><text name='Front'>เปลี่ยนเวลา</text><text name='Back'>- เก่ายิ่งดี (บางอย่าง)
-- ยิ่งนานยิ่งนิยม
-- ไวน์ อาหารหมักดอง กิมจิ
-- มียี่ห้อ > โนเนม
-- ฤดูกาล</text></card><card><text name='Front'>เปลี่ยนกรรมสิทธิ์</text><text name='Back'>- อยู่กับคนหนึ่งไม่มีค่า เปลี่ยนมือแล้วจึงเกิดมูลค่าขึ้นมา</text></card><card><text name='Front'>เกิดอรรถประโยชน์จากการบริหาร</text><text name='Back'>- ร้านอาหารเพิ่มมูลค่าอาหารจากการบริการ ยิ่งดี ยิ่งหรู ยิ่งแพง</text></card><card><text name='Front'>ปัจจัยการผลิต</text><text name='Back'>ที่ดิน ทุน แรงงาน ผู้ประกอบการ</text></card><card><text name='Front'>ที่ดิน</text><text name='Back'>- ที่ดิน + ทรัพยากรทั้งหมดในที่ดินนั้น 
-- ตอบแทนเป็น ค่าเช่า</text></card><card><text name='Front'>ทุน</text><text name='Back'>- สิ่งที่มนุษย์สร้างขึ้นเพื่อใช้ในการผลิต
-- เครื่องมือ อุปกรณ์ โรงงาน **สัตว์
-- ตอบแทนเป็น ดอกเบี้ย</text></card><card><text name='Front'>แรงงาน</text><text name='Back'>- กำลังแรงงานของมนุษย์
-- ตอบแทนเป็น ค่าจ้างหรือค่าแรง</text></card><card><text name='Front'>ผู้ประกอบการ</text><text name='Back'>- ผู้รวบรวมปัจจัยการผลิตเพื่อให้เกิดการผลิต
-- ตอบแทนเป็น กำไร</text></card><card><text name='Front'>การผลิตขั้นต้น / ปฐมภูมิ</text><text name='Back'>- ผลิตวัตถุดิบ
+- ปัจจุบัน</text></card><card><text name='Front'>กฎอุปทาน</text><text name='Back'>เปลี่ยนแปลงในการผลิตสินค้าอันเนื่องมาจากราคา
+- ราคาขึ้น อุปทานขึ้น
+- ราคาลง อุปทานลง</text></card><card><text name='Front'>เศรษฐศาสตร์กับนิติศาสตร์</text><text name='Back'>- ออกกฎหมายเกี่ยวกับเศรษฐกิจ
+- กฎหมายควบคุมราคา</text></card><card><text name='Front'>กรมหมื่นสรรควิไสยนรบดี</text><text name='Back'>จบปริญญาเอกทางเศรษฐศาสตร์คนแรก</text></card><card><text name='Front'>มหภาค</text><text name='Back'>- ทฤษฎีรายได้ประชาชาติ
+- การตัดสินใจภาครัฐ</text></card><card><text name='Front'>ลงทุนต่ำ ลงแรงสูง ได้ผลตอบแทนต่ำ</text><text name='Back'>ปฐมภูมิ</text></card><card><text name='Front'>สินค้าเอกชน</text><text name='Back'>กีดกันได้ เป็นปฏิปักษ์
+- เสื้อผ้า อาหาร ดอกไม้</text></card><card><text name='Front'>เกิดอรรถประโยชน์จากการบริหาร</text><text name='Back'>- ร้านอาหารเพิ่มมูลค่าอาหารจากการบริการ ยิ่งดี ยิ่งหรู ยิ่งแพง</text></card><card><text name='Front'>สินค้าบาป</text><text name='Back'>บริโภคมากขึ้นแล้วสังคมเสียประโยชน์
+- สุรา บุหรี่</text></card><card><text name='Front'>ทรัพย์ส่วนรวม</text><text name='Back'>ไม่กีดกัน เป็นปฏิปักษ์
+- ทรัพยากรธรรมชาติหรือส่วนกลางบางอย่าง ที่เกือบเป็นของฟรีที่เราใช้ได้ แต่ที่จริงไม่ฟรี เพราะหมดไปหรือถูกจำกัดปริมาณได้
+- สัตว์ป่า ปลาในทะเล ชายหาดในวันหยุด</text></card><card><text name='Front'>การผลิตขั้นต้น / ปฐมภูมิ</text><text name='Back'>- ผลิตวัตถุดิบ
 - เกษตร ประมง
-- ปลูกข้าว ทำไร่ ทำสวน เลี้ยงปลา ป่าไม้ เหมืองแร่</text></card><card><text name='Front'>การผลิตขั้นแปรรูป / ทุติยภูมิ</text><text name='Back'>- การแปรรูป
-- อุตสาหกรรม
-- สีข้าว ชำแหละหมู แช่แข็งกุ้ง โรงงานต่างๆ</text></card><card><text name='Front'>การผลิตขั้นบริการ / ตติยภูมิ</text><text name='Back'>- การบริการ
+- ปลูกข้าว ทำไร่ ทำสวน เลี้ยงปลา ป่าไม้ เหมืองแร่</text></card><card><text name='Front'>เปลี่ยนกรรมสิทธิ์</text><text name='Back'>- อยู่กับคนหนึ่งไม่มีค่า เปลี่ยนมือแล้วจึงเกิดมูลค่าขึ้นมา</text></card><card><text name='Front'>สินค้าเลว</text><text name='Back'>บริโภคแล้วเสียอรรถประโยชน์
+- ของเสีย ขยะเก่าที่เก็บ ของหมดอายุ</text></card><card><text name='Front'>จุลภาค</text><text name='Back'>- ทฤษฎีราคา
+- การตัดสินใจของเอกชน</text></card><card><text name='Front'>กฎการลดน้อยถอยลงของอรรถประโยชน์</text><text name='Back'>ยิ่งบริโภคมาก ความพึงพอใจเราน้อยลง</text></card><card><text name='Front'>พระยาสุริยานุวัตร</text><text name='Back'>- ทรัพย์ศาสตร์ (ตำราเศรษฐศาสตร์เล่มแรกของไทย; 2454; โดยแบนโดย ร.6)</text></card><card><text name='Front'>เพดานราคา</text><text name='Back'>กำหนดราคาขั้นสูง</text></card><card><text name='Front'>การผลิตขั้นบริการ / ตติยภูมิ</text><text name='Back'>- การบริการ
 - การท่องเที่ยว
 - การขนส่ง
 - การค้าปลีก
 - การค้าส่ง
-- โรงเรียน ภัตตาคาร โรงพยาบาล สายการบิน</text></card><card><text name='Front'>การผลิตขั้นภูมิปัญญาความรู้ / จตุรภูมิ</text><text name='Back'>- การผลิตคอนเทนต์
+- โรงเรียน ภัตตาคาร โรงพยาบาล สายการบิน</text></card><card><text name='Front'>อดัม สมิธ</text><text name='Back'>- บิดาเศรษฐศาสตร์
+- The Wealth of Nations
+- ตลาดเสรี
+- Invisible Hand</text></card><card><text name='Front'>สินค้าดี</text><text name='Back'>บริโภคแล้วเกิดอรรถประโยชน์
+- เป็นของดี ต้องซื้อหามาใช้</text></card><card><text name='Front'>เปลี่ยนเวลา</text><text name='Back'>- เก่ายิ่งดี (บางอย่าง)
+- ยิ่งนานยิ่งนิยม
+- ไวน์ อาหารหมักดอง กิมจิ
+- มียี่ห้อ > โนเนม
+- ฤดูกาล</text></card><card><text name='Front'>การผลิตขั้นบริหาร / ปัญจภูมิ</text><text name='Back'>- การบริหารงาน
+- ผู้บริหาร CEO
+- Human Service</text></card><card><text name='Front'>การผลิตขั้นภูมิปัญญาความรู้ / จตุรภูมิ</text><text name='Back'>- การผลิตคอนเทนต์
 - เนื้อหาสาระ
 - วิชาการ
 - ความบันเทิง
-- Information Service</text></card><card><text name='Front'>การผลิตขั้นบริหาร / ปัญจภูมิ</text><text name='Back'>- การบริหารงาน
-- ผู้บริหาร CEO
-- Human Service</text></card><card><text name='Front'>ลงทุนต่ำ ลงแรงสูง ได้ผลตอบแทนต่ำ</text><text name='Back'>ปฐมภูมิ</text></card><card><text name='Front'>ลงทุนสูง ลงแรงสูง ได้ผลตอบแทนสูง</text><text name='Back'>ทุติยภูมิ</text></card><card><text name='Front'>ลงทุนต่ำ ลงแรงต่ำ ผลตอบแทนสูง</text><text name='Back'>ตติยภูมิ</text></card><card><text name='Front'>ทรัพย์เสรี</text><text name='Back'>หมุนเวียนได้ มีมาก ไม่มีราคา
-- ลม แสงแดด อากาศ แหล่งน้ำ</text></card><card><text name='Front'>เศรษฐทรัพย์</text><text name='Back'>มีค่ามีราคา เพราะใช้แล้วหมดไป ต้องซื้อมาใหม่เรื่อยๆ
-- อาหาร เชื้อเพลิง</text></card><card><text name='Front'>สินค้าขั้นต้น</text><text name='Back'>วัตถุดิบ</text></card><card><text name='Front'>สินค้าขั้นสุดท้าย</text><text name='Back'>- Ready to Use
-- มนุษย์ซื้อมาบริโภคโดยตรง
-- อาหาร เสื้อผ้า</text></card><card><text name='Front'>สินค้าดี</text><text name='Back'>บริโภคแล้วเกิดอรรถประโยชน์
-- เป็นของดี ต้องซื้อหามาใช้</text></card><card><text name='Front'>สินค้าเลว</text><text name='Back'>บริโภคแล้วเสียอรรถประโยชน์
-- ของเสีย ขยะเก่าที่เก็บ ของหมดอายุ</text></card><card><text name='Front'>สินค้าที่ใช้ประกอบกัน</text><text name='Back'>มักซื้อควบคู่กัน
-- กาแฟ + คอฟฟี่เมต</text></card><card><text name='Front'>สินค้าที่ใช้ทดแทนกัน</text><text name='Back'>ซื้ออีกอย่างที่ทดแทนได้
-- หมูแพง ซื้อไก่กินแทน</text></card><card><text name='Front'>สินค้าด้อย</text><text name='Back'>สินค้าที่เราบริโภคมากขึ้นเมื่อระดับรายได้ลดลง
-- มาม่า ปลากระป๋อง</text></card><card><text name='Front'>สินค้าปกติ</text><text name='Back'>ของที่เราซื้อบริโภคอยู่ปกติ
-- ยิ่งระดับรายได้สูง ของก็จะราคาสูง</text></card><card><text name='Front'>สินค้าสาธารณะ / สินค้ามหาชน</text><text name='Back'>ไม่กีดกัน ไม่เป็นปฏิปักษ์
-- ถนน สวนสาธารณะ การป้องกันประเทศ</text></card><card><text name='Front'>สินค้าคลับ</text><text name='Back'>มีการกีดกัน ไม่เป็นปฏิปักษ์
-- เคเบิลทีวี Netflix โรงหนัง Spotify Gym ทางด่วน</text></card><card><text name='Front'>สินค้าเอกชน</text><text name='Back'>กีดกันได้ เป็นปฏิปักษ์
-- เสื้อผ้า อาหาร ดอกไม้</text></card><card><text name='Front'>ทรัพย์ส่วนรวม</text><text name='Back'>ไม่กีดกัน เป็นปฏิปักษ์
-- ทรัพยากรธรรมชาติหรือส่วนกลางบางอย่าง ที่เกือบเป็นของฟรีที่เราใช้ได้ แต่ที่จริงไม่ฟรี เพราะหมดไปหรือถูกจำกัดปริมาณได้
-- สัตว์ป่า ปลาในทะเล ชายหาดในวันหยุด</text></card><card><text name='Front'>สินค้าบุญ</text><text name='Back'>บริโภคมากขึ้นแล้วสังคมได้ประโยชน์
-- หนังสือ การศึกษา การดูแลสุขภาพ</text></card><card><text name='Front'>สินค้าบาป</text><text name='Back'>บริโภคมากขึ้นแล้วสังคมเสียประโยชน์
-- สุรา บุหรี่</text></card><card><text name='Front'>อุปสงค์ (Demand)</text><text name='Back'>ความต้องการซื้อของผู้บริโภคที่มีอยู่จริง มีกำลังซื้อจริง</text></card><card><text name='Front'>อุปสงค์ส่วนบุคคล</text><text name='Back'>ความต้องการซื้อของบุคคล ณ ระดับราคาต่างๆ</text></card><card><text name='Front'>อุปสงค์ตลาด / อุปสงค์รวม</text><text name='Back'>การนำอุปสงค์ส่วนบุคคลมารวมไว้ด้วยกัน</text></card><card><text name='Front'>กฎอุปสงค์</text><text name='Back'>เปลี่ยนแปลงในการซื้อสินค้าอันเนื่องมาจากราคา
+- Information Service</text></card><card><text name='Front'>การผลิตขั้นแปรรูป / ทุติยภูมิ</text><text name='Back'>- การแปรรูป
+- อุตสาหกรรม
+- สีข้าว ชำแหละหมู แช่แข็งกุ้ง โรงงานต่างๆ</text></card><card><text name='Front'>For whom</text><text name='Back'>- กระจายสินค้ายังไง
+- กลุ่มลูกค้าคือใคร
+- ขายใครดี
+- ลูกค้าอาศัยอยู่ตรงไหน</text></card><card><text name='Front'>กฎอุปสงค์</text><text name='Back'>เปลี่ยนแปลงในการซื้อสินค้าอันเนื่องมาจากราคา
 - ราคาขึ้น อุปสงค์ลง
-- ราคาลง อุปสงค์ขึ้น</text></card><card><text name='Front'>อุปทาน (Supply)</text><text name='Back'>ปริมาณเสนอขายสินค้าที่ผู้ผลิตเต็มใจผลิต</text></card><card><text name='Front'>กฎอุปทาน</text><text name='Back'>เปลี่ยนแปลงในการผลิตสินค้าอันเนื่องมาจากราคา
-- ราคาขึ้น อุปทานขึ้น
-- ราคาลง อุปทานลง</text></card><card><text name='Front'>เส้นกราฟขยับไปทาง ขวา</text><text name='Back'>ระดับราคาสินค้าเท่าเดิม มีอุปสงค์หรืออุปทานต่อสินค้านั้นๆเพิ่ม</text></card><card><text name='Front'>เส้นกราฟขยับไปทาง ซ้าว</text><text name='Back'>ระดับราคาสินค้าเท่าเดิม มีอุปสงค์หรืออุปทานต่อสินค้านั้นลด</text></card><card><text name='Front'>สิ่งที่มีอิทธิพลต่ออุปสงค์ </text><text name='Back'>ความจำเป็น การโฆษณา สมัยนิยม การศึกษา รายได้ผู้บริโภค ราคาสินค้าที่เกี่ยวข้อง เสถียรภาพทางเศรษฐกิจ การคะเนราคา จำนวนประชากร</text></card><card><text name='Front'>สิ่งที่มีอิทธิพลต่ออุปทาน</text><text name='Back'>ฤดูการผลิต เทคโนโลยีและเทคนิคในการผลิต ราคาวัตถุดิบ ราคาสินค้าที่เกี่ยวข้อง การคะเนราคา จำนวนคู่แข่งในตลาด นโยบายและการอุดหนุนของภาครัฐ</text></card><card><text name='Front'>จุดดุลยภาพ</text><text name='Back'>ราคาที่ต้องการซื้อ = ปริมาณสินค้าที่ผลิต
-- ราคาที่กำลังดี happy ทั้งผู้ขายผู้ซื้อ</text></card><card><text name='Front'>ประกันราคา</text><text name='Back'>กำหนดราคาขั้นต่ำ</text></card><card><text name='Front'>เพดานราคา</text><text name='Back'>กำหนดราคาขั้นสูง</text></card><card><text name='Front'>ตลาดมืด</text><text name='Back'>การค้านอกระบบ ขาวเกินราคาที่กำหนดไว้ ไม่มีการรายงานการค้าขายให้รัฐ</text></card><card><text name='Front'>ระบบบาร์เตอร์ (Barter system)</text><text name='Back'>ของแลกของ</text></card><card><text name='Front'>ระบบเงินตรา (Money system)</text><text name='Back'>ของแลกเงิน</text></card><card><text name='Front'>ระบบเครดิต (Credit system)</text><text name='Back'>ความน่าเชื่อถือไปแลกของหรือแลกเงินมาใช้ก่อน</text></card><card><text name='Front'>ระบบการค้าแบบหักบัญชี (Account Trade)</text><text name='Back'>1. ของแลกกัน (Barter)
-2. ลงบัญชีเอาไว้ เชื่อใจกัน (Credit)
-3. ครบกำหนดเวลาก็เอาบัญชีมาหักลบกลบหนี้กัน ขาดเหลือเท่าไหร่ก็จ่ายไปเป็นเงิน (Money)</text></card></cards></deck>
+- ราคาลง อุปสงค์ขึ้น</text></card><card><text name='Front'>เส้นกราฟขยับไปทาง ขวา</text><text name='Back'>ระดับราคาสินค้าเท่าเดิม มีอุปสงค์หรืออุปทานต่อสินค้านั้นๆเพิ่ม</text></card><card><text name='Front'>อุปสงค์ส่วนบุคคล</text><text name='Back'>ความต้องการซื้อของบุคคล ณ ระดับราคาต่างๆ</text></card><card><text name='Front'>อุปสงค์ (Demand)</text><text name='Back'>ความต้องการซื้อของผู้บริโภคที่มีอยู่จริง มีกำลังซื้อจริง</text></card><card><text name='Front'>ระบบเครดิต (Credit system)</text><text name='Back'>ความน่าเชื่อถือไปแลกของหรือแลกเงินมาใช้ก่อน</text></card><card><text name='Front'>ลงทุนสูง ลงแรงสูง ได้ผลตอบแทนสูง</text><text name='Back'>ทุติยภูมิ</text></card><card><text name='Front'>ตลาดมืด</text><text name='Back'>การค้านอกระบบ ขาวเกินราคาที่กำหนดไว้ ไม่มีการรายงานการค้าขายให้รัฐ</text></card><card><text name='Front'>สินค้าที่ใช้ทดแทนกัน</text><text name='Back'>ซื้ออีกอย่างที่ทดแทนได้
+- หมูแพง ซื้อไก่กินแทน</text></card><card><text name='Front'>สินค้าที่ใช้ประกอบกัน</text><text name='Back'>มักซื้อควบคู่กัน
+- กาแฟ + คอฟฟี่เมต</text></card><card><text name='Front'>สินค้าบุญ</text><text name='Back'>บริโภคมากขึ้นแล้วสังคมได้ประโยชน์
+- หนังสือ การศึกษา การดูแลสุขภาพ</text></card><card><text name='Front'>What</text><text name='Back'>- ผลิตอะไรดี</text></card><card><text name='Front'>เศรษฐศาสตร์กับรัฐศาสตร์</text><text name='Back'>- การกินดีอยู่ดีทำให้สังคมสงบสุขมั่นคง
+- การทำนโยบายคนละครึ่ง</text></card><card><text name='Front'>ปัจจัยการผลิต</text><text name='Back'>ที่ดิน ทุน แรงงาน ผู้ประกอบการ</text></card><card><text name='Front'>สินค้าขั้นต้น</text><text name='Back'>วัตถุดิบ</text></card><card><text name='Front'>เปลี่ยนสถานที่</text><text name='Back'>- ของฝากต่างแดน
+- หาง่ายถูก หายากแพง
+- น้ำในสนามบิน</text></card><card><text name='Front'>อรรถประโยชน์</text><text name='Back'>ความพึงพอใจที่มนุษย์เราได้รับจากการใช้ประโยชน์สินค้าหรือบริการ</text></card><card><text name='Front'>ต้นทุนเสียโอกาส</text><text name='Back'>มูลค่าของทางเลือกที่ต้องสละไปเมื่อเลือกสิ่งหนึ่ง</text></card><card><text name='Front'>ผู้ประกอบการ</text><text name='Back'>- ผู้รวบรวมปัจจัยการผลิตเพื่อให้เกิดการผลิต
+- ตอบแทนเป็น กำไร</text></card><card><text name='Front'>กรมหมื่นพิทยาลงกรณ์</text><text name='Back'>- บิดาสหกรณ์ไทย
+- หนังสือ "ตลาดเงินตรา"
+- สหกรณ์วัดจันทร์ ไม่จำกัดสินใช้ จ. พิษณุโลก</text></card><card><text name='Front'>เศรษฐทรัพย์</text><text name='Back'>มีค่ามีราคา เพราะใช้แล้วหมดไป ต้องซื้อมาใหม่เรื่อยๆ
+- อาหาร เชื้อเพลิง</text></card><card><text name='Front'>สินค้าขั้นสุดท้าย</text><text name='Back'>- Ready to Use
+- มนุษย์ซื้อมาบริโภคโดยตรง
+- อาหาร เสื้อผ้า</text></card><card><text name='Front'>ทรัพย์เสรี</text><text name='Back'>หมุนเวียนได้ มีมาก ไม่มีราคา
+- ลม แสงแดด อากาศ แหล่งน้ำ</text></card><card><text name='Front'>แรงงาน</text><text name='Back'>- กำลังแรงงานของมนุษย์
+- ตอบแทนเป็น ค่าจ้างหรือค่าแรง</text></card><card><text name='Front'>สิ่งที่มีอิทธิพลต่ออุปสงค์ </text><text name='Back'>ความจำเป็น การโฆษณา สมัยนิยม การศึกษา รายได้ผู้บริโภค ราคาสินค้าที่เกี่ยวข้อง เสถียรภาพทางเศรษฐกิจ การคะเนราคา จำนวนประชากร</text></card><card><text name='Front'>เส้นกราฟขยับไปทาง ซ้าว</text><text name='Back'>ระดับราคาสินค้าเท่าเดิม มีอุปสงค์หรืออุปทานต่อสินค้านั้นลด</text></card><card><text name='Front'>สิ่งที่มีอิทธิพลต่ออุปทาน</text><text name='Back'>ฤดูการผลิต เทคโนโลยีและเทคนิคในการผลิต ราคาวัตถุดิบ ราคาสินค้าที่เกี่ยวข้อง การคะเนราคา จำนวนคู่แข่งในตลาด นโยบายและการอุดหนุนของภาครัฐ</text></card><card><text name='Front'>ปัญหาพื้นฐานทาง เศรษฐศาสตร์</text><text name='Back'>- What
+- How
+- For whom</text></card><card><text name='Front'>เศรษฐศาสตร์นโยบาย</text><text name='Back'>- ระบุแนวทางการแก้ปัญหา
+- เสนอสิ่งที่ดีกว่า
+- การดำเนินนโยบายแก้
+- Future</text></card><card><text name='Front'>สินค้าด้อย</text><text name='Back'>สินค้าที่เราบริโภคมากขึ้นเมื่อระดับรายได้ลดลง
+- มาม่า ปลากระป๋อง</text></card><card><text name='Front'>ระบบบาร์เตอร์ (Barter system)</text><text name='Back'>ของแลกของ</text></card><card><text name='Front'>จอห์น เมย์นาร์ด เคนส์</text><text name='Back'>- บิดาเศรษฐศาสตร์มหภาค
+- General Theory
+- โต้แย้ง Adam โดยบอกว่ารัฐต้องแทรกแซงบ้าง</text></card><card><text name='Front'>ตลาดแข่งขันสมบูรณ์</text><text name='Back'>- ผู้ขายมาก ผู้ซื้อมาก กิจกรรมแลกเปลี่ยนคึกคัก
+- เข้าออกตลาดง่าย ไม่มีอุปสรรค
+- ข่าวสาร เทคนิคการผลิต เท่าเทียมกัน
+- สินค้าที่ขายไม่ทีความแตกต่าง
+- แข่งขันดุเดือด
+- เกือบเป็นอุดมคติ ใกล้เคียงคือ การเกษตร</text></card><card><text name='Front'>ตลาดแข่งขันไม่สมบูรณ์</text><text name='Back'>- ตลาดกึ่งแข่งขันผูกขาด
+- ตลาดผู้ค้าน้อยราย
+- ตลาดผูกขาด</text></card><card><text name='Front'>ตลาดกึ่งแข่งขันกึ่งผูกขาด</text><text name='Back'>- ผู้ขายมากราย ผู้ซื้อก็มาก
+- เข้าตลาดไม่ยาก
+- บางผู้ผลิตมีข้อได้เปรียบกว่า เช่น เปิดมานานกว่า
+- ไม่ได้แข่งแค่ราคา
+- แข่งกันเรื่อง บรรจุภัณฑ์ กลิ่น รส โฆษณา สรรพคุณ
+- แชมพู สบู่ ยาสีฟัน</text></card><card><text name='Front'>ตลาดผู้ค้าน้อยราย</text><text name='Back'>- ผู้ค้าน้อย
+- สินค้าเป็นอะไรก็ได้ แต่อาจหายาก ผลิตยาก มีสัมปทาน
+- เข้าตลาดยาก ใช้ทุนสูง หรือต้องมีสัปทานจากรัฐ
+- ผู้ค้ามีอำนาจเหนือตลาด อาจกำหนดราคาได้
+- กลไกราคาทำงานน้อย การร่วมมือของผู้ค้าน้อยรายครอบงำตลาด
+- ผู้ให้บริการอินเตอร์เน็ตในประเทศไทย</text></card><card><text name='Front'>ตลาดผูกขาด</text><text name='Back'>- ผู้ค้ามีแค่ 1
+- สินค้ามีความจำเป็นต่อการดำรงชีพ
+- ไม่มีการเข้าออกตลาด
+- ไม่มีการแข่งขันด้านราคา
+- ผู้ค้ามีอำนาจกำหนดราคาโดยสมบูรณ์
+- กลไกราคาไม่ทำงาน
+- การไฟฟ้า การประปา ในประเทศไทย</text></card><card><text name='Front'>GNP</text><text name='Back'>- Gross National Product
+- ผลิตภัณฑ์มวลรวมประชาชาติ
+- เอาแค่คนชาตินั้น (ไม่ว่านอกหรือในประเทศ)</text></card><card><text name='Front'>GDP</text><text name='Back'>- Gross Domestic Product
+- ผลิตภัณฑ์มวลรวมภายในประเทศ
+- นับแค่ในประเทศนั้น แผ่นดินนั้น (รวมชาวต่างชาติในประเทศ)</text></card><card><text name='Front'>NNP</text><text name='Back'>- Net National Product
+- ผลิตภัณฑ์ประชาชาติสุทธิ</text></card><card><text name='Front'>NNP at market price</text><text name='Back'>- ผลิตภัณฑ์ประชาชาติสุทธิในราคาตลาด
+- GNP หักค่าเสื่อม
+- ใช้วิเคราะห์ศักยภาพการผลิตของประชาชาติระยะยาว</text></card><card><text name='Front'>NNP at factor cost</text><text name='Back'>- ผลิตภัณฑ์ประชาชาติสุทธิในราคาทุน
+- GNP หัดค่าเสื่อมและภาษีทางอ้อม
+- ละเอียดกว่า at market price</text></card><card><text name='Front'>ดัชนีรายได้ประชาชาติไม่นับอะไรบ้าง</text><text name='Back'>- สินค้าและบริการที่ประเมินค่าไม่ได้
+- สินค้าและบริการที่ไม่ผ่านตลาด (แฟร์ในโรงเรียน)
+- กิจกรรมที่ไม่ได้รายงาน (Freelance ที่ไม่ได้รายงาน หรือวัดไม่ได้)
+- กิจกรรมผิดกฎหมาย
+- เงินโอน
+- ซื้อของมือสอง
+- เงินที่ได้จากการชำระหนี้เงินกู้เพื่อการบริโภค
+- เงินที่ได้จากการขายของที่มีอยู่แล้ว
+- ซื้อขายหุ้น การพนัน</text></card><card><text name='Front'>แรงงานแฝง</text><text name='Back'>แรงงานส่วนเกินในการผลิต ลดไปก็ไม่ได้ส่งผลต่อการผลิต
+(Optional workers)</text></card><card><text name='Front'>การว่างงานแฝง</text><text name='Back'>- แรงงานที่ถูกจ้างมีความสามารถหรือเวลางานต่ำเกินไป
+- ต้องจ้างเพิ่ม
+- Quantity over Quality</text></card><card><text name='Front'>การจ้างงานเต็มที่</text><text name='Back'>ผู้ที่ต้องการงานทำได้รับการจ้างทุกคน ไม่มีการว่างงานเหลือ</text></card><card><text name='Front'>แรงงานไร้ฝีมือ</text><text name='Back'>ใช้แรงงาน ไม่มีทักษะ</text></card><card><text name='Front'>แรงงานกึ่งฝีมือ</text><text name='Back'>มีการอบรมทักษะระดับหนึ่ง
+- ช่างต่างๆ</text></card><card><text name='Front'>แรงงานฝีมือ / แรงงานทักษะ</text><text name='Back'>มีการอบรมวิชาชีพระดับสูง ใช้ทักษะมาก
+- หมอ วิศวกร อาจารย์</text></card><card><text name='Front'>ประเทศไทยใช้ระบบเศรษฐกิจแบบใด</text><text name='Back'>แบบผสม</text></card><card><text name='Front'>เศรษฐกิจแบบทุนนิยม</text><text name='Back'>- ผลิตเฉพาะสินค้าที่ตนเองผลิตได้ดี
+- ผลิตตามสิ่งที่มี
+- ถ้าผลิตไม่ได้ จะนำเข้า
+- เอกชนมีเสรีภาพในกิจกรรมทางเศรษฐกิจ
+- รัฐเน้นการเมืองการปกครอง
+- รัฐประหยัดงบ
+- การผลิตดี ของหลากหลาย ราคาต่ำจากการแข่งขัน คุณภาพหลากหลาย
+- เคลื่อนด้วยความโลภ
+- "The rich have become richer, and the poor have become poorer."
+- กระจายรายได้ไม่ดี ขนขั้น นายทุนเอาเปรียบประชาชน การบริโภคล้นเกิดเป็นปัญหาทางสิ่งแวดล้อม</text></card><card><text name='Front'>เศรษฐกิจแบบสังคมนิยม</text><text name='Back'>- ผลิตเองให้ได้ทุกอย่าง เน้นพึ่งตนเอง
+- พยายามผลิตให้ได้
+- ไม่เน้นนำเข้า
+- รัฐดำเนินกิจกรรมทางเศรษฐกิจที่มีขนาดใหญ่ (ประปา ไฟฟ้า)
+- รัฐจัดเก็บภาษีสูง นำมาจัดสวัสดิการให้ประชาชน
+- กระจายรายได้ดี ช่องว่างระหว่างคนรวยกับคนจนมีไม่มาก
+- เอกชนถูกจำกัดเสรีภาพทางเศรษฐกิจบางส่วน
+- บางอย่างตอนการการ approve จากรัฐ
+- สินค้าตัวเลือกน้อย แข่งขันต่ำ คุณภาพต่ำ 
+- รัฐเป็นผู้แบกรับต้นทุนทางเศรษฐกิจ
+</text></card><card><text name='Front'>เศรษฐกิจแบบผสม</text><text name='Back'>- เป็นแบบทุนนิยม
+- รัฐเข้ามาทำบางอย่าง เช่นพวกรัฐวิสาหกิจ ไฟฟ้า ประปา
+- รัฐแทรกแซงตลาดบ้างด้วยนโยบายรัฐ จัดสวัสดิการให้ประชาชน แก้ไขปัญหาเศรษฐกิจต่างๆ
+- ได้ข้อดีจากทั้ง 2 ระบบ
+- รัฐต้องแบกรับต้นทุนรัฐวิสาหกิจ ส่วนใหญ่ขาดทุนและอาจไม่มีมีประสิทธิภาพ เพราะไม่มีการแข่งขันจึงไม่พัฒนา</text></card><card><text name='Front'>โรเบิร์ต โอเว่น</text><text name='Back'>บิดาสหกรณ์โลก</text></card><card><text name='Front'>สหกรณ์แรกของไทย</text><text name='Back'>สหกรณ์วัดจันทร์ไม่จำกัดสินใช้ จ. พิษณุโลก (สหกรณ์การเกษตร)</text></card><card><text name='Front'>หลักการสำคัญในการดำเนินการของสหกรณ์</text><text name='Back'>- พึ่งตนเอง
+- มีสิทธิเท่าเทียม
+- สามัคคีและเที่ยงธรรม เน้น ประชาธิปไตย</text></card></cards></deck>
