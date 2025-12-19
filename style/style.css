@@ -48,7 +48,7 @@
 
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", "Sarabun", sans-serif;
   background-color: var(--light-bg);
   display: flex;
   flex-direction: column;

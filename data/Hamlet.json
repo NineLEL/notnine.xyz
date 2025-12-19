@@ -1,0 +1,734 @@
+[
+    {
+        "id": 1,
+        "type": "multiple_choice",
+        "question": "Who is the Prince of Denmark in Shakespeare's Hamlet?",
+        "options": ["Claudius", "Hamlet", "Laertes", "Fortinbras"],
+        "correct": "Hamlet"
+    },
+    {
+        "id": 2,
+        "type": "true_false",
+        "question": "King Hamlet was murdered while awake in his bed.",
+        "correct": false
+    },
+    {
+        "id": 3,
+        "type": "short_answer",
+        "question": "Who is Hamlet’s mother?",
+        "correct": "Gertrude"
+    },
+    {
+        "id": 4,
+        "type": "multiple_choice",
+        "question": "Who becomes King of Denmark after King Hamlet’s death?",
+        "options": ["Hamlet", "Polonius", "Claudius", "Fortinbras"],
+        "correct": "Claudius"
+    },
+    {
+        "id": 5,
+        "type": "true_false",
+        "question": "The Ghost claims he was poisoned by Claudius.",
+        "correct": true
+    },
+    {
+        "id": 6,
+        "type": "short_answer",
+        "question": "What relationship is Ophelia to Polonius?",
+        "correct": "Daughter"
+    },
+    {
+        "id": 7,
+        "type": "multiple_choice",
+        "question": "What university does Hamlet study at?",
+        "options": ["Oxford", "Cambridge", "Wittenberg", "Paris"],
+        "correct": "Wittenberg"
+    },
+    {
+        "id": 8,
+        "type": "matching",
+        "question": "Match the character to their description.",
+        "pairs": [
+            { "left": "Polonius", "right": "The king’s advisor" },
+            { "left": "Ophelia", "right": "Polonius’s daughter" },
+            { "left": "Laertes", "right": "Ophelia’s brother" },
+            { "left": "Horatio", "right": "Hamlet’s loyal friend" }
+        ]
+    },
+    {
+        "id": 9,
+        "type": "true_false",
+        "question": "Horatio is the one who kills Claudius.",
+        "correct": false
+    },
+    {
+        "id": 10,
+        "type": "multiple_choice",
+        "question": "Which play do the actors perform to expose Claudius’s guilt?",
+        "options": ["The Mousetrap", "The Spanish Tragedy", "The Murder of Gonzago", "Macbeth"],
+        "correct": "The Murder of Gonzago"
+    },
+    {
+        "id": 11,
+        "type": "short_answer",
+        "question": "Who is Hamlet’s closest friend?",
+        "correct": "Horatio"
+    },
+    {
+        "id": 12,
+        "type": "true_false",
+        "question": "Polonius is killed while spying behind a curtain.",
+        "correct": true
+    },
+    {
+        "id": 13,
+        "type": "multiple_choice",
+        "question": "Where does Claudius send Hamlet after Polonius’s death?",
+        "options": ["France", "England", "Norway", "Germany"],
+        "correct": "England"
+    },
+    {
+        "id": 14,
+        "type": "ordering",
+        "question": "Arrange the following events in the correct order.",
+        "items": [
+            "The Ghost appears",
+            "The play is performed",
+            "Polonius is killed",
+            "Ophelia dies"
+        ]
+    },
+    {
+        "id": 15,
+        "type": "short_answer",
+        "question": "Who says the famous line 'To be, or not to be'?",
+        "correct": "Hamlet"
+    },
+    {
+        "id": 16,
+        "type": "true_false",
+        "question": "Ophelia goes mad after her father’s death.",
+        "correct": true
+    },
+    {
+        "id": 17,
+        "type": "multiple_choice",
+        "question": "How does Ophelia die?",
+        "options": ["Poisoned", "Stabbed", "Drowned", "Burned"],
+        "correct": "Drowned"
+    },
+    {
+        "id": 18,
+        "type": "matching",
+        "question": "Match the character to their fate.",
+        "pairs": [
+            { "left": "Claudius", "right": "Poisoned and stabbed" },
+            { "left": "Gertrude", "right": "Drinks poisoned wine" },
+            { "left": "Laertes", "right": "Wounded by poisoned sword" },
+            { "left": "Hamlet", "right": "Dies from poisoned wound" }
+        ]
+    },
+    {
+        "id": 19,
+        "type": "true_false",
+        "question": "Laertes and Hamlet fence in the final scene.",
+        "correct": true
+    },
+    {
+        "id": 20,
+        "type": "multiple_choice",
+        "question": "What weapon is poisoned in the duel?",
+        "options": ["Dagger", "Arrow", "Sword", "Spear"],
+        "correct": "Sword"
+    },
+    {
+        "id": 21,
+        "type": "short_answer",
+        "question": "Who becomes King of Denmark at the end of the play?",
+        "correct": "Fortinbras"
+    },
+    {
+        "id": 22,
+        "type": "true_false",
+        "question": "Rosencrantz and Guildenstern survive their trip to England.",
+        "correct": false
+    },
+    {
+        "id": 23,
+        "type": "multiple_choice",
+        "question": "Who warns Ophelia to stay away from Hamlet?",
+        "options": ["Claudius", "Laertes", "Horatio", "Hamlet"],
+        "correct": "Laertes"
+    },
+    {
+        "id": 24,
+        "type": "short_answer",
+        "question": "What is the name of the ghost’s son?",
+        "correct": "Hamlet"
+    },
+    {
+        "id": 25,
+        "type": "ordering",
+        "question": "Order the main acts of Hamlet’s revenge plan.",
+        "items": [
+            "Meet the Ghost",
+            "Pretend to be mad",
+            "Stage the play",
+            "Kill Claudius"
+        ]
+    },
+    {
+        "id": 26,
+        "type": "true_false",
+        "question": "Hamlet immediately kills Claudius after meeting the Ghost.",
+        "correct": false
+    },
+    {
+        "id": 27,
+        "type": "multiple_choice",
+        "question": "Which theme is most central to Hamlet?",
+        "options": ["Love", "Revenge", "Adventure", "Wealth"],
+        "correct": "Revenge"
+    },
+    {
+        "id": 28,
+        "type": "short_answer",
+        "question": "Who discovers Ophelia’s body?",
+        "correct": "Gertrude"
+    },
+    {
+        "id": 29,
+        "type": "true_false",
+        "question": "Hamlet apologizes to Laertes before the duel.",
+        "correct": true
+    },
+    {
+        "id": 30,
+        "type": "multiple_choice",
+        "question": "Who is present to tell Hamlet’s story at the end?",
+        "options": ["Laertes", "Horatio", "Fortinbras", "Gertrude"],
+        "correct": "Horatio"
+    },
+        {
+        "id": 31,
+        "type": "multiple_choice",
+        "question": "Who first sees the Ghost of King Hamlet?",
+        "options": ["Hamlet", "Horatio", "Bernardo", "Claudius"],
+        "correct": "Bernardo"
+    },
+    {
+        "id": 32,
+        "type": "true_false",
+        "question": "The Ghost appears only once in the play.",
+        "correct": false
+    },
+    {
+        "id": 33,
+        "type": "short_answer",
+        "question": "Who is the King of Norway mentioned in the play?",
+        "correct": "Fortinbras"
+    },
+    {
+        "id": 34,
+        "type": "multiple_choice",
+        "question": "Why does Claudius spy on Hamlet?",
+        "options": [
+            "He fears Hamlet knows the truth",
+            "Hamlet is planning a war",
+            "Hamlet stole money",
+            "Hamlet insulted him publicly"
+        ],
+        "correct": "He fears Hamlet knows the truth"
+    },
+    {
+        "id": 35,
+        "type": "true_false",
+        "question": "Polonius believes Hamlet’s madness is caused by love.",
+        "correct": true
+    },
+    {
+        "id": 36,
+        "type": "short_answer",
+        "question": "What phrase does Hamlet use to describe his fake madness?",
+        "correct": "Antic disposition"
+    },
+    {
+        "id": 37,
+        "type": "multiple_choice",
+        "question": "Who are sent to spy on Hamlet by Claudius?",
+        "options": [
+            "Horatio and Marcellus",
+            "Rosencrantz and Guildenstern",
+            "Laertes and Polonius",
+            "Bernardo and Francisco"
+        ],
+        "correct": "Rosencrantz and Guildenstern"
+    },
+    {
+        "id": 38,
+        "type": "matching",
+        "question": "Match the quote to the speaker.",
+        "pairs": [
+            { "left": "To be, or not to be", "right": "Hamlet" },
+            { "left": "Though this be madness, yet there is method in’t", "right": "Polonius" },
+            { "left": "The lady doth protest too much", "right": "Gertrude" },
+            { "left": "Something is rotten in the state of Denmark", "right": "Marcellus" }
+        ]
+    },
+    {
+        "id": 39,
+        "type": "true_false",
+        "question": "Hamlet trusts Rosencrantz and Guildenstern.",
+        "correct": false
+    },
+    {
+        "id": 40,
+        "type": "multiple_choice",
+        "question": "What does Hamlet ask the actors to do?",
+        "options": [
+            "Perform a comedy",
+            "Perform a tragedy about Troy",
+            "Perform a play resembling his father’s murder",
+            "Refuse to perform"
+        ],
+        "correct": "Perform a play resembling his father’s murder"
+    },
+    {
+        "id": 41,
+        "type": "short_answer",
+        "question": "Who does Hamlet accidentally kill?",
+        "correct": "Polonius"
+    },
+    {
+        "id": 42,
+        "type": "true_false",
+        "question": "Claudius feels guilty after watching the play.",
+        "correct": true
+    },
+    {
+        "id": 43,
+        "type": "multiple_choice",
+        "question": "Why does Hamlet not kill Claudius while he is praying?",
+        "options": [
+            "He feels pity",
+            "He wants a fair fight",
+            "He fears sending Claudius to heaven",
+            "He is interrupted"
+        ],
+        "correct": "He fears sending Claudius to heaven"
+    },
+    {
+        "id": 44,
+        "type": "ordering",
+        "question": "Order these characters by their family relationship.",
+        "items": [
+            "Polonius",
+            "Ophelia",
+            "Laertes"
+        ]
+    },
+    {
+        "id": 45,
+        "type": "short_answer",
+        "question": "What country is Hamlet sent to with Rosencrantz and Guildenstern?",
+        "correct": "England"
+    },
+    {
+        "id": 46,
+        "type": "true_false",
+        "question": "Gertrude knows Claudius killed King Hamlet from the beginning.",
+        "correct": false
+    },
+    {
+        "id": 47,
+        "type": "multiple_choice",
+        "question": "Who plots with Claudius to kill Hamlet?",
+        "options": ["Horatio", "Fortinbras", "Laertes", "Polonius"],
+        "correct": "Laertes"
+    },
+    {
+        "id": 48,
+        "type": "matching",
+        "question": "Match the object to its purpose.",
+        "pairs": [
+            { "left": "Poisoned sword", "right": "Kill Hamlet" },
+            { "left": "Poisoned cup", "right": "Backup plan" },
+            { "left": "Letter to England", "right": "Order Hamlet’s execution" },
+            { "left": "Play", "right": "Reveal guilt" }
+        ]
+    },
+    {
+        "id": 49,
+        "type": "true_false",
+        "question": "Hamlet rewrites the letter sent to England.",
+        "correct": true
+    },
+    {
+        "id": 50,
+        "type": "multiple_choice",
+        "question": "Who dies first in the final scene?",
+        "options": ["Claudius", "Gertrude", "Laertes", "Hamlet"],
+        "correct": "Gertrude"
+    },
+    {
+        "id": 51,
+        "type": "short_answer",
+        "question": "Who kills Claudius?",
+        "correct": "Hamlet"
+    },
+    {
+        "id": 52,
+        "type": "true_false",
+        "question": "Laertes confesses the plot before dying.",
+        "correct": true
+    },
+    {
+        "id": 53,
+        "type": "multiple_choice",
+        "question": "What does Hamlet ask Horatio to do before he dies?",
+        "options": [
+            "Leave Denmark",
+            "Kill Claudius",
+            "Tell his story",
+            "Rule the kingdom"
+        ],
+        "correct": "Tell his story"
+    },
+    {
+        "id": 54,
+        "type": "short_answer",
+        "question": "What is the setting of Hamlet?",
+        "correct": "Denmark"
+    },
+    {
+        "id": 55,
+        "type": "true_false",
+        "question": "Fortinbras arrives after Hamlet’s death.",
+        "correct": true
+    },
+    {
+        "id": 56,
+        "type": "multiple_choice",
+        "question": "Which theme is explored through Hamlet’s indecision?",
+        "options": ["Betrayal", "Madness", "Appearance vs reality", "Fate"],
+        "correct": "Appearance vs reality"
+    },
+    {
+        "id": 57,
+        "type": "ordering",
+        "question": "Arrange Hamlet’s emotional states throughout the play.",
+        "items": [
+            "Grief",
+            "Suspicion",
+            "Anger",
+            "Acceptance"
+        ]
+    },
+    {
+        "id": 58,
+        "type": "short_answer",
+        "question": "Who delivers the final speech honoring Hamlet?",
+        "correct": "Fortinbras"
+    },
+    {
+        "id": 59,
+        "type": "true_false",
+        "question": "Hamlet dies peacefully in his sleep.",
+        "correct": false
+    },
+    {
+        "id": 60,
+        "type": "multiple_choice",
+        "question": "Which character represents loyalty throughout the play?",
+        "options": ["Claudius", "Laertes", "Horatio", "Polonius"],
+        "correct": "Horatio"
+    },
+        {
+        "id": 61,
+        "type": "multiple_choice",
+        "question": "What does the word 'wherefore' most nearly mean in Shakespearean English?",
+        "options": ["Where", "Why", "When", "How"],
+        "correct": "Why"
+    },
+    {
+        "id": 62,
+        "type": "short_answer",
+        "question": "In 'To thine own self be true', what does 'thine' mean?",
+        "correct": "Your"
+    },
+    {
+        "id": 63,
+        "type": "true_false",
+        "question": "The word 'anon' means 'soon' or 'right away' in Hamlet.",
+        "correct": true
+    },
+    {
+        "id": 64,
+        "type": "multiple_choice",
+        "question": "What is the meaning of the word 'perchance' in Hamlet?",
+        "options": ["Certainly", "Perhaps", "Suddenly", "Never"],
+        "correct": "Perhaps"
+    },
+    {
+        "id": 65,
+        "type": "matching",
+        "question": "Match the old English word to its modern meaning.",
+        "pairs": [
+            { "left": "Thou", "right": "You (subject)" },
+            { "left": "Thee", "right": "You (object)" },
+            { "left": "Thy", "right": "Your" },
+            { "left": "Hast", "right": "Have" }
+        ]
+    },
+    {
+        "id": 66,
+        "type": "multiple_choice",
+        "question": "Which literary device is used in 'Something is rotten in the state of Denmark'?",
+        "options": ["Simile", "Metaphor", "Hyperbole", "Alliteration"],
+        "correct": "Metaphor"
+    },
+    {
+        "id": 67,
+        "type": "true_false",
+        "question": "Shakespeare often uses prose for nobles and verse for commoners in Hamlet.",
+        "correct": false
+    },
+    {
+        "id": 68,
+        "type": "short_answer",
+        "question": "What does the phrase 'frailty, thy name is woman' express?",
+        "correct": "Weakness"
+    },
+    {
+        "id": 69,
+        "type": "multiple_choice",
+        "question": "What does 'nunnery' most likely imply in Hamlet’s speech to Ophelia?",
+        "options": ["Church", "Convent", "School", "Palace"],
+        "correct": "Convent"
+    },
+    {
+        "id": 70,
+        "type": "true_false",
+        "question": "Shakespeare uses puns and wordplay heavily in Hamlet.",
+        "correct": true
+    },
+    {
+        "id": 71,
+        "type": "matching",
+        "question": "Match the phrase to its meaning.",
+        "pairs": [
+            { "left": "Brevity is the soul of wit", "right": "Being concise is wise" },
+            { "left": "To be or not to be", "right": "Existence vs nonexistence" },
+            { "left": "Mad north-northwest", "right": "Pretended madness" },
+            { "left": "Primrose path", "right": "Path of pleasure" }
+        ]
+    },
+    {
+        "id": 72,
+        "type": "multiple_choice",
+        "question": "Which word in Hamlet means 'evil' or 'wicked'?",
+        "options": ["Foul", "Fair", "Soft", "Kind"],
+        "correct": "Foul"
+    },
+    {
+        "id": 73,
+        "type": "short_answer",
+        "question": "What grammatical form is 'To be, or not to be'?",
+        "correct": "Infinitive"
+    },
+    {
+        "id": 74,
+        "type": "true_false",
+        "question": "Iambic pentameter is the dominant verse form in Hamlet.",
+        "correct": true
+    },
+    {
+        "id": 75,
+        "type": "multiple_choice",
+        "question": "What does the word 'alas' express?",
+        "options": ["Joy", "Anger", "Sorrow", "Confusion"],
+        "correct": "Sorrow"
+    },
+    {
+        "id": 76,
+        "type": "ordering",
+        "question": "Arrange the parts of iambic pentameter.",
+        "items": [
+            "Unstressed syllable",
+            "Stressed syllable",
+            "Five feet per line"
+        ]
+    },
+    {
+        "id": 77,
+        "type": "short_answer",
+        "question": "What does 'soft you now' mean?",
+        "correct": "Wait"
+    },
+    {
+        "id": 78,
+        "type": "true_false",
+        "question": "The word 'presently' always means 'now' in Shakespeare’s time.",
+        "correct": false
+    },
+    {
+        "id": 79,
+        "type": "multiple_choice",
+        "question": "Which word is closest in meaning to 'arrant'?",
+        "options": ["Complete", "Honest", "Small", "Quick"],
+        "correct": "Complete"
+    },
+    {
+        "id": 80,
+        "type": "matching",
+        "question": "Match the grammar feature to its description.",
+        "pairs": [
+            { "left": "Aside", "right": "Spoken to audience" },
+            { "left": "Soliloquy", "right": "Character’s inner thoughts" },
+            { "left": "Prose", "right": "Ordinary speech" },
+            { "left": "Verse", "right": "Rhythmic poetic speech" }
+        ]
+    },
+    {
+        "id": 81,
+        "type": "true_false",
+        "question": "Wordplay in Hamlet often hides insults or deeper meanings.",
+        "correct": true
+    },
+    {
+        "id": 82,
+        "type": "multiple_choice",
+        "question": "What does 'get thee to a nunnery' most strongly convey?",
+        "options": ["Affection", "Confusion", "Anger and rejection", "Respect"],
+        "correct": "Anger and rejection"
+    },
+    {
+        "id": 83,
+        "type": "short_answer",
+        "question": "What does the word 'marry' often mean in Shakespeare’s dialogue?",
+        "correct": "Indeed"
+    },
+    {
+        "id": 84,
+        "type": "true_false",
+        "question": "Shakespeare’s grammar always follows modern English rules.",
+        "correct": false
+    },
+    {
+        "id": 85,
+        "type": "multiple_choice",
+        "question": "Which technique is used when a word has double meanings?",
+        "options": ["Irony", "Pun", "Metaphor", "Symbolism"],
+        "correct": "Pun"
+    },
+    {
+        "id": 86,
+        "type": "ordering",
+        "question": "Order the language levels from lowest to highest.",
+        "items": [
+            "Prose",
+            "Blank verse",
+            "Rhymed verse"
+        ]
+    },
+    {
+        "id": 87,
+        "type": "short_answer",
+        "question": "What does 'woe' mean?",
+        "correct": "Great sorrow"
+    },
+    {
+        "id": 88,
+        "type": "true_false",
+        "question": "Old English and Shakespearean English are the same.",
+        "correct": false
+    },
+    {
+        "id": 89,
+        "type": "multiple_choice",
+        "question": "Which word from Hamlet means 'appearance'?",
+        "options": ["Seeming", "Being", "Doing", "Knowing"],
+        "correct": "Seeming"
+    },
+    {
+        "id": 90,
+        "type": "multiple_choice",
+        "question": "Which language feature best helps convey Hamlet’s inner conflict?",
+        "options": ["Stage directions", "Soliloquies", "Rhymes", "Chorus"],
+        "correct": "Soliloquies"
+    },
+        {
+        "id": 91,
+        "type": "multiple_choice",
+        "question": "Which character is known for being loyal, honest, and rational?",
+        "options": ["Laertes", "Horatio", "Polonius", "Rosencrantz"],
+        "correct": "Horatio"
+    },
+    {
+        "id": 92,
+        "type": "true_false",
+        "question": "Claudius is portrayed as both a powerful king and a guilty murderer.",
+        "correct": true
+    },
+    {
+        "id": 93,
+        "type": "short_answer",
+        "question": "Which character uses manipulation and spying as a main strategy?",
+        "correct": "Polonius"
+    },
+    {
+        "id": 94,
+        "type": "multiple_choice",
+        "question": "Who represents impulsive action in contrast to Hamlet’s indecision?",
+        "options": ["Horatio", "Claudius", "Laertes", "Polonius"],
+        "correct": "Laertes"
+    },
+    {
+        "id": 95,
+        "type": "true_false",
+        "question": "Ophelia is portrayed as obedient and heavily influenced by male authority figures.",
+        "correct": true
+    },
+    {
+        "id": 96,
+        "type": "matching",
+        "question": "Match the character to their dominant trait.",
+        "pairs": [
+            { "left": "Hamlet", "right": "Thoughtful and conflicted" },
+            { "left": "Claudius", "right": "Ambitious and deceitful" },
+            { "left": "Gertrude", "right": "Emotionally dependent" },
+            { "left": "Laertes", "right": "Hot-tempered" }
+        ]
+    },
+    {
+        "id": 97,
+        "type": "short_answer",
+        "question": "Which character struggles most with moral responsibility?",
+        "correct": "Hamlet"
+    },
+    {
+        "id": 98,
+        "type": "true_false",
+        "question": "Gertrude is clearly aware of Claudius’s murder from the start of the play.",
+        "correct": false
+    },
+    {
+        "id": 99,
+        "type": "multiple_choice",
+        "question": "Which pair of characters serve mainly as foils to Hamlet?",
+        "options": [
+            "Rosencrantz and Guildenstern",
+            "Laertes and Fortinbras",
+            "Polonius and Claudius",
+            "Horatio and Marcellus"
+        ],
+        "correct": "Laertes and Fortinbras"
+    },
+    {
+        "id": 100,
+        "type": "multiple_choice",
+        "question": "Which character remains alive to ensure Hamlet’s legacy is remembered?",
+        "options": ["Fortinbras", "Horatio", "Laertes", "Osric"],
+        "correct": "Horatio"
+    }
+]
