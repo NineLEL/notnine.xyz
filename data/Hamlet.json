@@ -1,687 +1,1104 @@
 [
   {
     "id": 1,
-    "type": "multiple_choice",
-    "question": "What does the word \"apparition\" most nearly mean in Hamlet?",
-    "options": ["A weapon", "A ghost", "A castle", "A dream"],
-    "correct": "A ghost"
+    "type": "short_answer",
+    "question": "Hamlet judges Claudius and Gertrude ________, condemning both not for open cruelty, but for their shared moral complacency.",
+    "correct": "equally"
   },
   {
     "id": 2,
     "type": "short_answer",
-    "question": "What does \"melancholy\" describe in Hamlet's personality?",
-    "correct": "Deep sadness or sorrow"
+    "question": "Denmark’s strength lies not in military ________, but in political image-making that conceals internal decay.",
+    "correct": "exports"
   },
   {
     "id": 3,
-    "type": "multiple_choice",
-    "question": "The word \"treachery\" most closely means:",
-    "options": ["Loyalty", "Deception", "Fear", "Love"],
-    "correct": "Deception"
+    "type": "short_answer",
+    "question": "The play’s exploration of revenge relies heavily on human ________, particularly the conflict between conscience and desire.",
+    "correct": "psychology"
   },
   {
     "id": 4,
-    "type": "true_false",
-    "question": "In Hamlet, the word \"foul\" is often used to suggest moral corruption.",
-    "correct": true
+    "type": "short_answer",
+    "question": "The ghost’s revelation has a profound ________ on Hamlet, reshaping grief into moral obsession.",
+    "correct": "impact"
   },
   {
     "id": 5,
     "type": "short_answer",
-    "question": "What does the word \"usurp\" mean in the context of King Claudius?",
-    "correct": "To take power unlawfully"
+    "question": "Ophelia’s madness rejects ________ forms of language, replacing reasoned speech with symbolic expression.",
+    "correct": "conventional"
   },
-
   {
     "id": 6,
-    "type": "multiple_choice",
-    "question": "Fill in the blank: \"Something is rotten in the state of _____.\"",
-    "options": ["England", "Norway", "Denmark", "France"],
-    "correct": "Denmark"
+    "type": "short_answer",
+    "question": "Polonius mistakes suspicion for ________, believing constant surveillance to be intellectual virtue.",
+    "correct": "wisdom"
   },
   {
     "id": 7,
     "type": "short_answer",
-    "question": "Complete the phrase: \"To be, or not to be, that is the _____.\"",
-    "correct": "question"
+    "question": "Hamlet believes that silence will ________ expose Claudius more effectively than immediate violence.",
+    "correct": "ultimately"
   },
   {
     "id": 8,
-    "type": "true_false",
-    "question": "Hamlet pretends to be mad as part of his plan.",
-    "correct": true
+    "type": "short_answer",
+    "question": "Polonius secretly ________ Hamlet’s behavior, convinced that knowledge equals control.",
+    "correct": "keeps tabs on"
   },
   {
     "id": 9,
-    "type": "multiple_choice",
-    "question": "Which word best completes the sentence: Hamlet feels _____ about his mother’s marriage.",
-    "options": ["Joyful", "Indifferent", "Disgusted", "Proud"],
-    "correct": "Disgusted"
+    "type": "short_answer",
+    "question": "Claudius’s greatest fear is not punishment, but that he might ________ without consequence.",
+    "correct": "get away with murder"
   },
   {
     "id": 10,
     "type": "short_answer",
-    "question": "Who tells Hamlet to remember him?",
-    "correct": "The ghost of his father"
+    "question": "The clash between Hamlet and Laertes reflects opposing ________: contemplation versus impulsive action.",
+    "correct": "personalities"
   },
-
   {
     "id": 11,
-    "type": "multiple_choice",
-    "question": "Who is Hamlet’s mother?",
-    "options": ["Ophelia", "Gertrude", "Helena", "Margaret"],
-    "correct": "Gertrude"
+    "type": "short_answer",
+    "question": "Gertrude’s emotional blindness plays a central role in events ________ Ophelia’s psychological collapse.",
+    "correct": "leading to"
   },
   {
     "id": 12,
-    "type": "multiple_choice",
-    "question": "Who killed King Hamlet?",
-    "options": ["Hamlet", "Laertes", "Claudius", "Fortinbras"],
-    "correct": "Claudius"
+    "type": "short_answer",
+    "question": "Hamlet’s moral rigidity can be traced partly to his royal ________, where honor outweighs comfort.",
+    "correct": "upbringing"
   },
   {
     "id": 13,
-    "type": "true_false",
-    "question": "Claudius is Hamlet’s uncle.",
-    "correct": true
+    "type": "short_answer",
+    "question": "Laertes appears openly ________, expressing emotion without Hamlet’s restraint or introspection.",
+    "correct": "extroverted"
   },
   {
     "id": 14,
     "type": "short_answer",
-    "question": "Who is Ophelia’s father?",
-    "correct": "Polonius"
+    "question": "Claudius projects a ________ public image to disguise his private fear and guilt.",
+    "correct": "confident"
   },
   {
     "id": 15,
-    "type": "multiple_choice",
-    "question": "Which character seeks revenge for Polonius’s death?",
-    "options": ["Horatio", "Laertes", "Rosencrantz", "Guildenstern"],
-    "correct": "Laertes"
+    "type": "short_answer",
+    "question": "Hamlet views moral action as a ________ burden that cannot be rushed without spiritual risk.",
+    "correct": "responsible"
   },
-
   {
     "id": 16,
-    "type": "ordering",
-    "question": "Arrange these events in correct order.",
-    "items": [
-      "The ghost appears",
-      "Hamlet stages the play",
-      "Polonius is killed",
-      "The final duel"
-    ]
+    "type": "short_answer",
+    "question": "Horatio’s loyalty provides emotional ________ when Hamlet doubts his own sanity.",
+    "correct": "help with"
   },
   {
     "id": 17,
-    "type": "true_false",
-    "question": "Hamlet kills Polonius by accident.",
-    "correct": true
+    "type": "short_answer",
+    "question": "Unlike Hamlet, Laertes is driven by loyalty to family, particularly his ________.",
+    "correct": "siblings"
   },
   {
     "id": 18,
-    "type": "multiple_choice",
-    "question": "Where does Hamlet stab Polonius?",
-    "options": ["In the garden", "Behind the curtain", "On the stairs", "In the hall"],
-    "correct": "Behind the curtain"
+    "type": "short_answer",
+    "question": "Hamlet continues to ________ his father as a model of moral authority.",
+    "correct": "look up to"
   },
   {
     "id": 19,
     "type": "short_answer",
-    "question": "Who is Hamlet’s closest friend?",
-    "correct": "Horatio"
+    "question": "Feigning madness becomes a strategic ________ for action Hamlet is not yet prepared to take openly.",
+    "correct": "substitute"
   },
   {
     "id": 20,
-    "type": "multiple_choice",
-    "question": "Which country threatens Denmark at the start of the book?",
-    "options": ["France", "England", "Norway", "Spain"],
-    "correct": "Norway"
+    "type": "short_answer",
+    "question": "Ophelia’s suffering is repeatedly ________ by the men who claim to protect her.",
+    "correct": "overlooked"
   },
-
   {
     "id": 21,
-    "type": "matching",
-    "question": "Match each character to their role.",
-    "pairs": [
-      { "left": "Hamlet", "right": "Prince of Denmark" },
-      { "left": "Claudius", "right": "King of Denmark" },
-      { "left": "Gertrude", "right": "Queen" },
-      { "left": "Ophelia", "right": "Polonius’s daughter" }
-    ]
+    "type": "short_answer",
+    "question": "Gertrude adopts an emotionally ________ role, choosing harmony over confrontation.",
+    "correct": "accommodating"
   },
   {
     "id": 22,
-    "type": "true_false",
-    "question": "Rosencrantz and Guildenstern truly help Hamlet.",
-    "correct": false
+    "type": "short_answer",
+    "question": "Hamlet remains intellectually ________ to evidence, even when it threatens his emotional stability.",
+    "correct": "receptive"
   },
   {
     "id": 23,
     "type": "short_answer",
-    "question": "Who becomes king at the end of the book?",
-    "correct": "Fortinbras"
+    "question": "Hamlet refuses to ________ in courtly celebrations he finds morally hollow.",
+    "correct": "participate in"
   },
   {
     "id": 24,
-    "type": "multiple_choice",
-    "question": "What is the main reason Hamlet delays killing Claudius?",
-    "options": [
-      "Fear",
-      "Lack of proof",
-      "Moral and philosophical doubt",
-      "Lack of opportunity"
-    ],
-    "correct": "Moral and philosophical doubt"
+    "type": "short_answer",
+    "question": "Political ________ within the court prevent open discussion of guilt or justice.",
+    "correct": "restrictions"
   },
   {
     "id": 25,
-    "type": "true_false",
-    "question": "Ophelia goes mad after her father’s death.",
-    "correct": true
+    "type": "short_answer",
+    "question": "Claudius’s speeches are deliberately ________, designed to control perception rather than reveal truth.",
+    "correct": "manipulative"
   },
-
   {
     "id": 26,
-    "type": "multiple_choice",
-    "question": "Which literary device is dominant in Hamlet’s soliloquies?",
-    "options": ["Irony", "Metaphor", "Alliteration", "Hyperbole"],
-    "correct": "Metaphor"
+    "type": "short_answer",
+    "question": "Claudius defines ________ as stability, even if it rests upon deception.",
+    "correct": "success"
   },
   {
     "id": 27,
     "type": "short_answer",
-    "question": "What theme is explored through Hamlet’s constant thinking?",
-    "correct": "Indecision"
+    "question": "Hamlet fears that unchecked revenge may destroy his moral ________.",
+    "correct": "potential"
   },
   {
     "id": 28,
-    "type": "true_false",
-    "question": "Revenge is a central theme in Hamlet.",
-    "correct": true
+    "type": "short_answer",
+    "question": "In his soliloquies, Hamlet frequently ________ philosophical ideas drawn from religion and ethics.",
+    "correct": "cites"
   },
   {
     "id": 29,
-    "type": "multiple_choice",
-    "question": "The play-within-a-play is mainly used to:",
-    "options": [
-      "Entertain the court",
-      "Expose Claudius’s guilt",
-      "Distract Gertrude",
-      "Show Hamlet’s madness"
-    ],
-    "correct": "Expose Claudius’s guilt"
+    "type": "short_answer",
+    "question": "Horatio’s calm reasoning reflects a ________ temperament absent in the royal court.",
+    "correct": "disciplined"
   },
   {
     "id": 30,
     "type": "short_answer",
-    "question": "What setting is most of Hamlet set in?",
-    "correct": "Elsinore Castle"
+    "question": "Hamlet’s approach to justice, when ________ Laertes’s, appears restrained and reflective.",
+    "correct": "compared with"
   },
-
   {
     "id": 31,
-    "type": "true_false",
-    "question": "Light and darkness symbolize truth and corruption in the book.",
-    "correct": true
+    "type": "short_answer",
+    "question": "Despite hesitation, Hamlet remains ________ to uncovering the truth.",
+    "correct": "determined"
   },
   {
     "id": 32,
-    "type": "multiple_choice",
-    "question": "Which theme is most connected to Ophelia?",
-    "options": ["Power", "Madness", "War", "Justice"],
-    "correct": "Madness"
+    "type": "short_answer",
+    "question": "Claudius avoids moral ________, preferring force and secrecy.",
+    "correct": "negotiation"
   },
   {
     "id": 33,
     "type": "short_answer",
-    "question": "What object causes Gertrude’s death?",
-    "correct": "Poisoned wine"
+    "question": "The tragedy demonstrates that revenge leaves little room for ethical ________.",
+    "correct": "compromise"
   },
   {
     "id": 34,
-    "type": "multiple_choice",
-    "question": "Which weapon is poisoned?",
-    "options": ["Dagger", "Sword", "Bow", "Spear"],
-    "correct": "Sword"
+    "type": "short_answer",
+    "question": "Justice in Denmark operates independently of ________, allowing crime to hide behind power.",
+    "correct": "law enforcement"
   },
   {
     "id": 35,
-    "type": "true_false",
-    "question": "Hamlet forgives Laertes before dying.",
-    "correct": true
+    "type": "short_answer",
+    "question": "Claudius fears exposure in the political ________ more than private condemnation.",
+    "correct": "limelight"
   },
-
   {
     "id": 36,
     "type": "short_answer",
-    "question": "Who planned the poisoned duel?",
-    "correct": "Claudius"
+    "question": "Hamlet’s thoughts naturally ________ toward philosophical abstraction.",
+    "correct": "gravitate"
   },
   {
     "id": 37,
-    "type": "multiple_choice",
-    "question": "Hamlet’s tragic flaw is best described as:",
-    "options": ["Anger", "Pride", "Indecision", "Greed"],
-    "correct": "Indecision"
+    "type": "short_answer",
+    "question": "The play ultimately ________ moral restraint over impulsive revenge.",
+    "correct": "advocates"
   },
   {
     "id": 38,
-    "type": "true_false",
-    "question": "Claudius feels genuine guilt for his crime.",
-    "correct": true
+    "type": "short_answer",
+    "question": "Hamlet views conscience as the ________ authority over action.",
+    "correct": "sole"
   },
   {
     "id": 39,
     "type": "short_answer",
-    "question": "Who is ordered to tell Hamlet’s story?",
-    "correct": "Horatio"
+    "question": "Claudius attempts to ________ moral law through political power.",
+    "correct": "override"
   },
   {
     "id": 40,
-    "type": "multiple_choice",
-    "question": "What does the skull in the graveyard represent?",
-    "options": ["War", "Death’s equality", "Madness", "Love"],
-    "correct": "Death’s equality"
+    "type": "short_answer",
+    "question": "The tragedy forces the audience to ________ traditional ideas of heroism.",
+    "correct": "rework"
   },
-
-  {
+    {
     "id": 41,
-    "type": "true_false",
-    "question": "Yorick was a court jester.",
-    "correct": true
+    "type": "multiple_choice",
+    "question": "In the ________ part of the story, Hamlet’s attitude toward fate becomes noticeably calmer and more accepting. Which word best completes the sentence?",
+    "options": ["later", "latter", "latest", "lately"],
+    "correct": "latter"
   },
   {
     "id": 42,
-    "type": "short_answer",
-    "question": "Who owns the skull Hamlet holds?",
-    "correct": "Yorick"
+    "type": "multiple_choice",
+    "question": "Despite disagreement among the characters, a ________ eventually forms regarding the need for action.",
+    "options": ["consent", "consensus", "consensual", "concentration"],
+    "correct": "consensus"
   },
   {
     "id": 43,
     "type": "multiple_choice",
-    "question": "Which idea best summarizes Hamlet’s ending?",
-    "options": ["Peace", "Chaos", "Restoration of order", "Comedy"],
-    "correct": "Restoration of order"
+    "question": "Hamlet quickly realizes that revenge is not an ________ task, but one burdened with moral complexity.",
+    "options": ["easily", "ease", "easy", "easiness"],
+    "correct": "easy"
   },
   {
     "id": 44,
-    "type": "true_false",
-    "question": "Fortinbras represents decisive action.",
-    "correct": true
+    "type": "multiple_choice",
+    "question": "Hamlet hopes to ________ justice without becoming morally corrupted himself.",
+    "options": ["achievement", "achievable", "achieve", "achieving"],
+    "correct": "achieve"
   },
   {
     "id": 45,
-    "type": "short_answer",
-    "question": "What does Hamlet finally accept before the duel?",
-    "correct": "Fate"
+    "type": "multiple_choice",
+    "question": "Claudius arranges events in a way that is politically ________ but ethically questionable.",
+    "options": ["convenience", "convenient", "conveniently", "convening"],
+    "correct": "convenient"
   },
-
   {
     "id": 46,
     "type": "multiple_choice",
-    "question": "Which theme contrasts Hamlet and Laertes?",
-    "options": ["Love", "Revenge", "Religion", "Politics"],
-    "correct": "Revenge"
+    "question": "The constant tension within the court severely affects the emotional ________ of its inhabitants.",
+    "options": ["well", "well-being", "wellnesses", "welfare"],
+    "correct": "well-being"
   },
   {
     "id": 47,
-    "type": "true_false",
-    "question": "Laertes acts more quickly than Hamlet.",
-    "correct": true
+    "type": "multiple_choice",
+    "question": "Claudius appears politically ________, yet his success rests on deception rather than legitimacy.",
+    "options": ["success", "successfully", "successful", "successes"],
+    "correct": "successful"
   },
   {
     "id": 48,
-    "type": "short_answer",
-    "question": "What causes Ophelia’s death?",
-    "correct": "Drowning"
+    "type": "multiple_choice",
+    "question": "Hamlet emerges as a ________ thinker, exploring ideas about existence long before others dare to do so.",
+    "options": ["pioneered", "pioneering", "pioneer", "pioneers"],
+    "correct": "pioneer"
   },
   {
     "id": 49,
     "type": "multiple_choice",
-    "question": "Which character manipulates others most?",
-    "options": ["Hamlet", "Claudius", "Horatio", "Ophelia"],
-    "correct": "Claudius"
+    "question": "The ghost’s revelation threatens to ________ Hamlet’s understanding of truth and morality.",
+    "options": ["transformation", "transformative", "transform", "transformed"],
+    "correct": "transform"
   },
   {
     "id": 50,
-    "type": "true_false",
-    "question": "The book suggests that power often leads to corruption.",
-    "correct": true
+    "type": "multiple_choice",
+    "question": "Revenge proves to be an unsustainable solution, lacking any ________ moral outcome.",
+    "options": ["sustain", "sustainability", "sustainable", "sustained"],
+    "correct": "sustainable"
   },
-
   {
     "id": 51,
-    "type": "short_answer",
-    "question": "What literary genre is Hamlet?",
-    "correct": "Tragedy"
+    "type": "multiple_choice",
+    "question": "Hamlet and Laertes ________ sharply in how they respond to their fathers’ deaths.",
+    "options": ["difference", "differ", "different", "differently"],
+    "correct": "differ"
   },
   {
     "id": 52,
     "type": "multiple_choice",
-    "question": "Which emotion dominates Hamlet’s soliloquies?",
-    "options": ["Joy", "Confusion", "Anger", "Fear"],
-    "correct": "Confusion"
+    "question": "The play performance ________ alters Claudius’s behavior, exposing his guilt.",
+    "options": ["significance", "signify", "significantly", "significant"],
+    "correct": "significantly"
   },
   {
     "id": 53,
-    "type": "true_false",
-    "question": "Hamlet trusts Horatio completely.",
-    "correct": true
+    "type": "multiple_choice",
+    "question": "Claudius plans a deadly ________ to eliminate Hamlet without raising suspicion.",
+    "options": ["intervene", "intervention", "intervening", "intervened"],
+    "correct": "intervention"
   },
   {
     "id": 54,
-    "type": "short_answer",
-    "question": "Who sends Hamlet to England?",
-    "correct": "Claudius"
+    "type": "multiple_choice",
+    "question": "Laertes allows his anger to be ________ by others for political gain.",
+    "options": ["harvest", "harvested", "harvesting", "harvests"],
+    "correct": "harvested"
   },
   {
     "id": 55,
     "type": "multiple_choice",
-    "question": "What happens to Rosencrantz and Guildenstern?",
-    "options": ["They escape", "They become kings", "They are executed", "They join Fortinbras"],
-    "correct": "They are executed"
+    "question": "Hamlet is eventually ________ as a figure of moral insight rather than madness.",
+    "options": ["recognize", "recognizing", "recognized", "recognition"],
+    "correct": "recognized"
   },
-
   {
     "id": 56,
-    "type": "true_false",
-    "question": "Hamlet directly kills Claudius.",
-    "correct": true
+    "type": "multiple_choice",
+    "question": "Many innocent lives are ________ in the pursuit of revenge.",
+    "options": ["sacrifice", "sacrificial", "sacrificed", "sacrificing"],
+    "correct": "sacrificed"
   },
   {
     "id": 57,
-    "type": "short_answer",
-    "question": "What does the ghost demand?",
-    "correct": "Revenge"
+    "type": "multiple_choice",
+    "question": "Private grief is often ________ into public duty within the royal court.",
+    "options": ["convert", "conversion", "converted", "converting"],
+    "correct": "converted"
   },
   {
     "id": 58,
     "type": "multiple_choice",
-    "question": "Which symbol best represents decay in the book?",
-    "options": ["Flowers", "Poison", "Gold", "Music"],
-    "correct": "Poison"
+    "question": "The duel is carefully ________ to ensure a fatal outcome.",
+    "options": ["commission", "commissioning", "commissioned", "commissions"],
+    "correct": "commissioned"
   },
   {
     "id": 59,
-    "type": "true_false",
-    "question": "The ghost may symbolize Hamlet’s inner conflict.",
-    "correct": true
+    "type": "multiple_choice",
+    "question": "Hamlet frequently contrasts human behavior with what is ________ and instinctive.",
+    "options": ["naturally", "natural", "nature", "naturalize"],
+    "correct": "natural"
   },
   {
     "id": 60,
-    "type": "short_answer",
-    "question": "What quality makes Hamlet a tragic hero?",
-    "correct": "A fatal flaw"
+    "type": "multiple_choice",
+    "question": "The play-within-the-play is deliberately ________ to provoke a reaction from Claudius.",
+    "options": ["design", "designer", "designed", "designing"],
+    "correct": "designed"
   },
-
   {
     "id": 61,
     "type": "multiple_choice",
-    "question": "Which value does Horatio represent?",
-    "options": ["Ambition", "Loyalty", "Power", "Revenge"],
-    "correct": "Loyalty"
+    "question": "Hamlet struggles to ________ his integrity in a corrupt environment.",
+    "options": ["preserved", "preserving", "preserve", "preservation"],
+    "correct": "preserve"
   },
   {
     "id": 62,
-    "type": "true_false",
-    "question": "Gertrude is aware of Claudius’s crime from the beginning.",
-    "correct": false
+    "type": "multiple_choice",
+    "question": "The tragedy explores ________ responses to grief, anger, and betrayal.",
+    "options": ["vary", "variety", "various", "variably"],
+    "correct": "various"
   },
   {
     "id": 63,
-    "type": "short_answer",
-    "question": "What emotion drives Claudius most?",
-    "correct": "Ambition"
+    "type": "multiple_choice",
+    "question": "The characters’ emotional states are ________ from deep despair to uncontrolled rage.",
+    "options": ["range", "ranged", "ranging", "ranges"],
+    "correct": "ranging"
   },
   {
     "id": 64,
     "type": "multiple_choice",
-    "question": "Which theme is shown by spying and secrecy?",
-    "options": ["Love", "Deceit", "Honor", "Faith"],
-    "correct": "Deceit"
+    "question": "After Ophelia’s death, Hamlet describes the world as an emotional ________ devoid of comfort.",
+    "options": ["desert", "deserted", "deserting", "deserts"],
+    "correct": "desert"
   },
   {
     "id": 65,
-    "type": "true_false",
-    "question": "Most characters die by the end of Hamlet.",
-    "correct": true
+    "type": "multiple_choice",
+    "question": "Hamlet attempts to ________ his understanding of human nature through reflection.",
+    "options": ["improved", "improving", "improvement", "improve"],
+    "correct": "improve"
   },
-
   {
     "id": 66,
-    "type": "short_answer",
-    "question": "What is Hamlet’s final request?",
-    "correct": "That his story be told"
+    "type": "multiple_choice",
+    "question": "Denmark is ________ by political tension and moral uncertainty.",
+    "options": ["border", "borders", "bordered", "bordering"],
+    "correct": "bordered"
   },
   {
     "id": 67,
     "type": "multiple_choice",
-    "question": "Which character contrasts Hamlet philosophically?",
-    "options": ["Horatio", "Fortinbras", "Polonius", "Ophelia"],
-    "correct": "Fortinbras"
+    "question": "The events of the story ________ rapidly once violence is introduced.",
+    "options": ["development", "developed", "developing", "develop"],
+    "correct": "develop"
   },
   {
     "id": 68,
-    "type": "true_false",
-    "question": "The book suggests action without thought is dangerous.",
-    "correct": true
+    "type": "multiple_choice",
+    "question": "Revenge becomes a dangerous ________ that ultimately destroys those who pursue it.",
+    "options": ["venture", "venturing", "ventures", "ventured"],
+    "correct": "venture"
   },
   {
     "id": 69,
-    "type": "short_answer",
-    "question": "What does Hamlet admire about Fortinbras?",
-    "correct": "His decisiveness"
-  },
-  {
-    "id": 70,
     "type": "multiple_choice",
-    "question": "Which theme best fits the phrase \"seeming vs being\"?",
-    "options": ["Identity", "Appearance vs reality", "Love", "Fate"],
-    "correct": "Appearance vs reality"
+    "question": "Polonius offers unsolicited ________, believing himself wiser than others.",
+    "options": ["advise", "advising", "advice", "advisable"],
+    "correct": "advice"
   },
-
+    {
+    "id": 70,
+    "type": "ordering",
+    "question": "Arrange the following events in the order they occur, beginning with the political situation that frames the story.",
+    "items": [
+      "Claudius assumes the throne after the death of the former king",
+      "Fortinbras threatens Denmark’s borders",
+      "The royal court celebrates Claudius’s marriage",
+      "Hamlet expresses grief over his father’s death"
+    ]
+  },
   {
     "id": 71,
-    "type": "true_false",
-    "question": "Polonius often gives long advice.",
-    "correct": true
+    "type": "ordering",
+    "question": "Place these events in the correct sequence related to the appearance of the ghost.",
+    "items": [
+      "The guards witness a mysterious apparition",
+      "Horatio is summoned to observe the ghost",
+      "The ghost refuses to speak",
+      "Hamlet is informed of the sightings"
+    ]
   },
   {
     "id": 72,
-    "type": "short_answer",
-    "question": "Who warns Ophelia about Hamlet?",
-    "correct": "Polonius"
+    "type": "ordering",
+    "question": "Order the following moments leading up to Hamlet’s first direct encounter with the ghost.",
+    "items": [
+      "Hamlet joins the guards at night",
+      "The ghost appears again",
+      "Hamlet follows the ghost alone",
+      "The ghost reveals the truth about the murder"
+    ]
   },
   {
     "id": 73,
-    "type": "multiple_choice",
-    "question": "What is Polonius’s main flaw?",
-    "options": ["Silence", "Arrogance", "Talkativeness", "Cruelty"],
-    "correct": "Talkativeness"
+    "type": "ordering",
+    "question": "Arrange these actions showing Hamlet’s response to the ghost’s revelation.",
+    "items": [
+      "Hamlet vows to remember his father",
+      "Hamlet resolves to feign madness",
+      "Hamlet distances himself from Ophelia",
+      "Hamlet begins observing Claudius closely"
+    ]
   },
   {
     "id": 74,
-    "type": "true_false",
-    "question": "Hamlet hates Ophelia.",
-    "correct": false
+    "type": "ordering",
+    "question": "Place the following events in order regarding the court’s reaction to Hamlet’s behavior.",
+    "items": [
+      "Polonius suspects love as the cause of Hamlet’s madness",
+      "Rosencrantz and Guildenstern are summoned",
+      "Hamlet confronts Polonius verbally",
+      "Claudius begins to fear Hamlet"
+    ]
   },
   {
     "id": 75,
-    "type": "short_answer",
-    "question": "What emotion drives Hamlet’s harsh words to Ophelia?",
-    "correct": "Confusion"
+    "type": "ordering",
+    "question": "Arrange these events related to the arrival of the traveling actors.",
+    "items": [
+      "The players arrive at court",
+      "Hamlet requests a specific scene",
+      "Hamlet plans to test Claudius’s guilt",
+      "Claudius agrees to attend the performance"
+    ]
   },
-
   {
     "id": 76,
-    "type": "multiple_choice",
-    "question": "Which theme is emphasized by the graveyard scene?",
-    "options": ["Love", "Death", "Power", "Revenge"],
-    "correct": "Death"
+    "type": "ordering",
+    "question": "Order the key moments of the play-within-the-play.",
+    "items": [
+      "The performance begins",
+      "The poison is poured into the sleeping king’s ear",
+      "Claudius reacts violently",
+      "The performance is abruptly stopped"
+    ]
   },
   {
     "id": 77,
-    "type": "true_false",
-    "question": "Death equalizes all people in Hamlet.",
-    "correct": true
+    "type": "ordering",
+    "question": "Arrange these events following Claudius’s exposure.",
+    "items": [
+      "Hamlet confronts his mother",
+      "Polonius hides behind the curtain",
+      "Hamlet kills Polonius",
+      "Gertrude reacts in horror"
+    ]
   },
   {
     "id": 78,
-    "type": "short_answer",
-    "question": "What does Hamlet realize about life in the graveyard?",
-    "correct": "Everyone dies regardless of status"
+    "type": "ordering",
+    "question": "Place these developments in order concerning Hamlet’s exile.",
+    "items": [
+      "Claudius decides Hamlet must be removed",
+      "Hamlet is sent to England",
+      "Claudius secretly orders Hamlet’s execution",
+      "Hamlet discovers the letter"
+    ]
   },
   {
     "id": 79,
-    "type": "multiple_choice",
-    "question": "Which character represents moral balance?",
-    "options": ["Claudius", "Hamlet", "Horatio", "Laertes"],
-    "correct": "Horatio"
+    "type": "ordering",
+    "question": "Arrange the events involving Ophelia and Laertes after Polonius’s death.",
+    "items": [
+      "Ophelia descends into madness",
+      "Laertes returns to Denmark",
+      "Ophelia’s death is reported",
+      "Laertes seeks revenge"
+    ]
   },
   {
     "id": 80,
-    "type": "true_false",
-    "question": "Horatio survives the play.",
-    "correct": true
+    "type": "ordering",
+    "question": "Order the final events leading to the conclusion of the story.",
+    "items": [
+      "The duel between Hamlet and Laertes begins",
+      "Gertrude drinks the poisoned wine",
+      "Laertes and Hamlet are both wounded",
+      "Claudius is exposed and killed"
+    ]
   },
-
-  {
+    {
     "id": 81,
-    "type": "short_answer",
-    "question": "What is the main conflict in Hamlet?",
-    "correct": "Revenge versus moral hesitation"
+    "type": "matching",
+    "question": "Match each character with the primary motive that drives their actions.",
+    "pairs": [
+      { "left": "Hamlet", "right": "Moral certainty before action" },
+      { "left": "Claudius", "right": "Preservation of power" },
+      { "left": "Gertrude", "right": "Emotional security" },
+      { "left": "Laertes", "right": "Immediate revenge" }
+    ]
   },
   {
     "id": 82,
-    "type": "multiple_choice",
-    "question": "Which idea best describes Hamlet’s worldview?",
-    "options": ["Optimistic", "Naive", "Philosophical", "Carefree"],
-    "correct": "Philosophical"
+    "type": "matching",
+    "question": "Match each character with their dominant psychological trait.",
+    "pairs": [
+      { "left": "Hamlet", "right": "Introspective skepticism" },
+      { "left": "Ophelia", "right": "Emotional vulnerability" },
+      { "left": "Polonius", "right": "Intrusive pragmatism" },
+      { "left": "Claudius", "right": "Calculating anxiety" }
+    ]
   },
   {
     "id": 83,
-    "type": "true_false",
-    "question": "Hamlet believes in destiny.",
-    "correct": true
+    "type": "matching",
+    "question": "Match each symbol with its underlying meaning.",
+    "pairs": [
+      { "left": "The Ghost", "right": "Unresolved moral obligation" },
+      { "left": "Poison", "right": "Corruption spreading silently" },
+      { "left": "The Crown", "right": "Illegitimate authority" },
+      { "left": "The Night", "right": "Moral uncertainty" }
+    ]
   },
   {
     "id": 84,
-    "type": "short_answer",
-    "question": "Who dies first among the royal family?",
-    "correct": "King Hamlet"
+    "type": "matching",
+    "question": "Match each character with how they respond to grief.",
+    "pairs": [
+      { "left": "Hamlet", "right": "Philosophical contemplation" },
+      { "left": "Laertes", "right": "Violent reaction" },
+      { "left": "Gertrude", "right": "Emotional avoidance" },
+      { "left": "Ophelia", "right": "Psychological collapse" }
+    ]
   },
   {
     "id": 85,
-    "type": "multiple_choice",
-    "question": "Which value ultimately triumphs at the end?",
-    "options": ["Revenge", "Truth", "Power", "Love"],
-    "correct": "Truth"
+    "type": "matching",
+    "question": "Match each setting with its symbolic function.",
+    "pairs": [
+      { "left": "Elsinore Castle", "right": "Political surveillance" },
+      { "left": "The Graveyard", "right": "Inevitability of death" },
+      { "left": "The Court", "right": "Public performance of power" },
+      { "left": "The Battlements", "right": "Boundary between worlds" }
+    ]
   },
-
   {
     "id": 86,
-    "type": "true_false",
-    "question": "The book ends tragically but with hope for Denmark.",
-    "correct": true
+    "type": "matching",
+    "question": "Match each character with the role they play in advancing the central conflict.",
+    "pairs": [
+      { "left": "Horatio", "right": "Moral witness" },
+      { "left": "Rosencrantz", "right": "Instrument of manipulation" },
+      { "left": "Guildenstern", "right": "Political compliance" },
+      { "left": "Fortinbras", "right": "External parallel" }
+    ]
   },
   {
     "id": 87,
-    "type": "short_answer",
-    "question": "What does Fortinbras inherit?",
-    "correct": "The throne of Denmark"
+    "type": "matching",
+    "question": "Match each object with its narrative significance.",
+    "pairs": [
+      { "left": "The Letter to England", "right": "Betrayal disguised as diplomacy" },
+      { "left": "The Sword", "right": "Personalized violence" },
+      { "left": "The Cup", "right": "Unintended consequence" },
+      { "left": "The Play", "right": "Exposure of truth" }
+    ]
   },
   {
     "id": 88,
-    "type": "multiple_choice",
-    "question": "Which phrase best describes Hamlet’s journey?",
-    "options": [
-      "From innocence to wisdom",
-      "From doubt to acceptance",
-      "From power to weakness",
-      "From joy to madness"
-    ],
-    "correct": "From doubt to acceptance"
+    "type": "matching",
+    "question": "Match each character with their moral weakness.",
+    "pairs": [
+      { "left": "Hamlet", "right": "Excessive hesitation" },
+      { "left": "Claudius", "right": "Ambition without remorse" },
+      { "left": "Polonius", "right": "Self-important interference" },
+      { "left": "Gertrude", "right": "Lack of moral scrutiny" }
+    ]
   },
   {
     "id": 89,
-    "type": "true_false",
-    "question": "Hamlet achieves inner peace before death.",
-    "correct": true
+    "type": "matching",
+    "question": "Match each theme with the event that most clearly illustrates it.",
+    "pairs": [
+      { "left": "Appearance vs Reality", "right": "Feigned madness" },
+      { "left": "Corruption", "right": "Poisoned ear" },
+      { "left": "Revenge", "right": "The duel" },
+      { "left": "Mortality", "right": "The skull in the graveyard" }
+    ]
   },
   {
     "id": 90,
-    "type": "short_answer",
-    "question": "What lesson does Hamlet teach about revenge?",
-    "correct": "It has destructive consequences"
+    "type": "matching",
+    "question": "Match each character with their ultimate outcome.",
+    "pairs": [
+      { "left": "Hamlet", "right": "Moral clarity through death" },
+      { "left": "Claudius", "right": "Punished exposure" },
+      { "left": "Laertes", "right": "Repentant demise" },
+      { "left": "Ophelia", "right": "Tragic dissolution" }
+    ]
   },
-
-  {
+    {
     "id": 91,
     "type": "multiple_choice",
-    "question": "Which character acts as the audience’s moral guide?",
-    "options": ["Hamlet", "Horatio", "Polonius", "Claudius"],
-    "correct": "Horatio"
+    "question": "Which best explains Hamlet’s hesitation in taking revenge?",
+    "options": [
+      "He is unaware of Claudius’s guilt",
+      "He fears moral and spiritual consequences",
+      "He is incapable of action",
+      "He prefers public confrontation"
+    ],
+    "correct": "He fears moral and spiritual consequences"
   },
   {
     "id": 92,
-    "type": "true_false",
-    "question": "Hamlet is a book about certainty.",
-    "correct": false
+    "type": "short_answer",
+    "question": "What is the main theme reflected when Hamlet holds Yorick’s skull?",
+    "correct": "mortality"
   },
   {
     "id": 93,
-    "type": "short_answer",
-    "question": "What human struggle is central to Hamlet?",
-    "correct": "Making difficult moral choices"
+    "type": "ordering",
+    "question": "Arrange these events in the order Hamlet discovers Claudius’s guilt.",
+    "items": [
+      "Hamlet observes Claudius during the play",
+      "The ghost reveals the murder",
+      "Claudius reacts to the reenacted murder scene",
+      "Hamlet decides to confront Claudius"
+    ]
   },
   {
     "id": 94,
-    "type": "multiple_choice",
-    "question": "Which theme is most universal in Hamlet?",
-    "options": ["Politics", "War", "Death", "Inheritance"],
-    "correct": "Death"
+    "type": "matching",
+    "question": "Match the character with their main driving motivation.",
+    "pairs": [
+      { "left": "Hamlet", "right": "Avenging his father" },
+      { "left": "Laertes", "right": "Immediate revenge for Polonius" },
+      { "left": "Claudius", "right": "Maintaining power" },
+      { "left": "Gertrude", "right": "Emotional security" }
+    ]
   },
   {
     "id": 95,
-    "type": "true_false",
-    "question": "Hamlet remains relevant because of its exploration of human psychology.",
-    "correct": true
+    "type": "multiple_choice",
+    "question": "Which symbol represents the spread of corruption in the kingdom?",
+    "options": [
+      "The crown",
+      "Poison",
+      "The skull",
+      "Ophelia’s flowers"
+    ],
+    "correct": "Poison"
   },
-
   {
     "id": 96,
     "type": "short_answer",
-    "question": "What ultimately ends Claudius’s rule?",
-    "correct": "His exposure and death"
+    "question": "What literary device is used when Hamlet speaks his thoughts aloud to reveal his inner conflicts?",
+    "correct": "soliloquy"
   },
   {
     "id": 97,
     "type": "multiple_choice",
-    "question": "Which concept best defines Hamlet’s inner struggle?",
-    "options": ["Faith", "Duty", "Existence", "Greed"],
-    "correct": "Existence"
+    "question": "How does Hamlet test Claudius’s guilt?",
+    "options": [
+      "He challenges him to a duel",
+      "He stages a play reflecting the murder",
+      "He directly accuses him at court",
+      "He consults Horatio for advice"
+    ],
+    "correct": "He stages a play reflecting the murder"
   },
   {
     "id": 98,
-    "type": "true_false",
-    "question": "Hamlet questions the meaning of life.",
-    "correct": true
+    "type": "ordering",
+    "question": "Order these events leading to the final duel.",
+    "items": [
+      "Laertes and Claudius plot Hamlet’s death",
+      "Ophelia dies",
+      "Hamlet returns from England",
+      "The duel takes place"
+    ]
   },
   {
     "id": 99,
-    "type": "short_answer",
-    "question": "What does Hamlet say about readiness?",
-    "correct": "The readiness is all"
+    "type": "matching",
+    "question": "Match each symbol with its meaning.",
+    "pairs": [
+      { "left": "The ghost", "right": "Call for justice" },
+      { "left": "The skull", "right": "Mortality" },
+      { "left": "Poisoned cup", "right": "Betrayal and consequence" },
+      { "left": "Ophelia’s flowers", "right": "Fragility of innocence" }
+    ]
   },
   {
     "id": 100,
     "type": "multiple_choice",
-    "question": "Overall, Hamlet is best described as a study of:",
+    "question": "What is the outcome for Hamlet at the end of the story?",
     "options": [
-      "War strategy",
-      "Human conscience",
-      "Royal romance",
-      "Political law"
+      "He kills Claudius and survives",
+      "He avenges his father but dies",
+      "He abandons revenge and lives in exile",
+      "He is imprisoned for inaction"
     ],
-    "correct": "Human conscience"
+    "correct": "He avenges his father but dies"
+  },
+    {
+    "id": 111,
+    "type": "short_answer",
+    "question": "Hamlet’s correspondence with Horatio was ________, spanning many letters and detailed instructions on observing Claudius.",
+    "correct": "extensive"
+  },
+  {
+    "id": 112,
+    "type": "short_answer",
+    "question": "Polonius ________ Hamlet in the courtly intrigue by reporting his every move to Claudius.",
+    "correct": "signed him up"
+  },
+  {
+    "id": 113,
+    "type": "short_answer",
+    "question": "Gertrude ________ that Hamlet’s melancholy was solely due to his father’s death, failing to perceive the depth of his ethical dilemma.",
+    "correct": "wasn't convinced"
+  },
+  {
+    "id": 114,
+    "type": "short_answer",
+    "question": "Hamlet struggles to ________ between sincere affection and feigned madness when interacting with Ophelia.",
+    "correct": "distinguish"
+  },
+  {
+    "id": 115,
+    "type": "short_answer",
+    "question": "When addressing the court, Hamlet delivered a scathing verbal ________ that challenged Claudius’s legitimacy.",
+    "correct": "pitch"
+  },
+  {
+    "id": 116,
+    "type": "short_answer",
+    "question": "Claudius plotted his moves while Hamlet reacted ________, balancing contemplation and urgent action.",
+    "correct": "simultaneously"
+  },
+  {
+    "id": 117,
+    "type": "short_answer",
+    "question": "Despite the tension of the court, Hamlet developed a ________ with Horatio that allowed candid discussion of revenge.",
+    "correct": "rapport"
+  },
+  {
+    "id": 118,
+    "type": "short_answer",
+    "question": "Hamlet’s reflection on the skull of Yorick serves as a ________ for the inevitability of death.",
+    "correct": "metaphor"
+  },
+  {
+    "id": 119,
+    "type": "short_answer",
+    "question": "The way Hamlet stages the play-within-the-play is designed to ________ Claudius’s guilty conscience.",
+    "correct": "illustrate"
+  },
+  {
+    "id": 120,
+    "type": "short_answer",
+    "question": "Denmark’s court is ________ by political corruption, moral ambiguity, and the haunting presence of the ghost.",
+    "correct": "characterized"
+  },
+  {
+    "id": 121,
+    "type": "short_answer",
+    "question": "The duel between Hamlet and Laertes required incredible focus and ________, as each movement could mean life or death.",
+    "correct": "energy"
+  },
+  {
+    "id": 122,
+    "type": "short_answer",
+    "question": "During the council, Hamlet ________ the question of succession, indirectly revealing Claudius’s treachery.",
+    "correct": "brought up"
+  },
+  {
+    "id": 123,
+    "type": "short_answer",
+    "question": "Ophelia’s behavior sometimes appears ________, her songs and actions seemingly unplanned but deeply symbolic.",
+    "correct": "spontaneous"
+  },
+  {
+    "id": 124,
+    "type": "short_answer",
+    "question": "The political intrigues of Elsinore often ________, creating confusion between personal duty and public expectation.",
+    "correct": "overlap"
+  },
+  {
+    "id": 125,
+    "type": "short_answer",
+    "question": "The camaraderie between Hamlet and Horatio is built on mutual trust and shared awareness, reflecting true ________.",
+    "correct": "camaraderie"
+  },
+  {
+    "id": 126,
+    "type": "short_answer",
+    "question": "The poisoned cup ________ the corruption of Claudius’s rule, symbolizing moral decay in the kingdom.",
+    "correct": "symbolized"
+  },
+  {
+    "id": 127,
+    "type": "short_answer",
+    "question": "During court debates, Hamlet often needs to ________ to assert his argument while others attempt to dominate the conversation.",
+    "correct": "hold the floor"
+  },
+  {
+    "id": 128,
+    "type": "short_answer",
+    "question": "In the fencing scene, Hamlet’s precise ________ demonstrates his skill and strategic mind.",
+    "correct": "dribbling"
+  },
+  {
+    "id": 129,
+    "type": "short_answer",
+    "question": "During the duel, Laertes would carefully ________ the foil to Hamlet to ensure a lethal advantage.",
+    "correct": "toss"
+  },
+  {
+    "id": 130,
+    "type": "short_answer",
+    "question": "Hamlet’s actions often ________ Laertes’s impulsive nature, reflecting a contrast in revenge philosophy.",
+    "correct": "tackle"
+  },
+  {
+    "id": 131,
+    "type": "short_answer",
+    "question": "Claudius’s demeanor in public often ________ a composed king, but privately he reveals panic and guilt.",
+    "correct": "resembles"
+  },
+  {
+    "id": 132,
+    "type": "short_answer",
+    "question": "The mirror scene in Gertrude’s chamber allows Hamlet to ________ his mother’s conscience and the moral consequences of her choices.",
+    "correct": "reflect"
+  },
+  {
+    "id": 133,
+    "type": "short_answer",
+    "question": "In the court, the strict adherence to ________ governs how nobles speak, move, and observe social protocol.",
+    "correct": "etiquette"
+  },
+  {
+    "id": 134,
+    "type": "short_answer",
+    "question": "Hamlet must quickly ________ the poisoned cup to prevent Gertrude from drinking it, demonstrating quick thinking.",
+    "correct": "grab"
+  },
+  {
+    "id": 135,
+    "type": "short_answer",
+    "question": "The king’s decisions often follow a strict ________ procedure to disguise his true intentions.",
+    "correct": "procedural"
+  },
+  {
+    "id": 136,
+    "type": "short_answer",
+    "question": "Laertes demonstrates excessive ________ to Claudius, placing loyalty over moral judgment.",
+    "correct": "deference"
+  },
+    {
+    "id": 137,
+    "type": "multiple_choice",
+    "question": "The king’s plans were so ________ that no detail of the assassination plot escaped notice.",
+    "options": ["extensively", "extensive", "extend", "extension"],
+    "correct": "extensive"
+  },
+  {
+    "id": 138,
+    "type": "multiple_choice",
+    "question": "Polonius ________ Laertes into the spy network to monitor Hamlet’s movements.",
+    "options": ["signed him up", "signup", "signing", "signed"],
+    "correct": "signed him up"
+  },
+  {
+    "id": 139,
+    "type": "multiple_choice",
+    "question": "Even after Hamlet’s speech, Gertrude remained ________ about the true intentions behind his madness.",
+    "options": ["unconvincing", "wasn't convinced", "convincedly", "convinces"],
+    "correct": "wasn't convinced"
+  },
+  {
+    "id": 140,
+    "type": "multiple_choice",
+    "question": "Ophelia struggled to ________ between Hamlet’s genuine affection and his feigned insanity.",
+    "options": ["distinguish", "distinction", "distinct", "distinguishing"],
+    "correct": "distinguish"
+  },
+  {
+    "id": 141,
+    "type": "multiple_choice",
+    "question": "Hamlet prepared a passionate ________ to expose Claudius’s guilt before the court.",
+    "options": ["pitch", "pitched", "pitching", "pitches"],
+    "correct": "pitch"
+  },
+  {
+    "id": 142,
+    "type": "multiple_choice",
+    "question": "Hamlet needed to act and speak ________ to respond to multiple threats simultaneously.",
+    "options": ["simultaneously", "simultaneous", "simultaneity", "simultaneities"],
+    "correct": "simultaneously"
+  },
+  {
+    "id": 143,
+    "type": "multiple_choice",
+    "question": "Horatio maintained a strong ________ with Hamlet, allowing candid discussion of revenge plans.",
+    "options": ["rapport", "rapports", "rapporte", "rapporting"],
+    "correct": "rapport"
+  },
+  {
+    "id": 144,
+    "type": "multiple_choice",
+    "question": "The ghost serves as a powerful ________ for Hamlet’s contemplation of mortality.",
+    "options": ["metaphor", "metaphoric", "metaphorically", "metaphors"],
+    "correct": "metaphor"
+  },
+  {
+    "id": 145,
+    "type": "multiple_choice",
+    "question": "Hamlet’s staging of the play was meant to ________ Claudius’s guilt without direct accusation.",
+    "options": ["illustrate", "illustration", "illustrative", "illustrated"],
+    "correct": "illustrate"
+  },
+  {
+    "id": 146,
+    "type": "multiple_choice",
+    "question": "Elsinore is ________ by betrayal, revenge, and political intrigue, shaping Hamlet’s worldview.",
+    "options": ["characterized", "character", "characterizing", "characterization"],
+    "correct": "characterized"
+  },
+  {
+    "id": 147,
+    "type": "multiple_choice",
+    "question": "Hamlet showed remarkable ________ in dueling Laertes, conserving his strength and focus.",
+    "options": ["energy", "energetic", "energized", "energies"],
+    "correct": "energy"
+  },
+  {
+    "id": 148,
+    "type": "multiple_choice",
+    "question": "During the meeting with Claudius, Hamlet ________ the subject of espionage, indirectly exposing Polonius.",
+    "options": ["brought up", "bring up", "bringing", "broughts up"],
+    "correct": "brought up"
+  },
+  {
+    "id": 149,
+    "type": "multiple_choice",
+    "question": "Ophelia’s actions sometimes appear ________, blending unrehearsed emotion with deep symbolism.",
+    "options": ["spontaneous", "spontaneously", "spontaneity", "spontaneities"],
+    "correct": "spontaneous"
+  },
+  {
+    "id": 150,
+    "type": "multiple_choice",
+    "question": "Political and personal conflicts often ________, making it hard to separate revenge from duty.",
+    "options": ["overlap", "overlapped", "overlapping", "overlaps"],
+    "correct": "overlap"
+  },
+  {
+    "id": 151,
+    "type": "multiple_choice",
+    "question": "The mutual trust between Hamlet and Horatio reflects their deep ________ and shared understanding.",
+    "options": ["camaraderie", "camaraderies", "camaraderie’s", "camaraderied"],
+    "correct": "camaraderie"
+  },
+  {
+    "id": 152,
+    "type": "multiple_choice",
+    "question": "The poisoned cup ________ the king’s moral corruption and foreshadowed tragedy.",
+    "options": ["symbolized", "symbolize", "symbolizing", "symbolic"],
+    "correct": "symbolized"
+  },
+  {
+    "id": 153,
+    "type": "multiple_choice",
+    "question": "When addressing the court, Hamlet often needs to ________ to command attention and assert authority.",
+    "options": ["hold the floor", "holds the floor", "holding the floor", "held the floor"],
+    "correct": "hold the floor"
+  },
+  {
+    "id": 154,
+    "type": "multiple_choice",
+    "question": "During the duel, Hamlet’s precise ________ allowed him to anticipate Laertes’s moves.",
+    "options": ["dribbling", "dribble", "dribbled", "dribbles"],
+    "correct": "dribbling"
+  },
+  {
+    "id": 155,
+    "type": "multiple_choice",
+    "question": "Laertes carefully ________ the foil to gain a lethal advantage against Hamlet.",
+    "options": ["toss", "tossed", "tossing", "tosses"],
+    "correct": "toss"
+  },
+  {
+    "id": 156,
+    "type": "multiple_choice",
+    "question": "Hamlet’s strategic movements often ________ Laertes’s aggressive style, providing balance in the duel.",
+    "options": ["tackle", "tackled", "tackling", "tackles"],
+    "correct": "tackle"
+  },
+  {
+    "id": 157,
+    "type": "multiple_choice",
+    "question": "Claudius’s public persona ________ a confident ruler, but secretly he is anxious and guilty.",
+    "options": ["resembles", "resemble", "resembling", "resembled"],
+    "correct": "resembles"
+  },
+  {
+    "id": 158,
+    "type": "multiple_choice",
+    "question": "The mirror scene allows Hamlet to ________ the moral implications of Gertrude’s choices.",
+    "options": ["reflect", "reflected", "reflecting", "reflection"],
+    "correct": "reflect"
+  },
+  {
+    "id": 159,
+    "type": "multiple_choice",
+    "question": "Strict adherence to court ________ dictated how nobles acted, spoke, and observed social hierarchy.",
+    "options": ["etiquette", "etiquetted", "etiquettes", "etiquetting"],
+    "correct": "etiquette"
+  },
+  {
+    "id": 160,
+    "type": "multiple_choice",
+    "question": "Hamlet had to quickly ________ the poisoned cup to prevent Gertrude from drinking it.",
+    "options": ["grab", "grabbing", "grabbed", "grabs"],
+    "correct": "grab"
   }
 ]

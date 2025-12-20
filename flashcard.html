@@ -1,259 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Economics Flashcards</title>
+    <title>Biology Flashcards - Centered</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Sarabun:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sarabun:wght@300;400;600;700&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --container-bg: #1e1e1e;
-            --text-main: #e0e0e0;
-            --text-muted: #a0a0a0;
-            --pastel-pink: #ffb7b2;
-            --pastel-mint: #b5ead7;
-            --pastel-purple: #c7ceea;
+            --bg-gradient: radial-gradient(circle at center, #0a0c1b 0%, #03040a 100%);
+            --card-bg: #0d111d;
+            --card-border: rgba(255, 255, 255, 0.05);
+            --accent: #6366f1;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --success: #22c55e;
+            --fail: #ef4444;
+            --flip-speed: 0.4s;
         }
 
         * {
             box-sizing: border-box;
-            outline: none;
+            margin: 0;
+            padding: 0;
+            font-family: 'Sarabun', 'Inter', sans-serif;
         }
 
         body {
-            font-family: 'Inter', 'Sarabun', sans-serif;
-            background-color: var(--bg-color);
+            background: var(--bg-gradient);
             color: var(--text-main);
+            min-height: 100vh;
+            /* Full viewport height */
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
             padding: 20px;
+            overflow-x: hidden;
         }
 
-        #upload-section {
-            text-align: center;
-            padding: 60px 40px;
-            background: var(--container-bg);
-            border: 2px dashed var(--pastel-purple);
-            border-radius: 20px;
-            max-width: 400px;
-            width: 100%;
-        }
-
-        .loading-spinner {
-            border: 4px solid rgba(255, 255, 255, 0.1);
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            border-left-color: var(--pastel-mint);
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-            display: none;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        #upload-section h2 {
-            color: var(--pastel-purple);
-            margin-top: 0;
-            font-weight: 300;
-        }
-
-        .file-upload-label {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: var(--pastel-mint);
-            color: #121212;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: transform 0.2s;
-        }
-
-        .file-upload-label:hover {
-            transform: translateY(-2px);
-        }
-
-        input[type="file"] {
-            display: none;
-        }
-
-        #app-section {
-            display: none;
+        /* --- Centering Wrapper --- */
+        /* This container consumes all available vertical space to center content */
+        .game-wrapper {
+            flex-grow: 1;
+            display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
             width: 100%;
             max-width: 600px;
         }
 
-        .deck-title {
-            color: var(--pastel-pink);
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            text-align: center;
+        /* --- Progress UI --- */
+        .progress-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: 480px) {
+            .progress-wrapper {
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+
+        .question-counter {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            white-space: nowrap;
+        }
+
+        .bar-bg {
+            flex-grow: 1;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: var(--accent);
+            width: 0%;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+        }
+
+        /* --- Flashcard Scene --- */
+        #main-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .scene {
             width: 100%;
             height: 350px;
-            perspective: 1000px;
-            margin-bottom: 30px;
-            cursor: pointer;
+            perspective: 1200px;
         }
 
         .card {
             width: 100%;
             height: 100%;
             position: relative;
-            transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: transform var(--flip-speed) ease-in-out;
             transform-style: preserve-3d;
+            cursor: pointer;
         }
 
         .card.is-flipped {
             transform: rotateY(180deg);
         }
 
+        /* Left-Right Flip */
+
         .card-face {
             position: absolute;
             width: 100%;
             height: 100%;
             backface-visibility: hidden;
+            border-radius: 24px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 30px;
-            border-radius: 24px;
             text-align: center;
-            font-size: 1.4rem;
-            line-height: 1.6;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            overflow-y: auto;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
 
-        .card-face.front {
-            background-color: var(--card-bg);
-            border: 1px solid #333;
-        }
-
-        .card-face.front::after {
-            content: "Tap to flip";
-            position: absolute;
-            bottom: 20px;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            opacity: 0.5;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .card-face.back {
-            background-color: var(--pastel-purple);
-            color: #1a1a1a;
+        .card-back {
             transform: rotateY(180deg);
-            white-space: pre-wrap;
-            font-size: 1.1rem;
+            background: #111827;
         }
 
-        .card-face::-webkit-scrollbar {
-            width: 6px;
+        .content-q {
+            font-size: 2rem;
+            font-weight: 600;
         }
 
-        .card-face::-webkit-scrollbar-thumb {
-            background-color: rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
+        .content-a {
+            font-size: 1.4rem;
+            color: var(--text-dim);
+            line-height: 1.6;
         }
 
+        /* --- Controls --- */
         .controls {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            gap: 15px;
+            margin-top: 30px;
+            display: flex;
             width: 100%;
+            gap: 15px;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            pointer-events: none;
+        }
+
+        .controls.visible {
+            opacity: 1;
+            pointer-events: all;
         }
 
         .btn {
-            padding: 16px;
+            flex: 1;
+            padding: 14px 20px;
+            border-radius: 12px;
             border: none;
-            border-radius: 16px;
-            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            background-color: var(--card-bg);
-            color: var(--text-main);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.1s;
+            transition: all 0.1s ease;
+            color: white;
+            font-size: 1rem;
         }
 
         .btn:active {
-            transform: scale(0.96);
+            transform: scale(0.95);
         }
 
-        .btn:hover {
-            background-color: #2a2a2a;
+        .btn-next {
+            background: var(--accent);
+            box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.3);
         }
 
-        .btn-primary {
-            background-color: var(--pastel-mint);
-            color: #121212;
-        }
-
-        .btn-primary:hover {
-            background-color: #9cdcc7;
-        }
-
-        .progress-bar-container {
-            width: 100%;
-            height: 4px;
-            background-color: #333;
-            border-radius: 2px;
-            margin-top: 30px;
-        }
-
-        .progress-bar {
-            height: 100%;
-            background-color: var(--pastel-pink);
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-
-        .counter {
+        /* --- Completion Page --- */
+        #completion-page {
+            display: none;
             text-align: center;
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            margin-top: 8px;
-            letter-spacing: 1px;
+            width: 100%;
         }
 
+        .congrats-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        .congrats-text {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        /* --- Footer & Reset --- */
+        .footer-actions {
+            margin-top: 20px;
+            flex-shrink: 0;
+            /* Prevents footer from squishing */
+        }
+
+        .btn-text {
+            background: transparent;
+            border: none;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            text-decoration: underline;
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        .btn-text:hover {
+            opacity: 1;
+            color: var(--fail);
+        }
+
+        /* --- Responsive Adjustments --- */
         @media (max-width: 480px) {
             .scene {
                 height: 300px;
             }
 
-            .card-face {
-                font-size: 1.1rem;
-                padding: 20px;
+            .content-q {
+                font-size: 1.6rem;
             }
 
-            .btn {
-                padding: 12px;
+            .content-a {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -261,188 +249,156 @@
 
 <body>
 
-    <div id="upload-section">
-        <div class="loading-spinner" id="loadingSpinner"></div>
-        <div id="manualUpload">
-            <h2>Load Deck</h2>
-            <p>We couldn't auto-load 'EcoSum.xml'.<br>Please upload it manually.</p>
-            <label for="fileInput" class="file-upload-label">Select XML File</label>
-            <input type="file" id="fileInput" accept=".xml">
-            <p id="error-msg" style="color: var(--pastel-pink); display: none; margin-top: 15px;"></p>
-        </div>
-    </div>
+    <!-- Main Game Wrapper (Centered) -->
+    <div class="game-wrapper">
 
-    <div id="app-section">
-        <h2 id="deckTitle" class="deck-title">Deck Name</h2>
-
-        <div class="scene" onclick="flipCard()">
-            <div class="card" id="card">
-                <div class="card-face front" id="frontText"></div>
-                <div class="card-face back" id="backText"></div>
+        <!-- Progress Top -->
+        <div id="top-progress" class="progress-wrapper">
+            <div class="question-counter" id="counter">กำลังโหลด...</div>
+            <div class="bar-bg">
+                <div class="bar-fill" id="progress-fill"></div>
             </div>
         </div>
 
-        <div class="controls">
-            <button class="btn" onclick="prevCard()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M15 18l-6-6 6-6" />
-                </svg>
-            </button>
+        <!-- App Content -->
+        <div id="main-container">
+            <div class="scene">
+                <div class="card" id="card" onclick="flipCard()">
+                    <div class="card-face card-front">
+                        <div class="content-q" id="q-text">...</div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="content-a" id="a-text">...</div>
+                    </div>
+                </div>
+            </div>
 
-            <button class="btn btn-primary" onclick="shuffleDeck()">
-                Re-Shuffle
-            </button>
-
-            <button class="btn" onclick="nextCard()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 18l6-6-6-6" />
-                </svg>
-            </button>
+            <div class="controls" id="controls">
+                <button class="btn btn-next" onclick="nextCard()">เข้าใจแล้ว / ข้อถัดไป</button>
+            </div>
         </div>
 
-        <div class="progress-bar-container">
-            <div class="progress-bar" id="progressBar"></div>
+        <!-- Completion View -->
+        <div id="completion-page">
+            <h1 class="congrats-title">ยอดเยี่ยม! 🎉</h1>
+            <p class="congrats-text">คุณเรียนรู้คำศัพท์ในชุดนี้ครบทั้งหมดแล้ว</p>
+            <button class="btn btn-next" style="width: 200px;" onclick="restartDeck()">เริ่มใหม่ (สุ่มลำดับ)</button>
         </div>
-        <div class="counter" id="counter"></div>
+
+    </div>
+
+    <!-- Global Reset (Footer) -->
+    <div class="footer-actions">
+        <button class="btn-text" onclick="resetAllData()">ล้างข้อมูลและประวัติทั้งหมด (Reset all Data)</button>
     </div>
 
     <script>
-        const CONFIG = {
-            autoLoadFile: './data/EcoSum.xml'
-        };
+        let allCards = [];
+        let remainingCards = [];
+        let completedCount = 0;
+        let isProcessing = false;
 
-        let cards = [];
-        let currentIndex = 0;
-
-        const uploadSection = document.getElementById('upload-section');
-        const manualUpload = document.getElementById('manualUpload');
-        const loadingSpinner = document.getElementById('loadingSpinner');
-        const appSection = document.getElementById('app-section');
-        const errorMsg = document.getElementById('error-msg');
-
-        const cardElement = document.getElementById('card');
-        const frontText = document.getElementById('frontText');
-        const backText = document.getElementById('backText');
-        const counter = document.getElementById('counter');
-        const progressBar = document.getElementById('progressBar');
-        const deckTitle = document.getElementById('deckTitle');
-
-        window.addEventListener('DOMContentLoaded', () => {
-            manualUpload.style.display = 'none';
-            loadingSpinner.style.display = 'block';
-
-            fetch(CONFIG.autoLoadFile)
-                .then(response => {
-                    if (!response.ok) throw new Error("File not found");
-                    return response.text();
-                })
-                .then(xmlString => parseXML(xmlString))
-                .catch(err => {
-                    loadingSpinner.style.display = 'none';
-                    manualUpload.style.display = 'block';
-                });
-        });
-
-        document.getElementById('fileInput').addEventListener('change', function (e) {
-            const file = e.target.files[0];
-            if (!file) return;
-            const reader = new FileReader();
-            reader.onload = (e) => parseXML(e.target.result);
-            reader.readAsText(file);
-        });
-
-        function parseXML(xmlString) {
+        async function init() {
             try {
-                const parser = new DOMParser();
-                const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+                const response = await fetch('./data/Flashcard.json');
+                const data = await response.json();
+                allCards = data.Biology || [];
 
-                if (xmlDoc.getElementsByTagName("parsererror").length > 0) throw new Error("Invalid XML");
+                // Load existing progress
+                const savedProgress = localStorage.getItem('flashcard_completed_ids');
+                const completedIds = savedProgress ? JSON.parse(savedProgress) : [];
 
-                const deck = xmlDoc.getElementsByTagName("deck")[0];
-                deckTitle.innerText = deck ? deck.getAttribute("name") : "Flashcards";
+                // Filter cards
+                remainingCards = allCards.filter(c => !completedIds.includes(c.q));
+                completedCount = completedIds.length;
 
-                const cardElements = xmlDoc.getElementsByTagName("card");
-                let newCards = [];
-
-                for (let i = 0; i < cardElements.length; i++) {
-                    const texts = cardElements[i].getElementsByTagName("text");
-                    let front = "";
-                    let back = "";
-                    for (let j = 0; j < texts.length; j++) {
-                        const name = texts[j].getAttribute("name");
-                        if (name === "Front") front = texts[j].textContent;
-                        if (name === "Back") back = texts[j].textContent;
-                    }
-                    if (front || back) newCards.push({ front, back });
+                if (remainingCards.length === 0 && allCards.length > 0) {
+                    showCompletionPage();
+                } else {
+                    shuffle(remainingCards);
+                    updateDisplay();
                 }
-
-                if (newCards.length === 0) throw new Error("No cards found");
-
-                cards = newCards.sort(() => Math.random() - 0.5);
-
-                currentIndex = 0;
-                uploadSection.style.display = 'none';
-                appSection.style.display = 'flex';
-                updateCardDisplay();
-
             } catch (err) {
-                loadingSpinner.style.display = 'none';
-                manualUpload.style.display = 'block';
-                errorMsg.innerText = "Error: " + err.message;
-                errorMsg.style.display = 'block';
+                document.getElementById('q-text').innerText = "ไม่พบไฟล์ข้อมูลที่ ./data/Flashcard.json";
             }
         }
 
-        function updateCardDisplay() {
-            cardElement.classList.remove('is-flipped');
-            setTimeout(() => {
-                frontText.innerText = cards[currentIndex].front;
-                backText.innerText = cards[currentIndex].back;
-
-                counter.innerText = `${currentIndex + 1} / ${cards.length}`;
-                progressBar.style.width = `${((currentIndex + 1) / cards.length) * 100}%`;
-            }, 150);
+        function shuffle(arr) {
+            return arr.sort(() => Math.random() - 0.5);
         }
 
         function flipCard() {
-            cardElement.classList.toggle('is-flipped');
+            if (isProcessing) return;
+            const card = document.getElementById('card');
+            card.classList.toggle('is-flipped');
+            if (card.classList.contains('is-flipped')) {
+                document.getElementById('controls').classList.add('visible');
+            } else {
+                document.getElementById('controls').classList.remove('visible');
+            }
+        }
+
+        function updateDisplay() {
+            if (remainingCards.length > 0) {
+                const current = remainingCards[0];
+                document.getElementById('q-text').innerText = current.q;
+                document.getElementById('a-text').innerText = current.a;
+                updateStats();
+            } else {
+                showCompletionPage();
+                updateStats(); // Update to 100%
+            }
         }
 
         function nextCard() {
-            if (currentIndex < cards.length - 1) {
-                currentIndex++;
-                updateCardDisplay();
-            } else {
-                shuffleDeck();
+            if (isProcessing || remainingCards.length === 0) return;
+            isProcessing = true;
+
+            const finishedCard = remainingCards.shift();
+            completedCount++;
+
+            const savedProgress = localStorage.getItem('flashcard_completed_ids');
+            const completedIds = savedProgress ? JSON.parse(savedProgress) : [];
+            completedIds.push(finishedCard.q);
+            localStorage.setItem('flashcard_completed_ids', JSON.stringify(completedIds));
+
+            const card = document.getElementById('card');
+            card.classList.remove('is-flipped');
+            document.getElementById('controls').classList.remove('visible');
+
+            // Delay to avoid spoiler
+            setTimeout(() => {
+                updateDisplay();
+                isProcessing = false;
+            }, 400);
+        }
+
+        function updateStats() {
+            const total = allCards.length;
+            const progress = (completedCount / total) * 100;
+            document.getElementById('progress-fill').style.width = `${progress}%`;
+            document.getElementById('counter').innerText = `ความคืบหน้า: ${completedCount} / ${total}`;
+        }
+
+        function showCompletionPage() {
+            document.getElementById('main-container').style.display = 'none';
+            document.getElementById('top-progress').style.display = 'none';
+            document.getElementById('completion-page').style.display = 'block';
+        }
+
+        function restartDeck() {
+            localStorage.removeItem('flashcard_completed_ids');
+            location.reload();
+        }
+
+        function resetAllData() {
+            if (confirm("ต้องการล้างประวัติการเรียนทั้งหมดใช่หรือไม่?")) {
+                localStorage.clear();
+                location.reload();
             }
         }
 
-        function prevCard() {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : cards.length - 1;
-            updateCardDisplay();
-        }
-
-        function shuffleDeck() {
-            cards.sort(() => Math.random() - 0.5);
-            currentIndex = 0;
-            if (cardElement.classList.contains('is-flipped')) {
-                cardElement.classList.remove('is-flipped');
-                setTimeout(updateCardDisplay, 200);
-            } else {
-                updateCardDisplay();
-            }
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (appSection.style.display === 'flex') {
-                if (e.code === 'Space' || e.code === 'ArrowUp') {
-                    flipCard(); e.preventDefault();
-                } else if (e.code === 'ArrowRight') nextCard();
-                else if (e.code === 'ArrowLeft') prevCard();
-            }
-        });
+        init();
     </script>
 </body>
 
