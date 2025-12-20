@@ -236,7 +236,7 @@
           id="question-card"
           class="glass-panel rounded-2xl p-6 md:p-8 shadow-xl min-h-[400px] flex flex-col relative overflow-hidden transition-all duration-300"
         >
-          <div class="absolute top-6 right-6">
+          <div class="absolute top-2.5 right-6">
             <span
               id="q-type-badge"
               class="px-2 py-0.5 text-xs font-semibold uppercase tracking-wider text-indigo-300 bg-indigo-500/10 rounded-full border border-indigo-500/20"
@@ -615,7 +615,9 @@
           wrapper.appendChild(input);
           this.ui.content.appendChild(wrapper);
 
+          this.ui.submitArea.innerHTML = `<button id="submit-btn" class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-medium transition-colors shadow-lg shadow-indigo-500/20">ส่งคําตอบ</button>`;
           this.ui.submitArea.classList.remove("hidden");
+          this.ui.submitBtn = document.getElementById("submit-btn");
           this.ui.submitBtn.onclick = () => {
             const val = input.value.trim().toLowerCase();
             const correct = q.correct.toLowerCase();
@@ -934,6 +936,10 @@
               list.insertBefore(draggable, afterElement);
             }
           });
+          const placeholder = document.createElement("div");
+          placeholder.className = "bg-slate-700/50 border-2 border-dashed border-indigo-500 rounded-xl mb-3";
+          placeholder.style.display = "none";
+
           const createItem = (item, index) => {
             const li = document.createElement("li");
             li.className =
@@ -950,6 +956,8 @@
             text.textContent = item;
             li.appendChild(handle);
             li.appendChild(text);
+
+            // Desktop drag support
             li.addEventListener("dragstart", (e) => {
               e.dataTransfer.effectAllowed = "move";
               li.classList.add("dragging");
@@ -960,6 +968,100 @@
                 ...list.querySelectorAll(".draggable-item"),
               ].map((el) => el.dataset.value);
             });
+
+            // Mobile touch support
+            let touchStartY = 0;
+            let touchStartX = 0;
+            let isDragging = false;
+            let initialIndex = 0;
+            let initialX = 0;
+            let initialY = 0;
+
+            li.addEventListener("touchstart", (e) => {
+              touchStartY = e.touches[0].clientY;
+              touchStartX = e.touches[0].clientX;
+              initialIndex = Array.from(list.children).indexOf(li);
+              li.classList.add("dragging");
+              isDragging = true;
+
+              // Remove item from list to let others shift up
+              const rect = li.getBoundingClientRect();
+              initialX = rect.left;
+              initialY = rect.top;
+              list.removeChild(li);
+              li.style.position = 'fixed';
+              li.style.zIndex = '1000';
+              li.style.left = `${initialX}px`;
+              li.style.top = `${initialY}px`;
+              li.style.width = `${rect.width}px`;
+              document.body.appendChild(li); // Append to body to avoid clipping
+
+              // Show placeholder
+              placeholder.style.height = `${rect.height}px`;
+              placeholder.style.display = "block";
+              // Initially place at end or calculate
+              const afterElement = getDragAfterElement(list, touchStartY);
+              if (afterElement == null) {
+                list.appendChild(placeholder);
+              } else {
+                list.insertBefore(placeholder, afterElement);
+              }
+            });
+
+            li.addEventListener("touchmove", (e) => {
+              if (!isDragging) return;
+              e.preventDefault();
+
+              const touchY = e.touches[0].clientY;
+              const touchX = e.touches[0].clientX;
+
+              // Move the element to follow the finger
+              li.style.left = `${initialX + (touchX - touchStartX)}px`;
+              li.style.top = `${initialY + (touchY - touchStartY)}px`;
+
+              // Update placeholder position
+              if (placeholder.parentNode === list) {
+                list.removeChild(placeholder);
+              }
+              const afterElement = getDragAfterElement(list, touchY);
+              if (afterElement == null) {
+                list.appendChild(placeholder);
+              } else {
+                list.insertBefore(placeholder, afterElement);
+              }
+            });
+
+            li.addEventListener("touchend", (e) => {
+              if (!isDragging) return;
+              isDragging = false;
+
+              li.classList.remove("dragging");
+              li.style.position = '';
+              li.style.zIndex = '';
+              li.style.left = '';
+              li.style.top = '';
+              li.style.width = '';
+
+              // Hide placeholder
+              placeholder.style.display = "none";
+              if (placeholder.parentNode === list) {
+                list.removeChild(placeholder);
+              }
+
+              // Remove from body and insert back into list at the correct position
+              document.body.removeChild(li);
+              const afterElement = getDragAfterElement(list, e.changedTouches[0].clientY);
+              if (afterElement == null) {
+                list.appendChild(li);
+              } else {
+                list.insertBefore(li, afterElement);
+              }
+
+              this.currentOrderState = [
+                ...list.querySelectorAll(".draggable-item"),
+              ].map((el) => el.dataset.value);
+            });
+
             return li;
           };
           this.currentOrderState.forEach((item, idx) => {
