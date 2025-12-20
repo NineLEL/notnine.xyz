@@ -156,10 +156,14 @@
           class="w-full p-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition-colors shadow-lg shadow-indigo-500/20 flex items-center justify-center gap-3">
           Hamlet + Aim High Vocab
         </button>
+                <button onclick="quizApp.selectSubject('healthEdu')"
+                  class="w-full p-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition-colors shadow-lg shadow-indigo-500/20 flex items-center justify-center gap-3">
+                  สุขศึกษา
+                </button>
         <button
           class="w-full p-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition-colors shadow-lg shadow-indigo-500/20 flex items-center justify-center gap-3"
           onclick="window.location.href='/flashcard'">
-          Biology Flashcard (คำศัพท์)
+          Biology Flashcard (คำศัพท์) (Redirect)
         </button>
       </div>
     </div>
@@ -316,6 +320,7 @@
         this.subjects = {
           english: { name: "English", file: "data/English.json" },
           hamlet: { name: "Hamlet", file: "data/Hamlet.json" },
+          healthEdu: { name: "สุขศึกษา", file: "data/HealthEdu.json" },
           ecoHistory: { name: "EcoHistory", file: "data/EcoHistory.json" },
         };
 
