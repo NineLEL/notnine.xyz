@@ -3,6 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="public/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+    <link rel="shortcut icon" href="public/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="public/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Nine" />
+    <link rel="manifest" href="public/site.webmanifest" />
     <title>Quiz</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -931,7 +946,8 @@
             }
           });
           const placeholder = document.createElement("div");
-          placeholder.className = "bg-slate-700/50 border-2 border-dashed border-indigo-500 rounded-xl mb-3";
+          placeholder.className =
+            "bg-slate-700/50 border-2 border-dashed border-indigo-500 rounded-xl mb-3";
           placeholder.style.display = "none";
 
           const createItem = (item, index) => {
@@ -953,7 +969,7 @@
 
             // Desktop drag support
             li.addEventListener("dragstart", (e) => {
-              if (!this.isAnswering) return
+              if (!this.isAnswering) return;
               e.dataTransfer.effectAllowed = "move";
               li.classList.add("dragging");
             });
@@ -984,8 +1000,8 @@
               initialX = rect.left;
               initialY = rect.top;
               list.removeChild(li);
-              li.style.position = 'fixed';
-              li.style.zIndex = '1000';
+              li.style.position = "fixed";
+              li.style.zIndex = "1000";
               li.style.left = `${initialX}px`;
               li.style.top = `${initialY}px`;
               li.style.width = `${rect.width}px`;
@@ -1030,11 +1046,11 @@
               isDragging = false;
 
               li.classList.remove("dragging");
-              li.style.position = '';
-              li.style.zIndex = '';
-              li.style.left = '';
-              li.style.top = '';
-              li.style.width = '';
+              li.style.position = "";
+              li.style.zIndex = "";
+              li.style.left = "";
+              li.style.top = "";
+              li.style.width = "";
 
               // Hide placeholder
               placeholder.style.display = "none";
@@ -1044,7 +1060,10 @@
 
               // Remove from body and insert back into list at the correct position
               document.body.removeChild(li);
-              const afterElement = getDragAfterElement(list, e.changedTouches[0].clientY);
+              const afterElement = getDragAfterElement(
+                list,
+                e.changedTouches[0].clientY
+              );
               if (afterElement == null) {
                 list.appendChild(li);
               } else {

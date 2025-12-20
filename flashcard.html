@@ -1,405 +1,436 @@
 <!DOCTYPE html>
 <html lang="th">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biology Flashcards - Centered</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sarabun:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
+      rel="icon"
+      type="image/png"
+      href="public/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+    <link rel="shortcut icon" href="public/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="public/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Nine" />
+    <link rel="manifest" href="public/site.webmanifest" />
+    <title>Biology Flashcards</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sarabun:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        :root {
-            --bg-gradient: radial-gradient(circle at center, #0a0c1b 0%, #03040a 100%);
-            --card-bg: #0d111d;
-            --card-border: rgba(255, 255, 255, 0.05);
-            --accent: #6366f1;
-            --text-main: #ffffff;
-            --text-dim: #94a3b8;
-            --success: #22c55e;
-            --fail: #ef4444;
-            --flip-speed: 0.4s;
-        }
+      :root {
+        --bg-gradient: radial-gradient(
+          circle at center,
+          #0a0c1b 0%,
+          #03040a 100%
+        );
+        --card-bg: #0d111d;
+        --card-border: rgba(255, 255, 255, 0.05);
+        --accent: #6366f1;
+        --text-main: #ffffff;
+        --text-dim: #94a3b8;
+        --success: #22c55e;
+        --fail: #ef4444;
+        --flip-speed: 0.4s;
+      }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Sarabun', 'Inter', sans-serif;
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Sarabun", "Inter", sans-serif;
+      }
 
-        body {
-            background: var(--bg-gradient);
-            color: var(--text-main);
-            min-height: 100vh;
-            /* Full viewport height */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            overflow-x: hidden;
-        }
+      body {
+        background: var(--bg-gradient);
+        color: var(--text-main);
+        min-height: 100vh;
+        /* Full viewport height */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        overflow-x: hidden;
+      }
 
-        /* --- Centering Wrapper --- */
-        /* This container consumes all available vertical space to center content */
-        .game-wrapper {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            max-width: 600px;
-        }
+      /* --- Centering Wrapper --- */
+      /* This container consumes all available vertical space to center content */
+      .game-wrapper {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+      }
 
-        /* --- Progress UI --- */
+      /* --- Progress UI --- */
+      .progress-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+
+      @media (min-width: 480px) {
         .progress-wrapper {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 30px;
+          flex-direction: row;
+          align-items: center;
+          gap: 15px;
         }
+      }
 
-        @media (min-width: 480px) {
-            .progress-wrapper {
-                flex-direction: row;
-                align-items: center;
-                gap: 15px;
-            }
-        }
+      .question-counter {
+        font-size: 0.9rem;
+        color: var(--text-dim);
+        white-space: nowrap;
+      }
 
-        .question-counter {
-            font-size: 0.9rem;
-            color: var(--text-dim);
-            white-space: nowrap;
-        }
+      .bar-bg {
+        flex-grow: 1;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+      }
 
-        .bar-bg {
-            flex-grow: 1;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 2px;
-        }
+      .bar-fill {
+        height: 100%;
+        background: var(--accent);
+        width: 0%;
+        border-radius: 2px;
+        transition: width 0.3s ease;
+        box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+      }
 
-        .bar-fill {
-            height: 100%;
-            background: var(--accent);
-            width: 0%;
-            border-radius: 2px;
-            transition: width 0.3s ease;
-            box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
-        }
+      /* --- Flashcard Scene --- */
+      #main-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-        /* --- Flashcard Scene --- */
-        #main-container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+      .scene {
+        width: 100%;
+        height: 350px;
+        perspective: 1200px;
+      }
 
+      .card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: transform var(--flip-speed) ease-in-out;
+        transform-style: preserve-3d;
+        cursor: pointer;
+      }
+
+      .card.is-flipped {
+        transform: rotateY(180deg);
+      }
+
+      /* Left-Right Flip */
+
+      .card-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 24px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      }
+
+      .card-back {
+        transform: rotateY(180deg);
+        background: #111827;
+      }
+
+      .content-q {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      .content-a {
+        font-size: 1.4rem;
+        color: var(--text-dim);
+        line-height: 1.6;
+      }
+
+      /* --- Controls --- */
+      .controls {
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+        gap: 15px;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        pointer-events: none;
+      }
+
+      .controls.visible {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 14px 20px;
+        border-radius: 12px;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.1s ease;
+        color: white;
+        font-size: 1rem;
+      }
+
+      .btn:active {
+        transform: scale(0.95);
+      }
+
+      .btn-next {
+        background: var(--accent);
+        box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.3);
+      }
+
+      /* --- Completion Page --- */
+      #completion-page {
+        display: none;
+        text-align: center;
+        width: 100%;
+      }
+
+      .congrats-title {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: var(--accent);
+      }
+
+      .congrats-text {
+        font-size: 1.2rem;
+        color: var(--text-dim);
+        margin-bottom: 30px;
+      }
+
+      /* --- Footer & Reset --- */
+      .footer-actions {
+        margin-top: 20px;
+        flex-shrink: 0;
+        /* Prevents footer from squishing */
+      }
+
+      .btn-text {
+        background: transparent;
+        border: none;
+        color: var(--text-dim);
+        font-size: 0.8rem;
+        text-decoration: underline;
+        cursor: pointer;
+        opacity: 0.6;
+      }
+
+      .btn-text:hover {
+        opacity: 1;
+        color: var(--fail);
+      }
+
+      /* --- Responsive Adjustments --- */
+      @media (max-width: 480px) {
         .scene {
-            width: 100%;
-            height: 350px;
-            perspective: 1200px;
-        }
-
-        .card {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transition: transform var(--flip-speed) ease-in-out;
-            transform-style: preserve-3d;
-            cursor: pointer;
-        }
-
-        .card.is-flipped {
-            transform: rotateY(180deg);
-        }
-
-        /* Left-Right Flip */
-
-        .card-face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 24px;
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        .card-back {
-            transform: rotateY(180deg);
-            background: #111827;
+          height: 300px;
         }
 
         .content-q {
-            font-size: 2rem;
-            font-weight: 600;
+          font-size: 1.6rem;
         }
 
         .content-a {
-            font-size: 1.4rem;
-            color: var(--text-dim);
-            line-height: 1.6;
+          font-size: 1.2rem;
         }
-
-        /* --- Controls --- */
-        .controls {
-            margin-top: 30px;
-            display: flex;
-            width: 100%;
-            gap: 15px;
-            opacity: 0;
-            transition: opacity 0.2s ease;
-            pointer-events: none;
-        }
-
-        .controls.visible {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .btn {
-            flex: 1;
-            padding: 14px 20px;
-            border-radius: 12px;
-            border: none;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.1s ease;
-            color: white;
-            font-size: 1rem;
-        }
-
-        .btn:active {
-            transform: scale(0.95);
-        }
-
-        .btn-next {
-            background: var(--accent);
-            box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.3);
-        }
-
-        /* --- Completion Page --- */
-        #completion-page {
-            display: none;
-            text-align: center;
-            width: 100%;
-        }
-
-        .congrats-title {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: var(--accent);
-        }
-
-        .congrats-text {
-            font-size: 1.2rem;
-            color: var(--text-dim);
-            margin-bottom: 30px;
-        }
-
-        /* --- Footer & Reset --- */
-        .footer-actions {
-            margin-top: 20px;
-            flex-shrink: 0;
-            /* Prevents footer from squishing */
-        }
-
-        .btn-text {
-            background: transparent;
-            border: none;
-            color: var(--text-dim);
-            font-size: 0.8rem;
-            text-decoration: underline;
-            cursor: pointer;
-            opacity: 0.6;
-        }
-
-        .btn-text:hover {
-            opacity: 1;
-            color: var(--fail);
-        }
-
-        /* --- Responsive Adjustments --- */
-        @media (max-width: 480px) {
-            .scene {
-                height: 300px;
-            }
-
-            .content-q {
-                font-size: 1.6rem;
-            }
-
-            .content-a {
-                font-size: 1.2rem;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- Main Game Wrapper (Centered) -->
     <div class="game-wrapper">
+      <!-- Progress Top -->
+      <div id="top-progress" class="progress-wrapper">
+        <div class="question-counter" id="counter">กำลังโหลด...</div>
+        <div class="bar-bg">
+          <div class="bar-fill" id="progress-fill"></div>
+        </div>
+      </div>
 
-        <!-- Progress Top -->
-        <div id="top-progress" class="progress-wrapper">
-            <div class="question-counter" id="counter">กำลังโหลด...</div>
-            <div class="bar-bg">
-                <div class="bar-fill" id="progress-fill"></div>
+      <!-- App Content -->
+      <div id="main-container">
+        <div class="scene">
+          <div class="card" id="card" onclick="flipCard()">
+            <div class="card-face card-front">
+              <div class="content-q" id="q-text">...</div>
             </div>
+            <div class="card-face card-back">
+              <div class="content-a" id="a-text">...</div>
+            </div>
+          </div>
         </div>
 
-        <!-- App Content -->
-        <div id="main-container">
-            <div class="scene">
-                <div class="card" id="card" onclick="flipCard()">
-                    <div class="card-face card-front">
-                        <div class="content-q" id="q-text">...</div>
-                    </div>
-                    <div class="card-face card-back">
-                        <div class="content-a" id="a-text">...</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="controls" id="controls">
-                <button class="btn btn-next" onclick="nextCard()">เข้าใจแล้ว / ข้อถัดไป</button>
-            </div>
+        <div class="controls" id="controls">
+          <button class="btn btn-next" onclick="nextCard()">
+            เข้าใจแล้ว / ข้อถัดไป
+          </button>
         </div>
+      </div>
 
-        <!-- Completion View -->
-        <div id="completion-page">
-            <h1 class="congrats-title">ยอดเยี่ยม! 🎉</h1>
-            <p class="congrats-text">คุณเรียนรู้คำศัพท์ในชุดนี้ครบทั้งหมดแล้ว</p>
-            <button class="btn btn-next" style="width: 200px;" onclick="restartDeck()">เริ่มใหม่ (สุ่มลำดับ)</button>
-        </div>
-
+      <!-- Completion View -->
+      <div id="completion-page">
+        <h1 class="congrats-title">ยอดเยี่ยม! 🎉</h1>
+        <p class="congrats-text">คุณเรียนรู้คำศัพท์ในชุดนี้ครบทั้งหมดแล้ว</p>
+        <button
+          class="btn btn-next"
+          style="width: 200px"
+          onclick="restartDeck()"
+        >
+          เริ่มใหม่ (สุ่มลำดับ)
+        </button>
+      </div>
     </div>
 
     <!-- Global Reset (Footer) -->
     <div class="footer-actions">
-        <button class="btn-text" onclick="resetAllData()">ล้างข้อมูลและประวัติทั้งหมด (Reset all Data)</button>
+      <button class="btn-text" onclick="resetAllData()">
+        ล้างข้อมูลและประวัติทั้งหมด (Reset all Data)
+      </button>
     </div>
 
     <script>
-        let allCards = [];
-        let remainingCards = [];
-        let completedCount = 0;
-        let isProcessing = false;
+      let allCards = [];
+      let remainingCards = [];
+      let completedCount = 0;
+      let isProcessing = false;
 
-        async function init() {
-            try {
-                const response = await fetch('./data/Flashcard.json');
-                const data = await response.json();
-                allCards = data.Biology || [];
+      async function init() {
+        try {
+          const response = await fetch("./data/Flashcard.json");
+          const data = await response.json();
+          allCards = data.Biology || [];
 
-                // Load existing progress
-                const savedProgress = localStorage.getItem('flashcard_completed_ids');
-                const completedIds = savedProgress ? JSON.parse(savedProgress) : [];
+          // Load existing progress
+          const savedProgress = localStorage.getItem("flashcard_completed_ids");
+          const completedIds = savedProgress ? JSON.parse(savedProgress) : [];
 
-                // Filter cards
-                remainingCards = allCards.filter(c => !completedIds.includes(c.q));
-                completedCount = completedIds.length;
+          // Filter cards
+          remainingCards = allCards.filter((c) => !completedIds.includes(c.q));
+          completedCount = completedIds.length;
 
-                if (remainingCards.length === 0 && allCards.length > 0) {
-                    showCompletionPage();
-                } else {
-                    shuffle(remainingCards);
-                    updateDisplay();
-                }
-            } catch (err) {
-                document.getElementById('q-text').innerText = "ไม่พบไฟล์ข้อมูลที่ ./data/Flashcard.json";
-            }
+          if (remainingCards.length === 0 && allCards.length > 0) {
+            showCompletionPage();
+          } else {
+            shuffle(remainingCards);
+            updateDisplay();
+          }
+        } catch (err) {
+          document.getElementById("q-text").innerText =
+            "ไม่พบไฟล์ข้อมูลที่ ./data/Flashcard.json";
         }
+      }
 
-        function shuffle(arr) {
-            return arr.sort(() => Math.random() - 0.5);
+      function shuffle(arr) {
+        return arr.sort(() => Math.random() - 0.5);
+      }
+
+      function flipCard() {
+        if (isProcessing) return;
+        const card = document.getElementById("card");
+        card.classList.toggle("is-flipped");
+        if (card.classList.contains("is-flipped")) {
+          document.getElementById("controls").classList.add("visible");
+        } else {
+          document.getElementById("controls").classList.remove("visible");
         }
+      }
 
-        function flipCard() {
-            if (isProcessing) return;
-            const card = document.getElementById('card');
-            card.classList.toggle('is-flipped');
-            if (card.classList.contains('is-flipped')) {
-                document.getElementById('controls').classList.add('visible');
-            } else {
-                document.getElementById('controls').classList.remove('visible');
-            }
+      function updateDisplay() {
+        if (remainingCards.length > 0) {
+          const current = remainingCards[0];
+          document.getElementById("q-text").innerText = current.q;
+          document.getElementById("a-text").innerText = current.a;
+          updateStats();
+        } else {
+          showCompletionPage();
+          updateStats(); // Update to 100%
         }
+      }
 
-        function updateDisplay() {
-            if (remainingCards.length > 0) {
-                const current = remainingCards[0];
-                document.getElementById('q-text').innerText = current.q;
-                document.getElementById('a-text').innerText = current.a;
-                updateStats();
-            } else {
-                showCompletionPage();
-                updateStats(); // Update to 100%
-            }
+      function nextCard() {
+        if (isProcessing || remainingCards.length === 0) return;
+        isProcessing = true;
+
+        const finishedCard = remainingCards.shift();
+        completedCount++;
+
+        const savedProgress = localStorage.getItem("flashcard_completed_ids");
+        const completedIds = savedProgress ? JSON.parse(savedProgress) : [];
+        completedIds.push(finishedCard.q);
+        localStorage.setItem(
+          "flashcard_completed_ids",
+          JSON.stringify(completedIds)
+        );
+
+        const card = document.getElementById("card");
+        card.classList.remove("is-flipped");
+        document.getElementById("controls").classList.remove("visible");
+
+        // Delay to avoid spoiler
+        setTimeout(() => {
+          updateDisplay();
+          isProcessing = false;
+        }, 400);
+      }
+
+      function updateStats() {
+        const total = allCards.length;
+        const progress = (completedCount / total) * 100;
+        document.getElementById("progress-fill").style.width = `${progress}%`;
+        document.getElementById(
+          "counter"
+        ).innerText = `ความคืบหน้า: ${completedCount} / ${total}`;
+      }
+
+      function showCompletionPage() {
+        document.getElementById("main-container").style.display = "none";
+        document.getElementById("top-progress").style.display = "none";
+        document.getElementById("completion-page").style.display = "block";
+      }
+
+      function restartDeck() {
+        localStorage.removeItem("flashcard_completed_ids");
+        location.reload();
+      }
+
+      function resetAllData() {
+        if (confirm("ต้องการล้างประวัติการเรียนทั้งหมดใช่หรือไม่?")) {
+          localStorage.clear();
+          location.reload();
         }
+      }
 
-        function nextCard() {
-            if (isProcessing || remainingCards.length === 0) return;
-            isProcessing = true;
-
-            const finishedCard = remainingCards.shift();
-            completedCount++;
-
-            const savedProgress = localStorage.getItem('flashcard_completed_ids');
-            const completedIds = savedProgress ? JSON.parse(savedProgress) : [];
-            completedIds.push(finishedCard.q);
-            localStorage.setItem('flashcard_completed_ids', JSON.stringify(completedIds));
-
-            const card = document.getElementById('card');
-            card.classList.remove('is-flipped');
-            document.getElementById('controls').classList.remove('visible');
-
-            // Delay to avoid spoiler
-            setTimeout(() => {
-                updateDisplay();
-                isProcessing = false;
-            }, 400);
-        }
-
-        function updateStats() {
-            const total = allCards.length;
-            const progress = (completedCount / total) * 100;
-            document.getElementById('progress-fill').style.width = `${progress}%`;
-            document.getElementById('counter').innerText = `ความคืบหน้า: ${completedCount} / ${total}`;
-        }
-
-        function showCompletionPage() {
-            document.getElementById('main-container').style.display = 'none';
-            document.getElementById('top-progress').style.display = 'none';
-            document.getElementById('completion-page').style.display = 'block';
-        }
-
-        function restartDeck() {
-            localStorage.removeItem('flashcard_completed_ids');
-            location.reload();
-        }
-
-        function resetAllData() {
-            if (confirm("ต้องการล้างประวัติการเรียนทั้งหมดใช่หรือไม่?")) {
-                localStorage.clear();
-                location.reload();
-            }
-        }
-
-        init();
+      init();
     </script>
-</body>
-
+  </body>
 </html>
