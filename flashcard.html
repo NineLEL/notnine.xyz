@@ -106,9 +106,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 30px;
+      padding: 25px;
       text-align: center;
       backface-visibility: hidden;
+      overflow-y: auto;
+      scrollbar-width: none;
+    }
+
+    .card-face::-webkit-scrollbar {
+      display: none;
     }
 
     .card-back {
@@ -117,13 +123,22 @@
     }
 
     .content-q {
-      font-size: 2rem;
+      font-size: clamp(1.25rem, 5vw, 2rem);
       font-weight: 600;
+      line-height: 1.4;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word;
+      max-width: 100%;
     }
 
     .content-a {
-      font-size: 1.4rem;
+      font-size: clamp(1rem, 4vw, 1.4rem);
       line-height: 1.6;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word;
+      max-width: 100%;
     }
 
     /* Controls */
@@ -143,7 +158,7 @@
 
     .btn {
       flex: 1;
-      padding: 10px 12px;
+      padding: 12px 10px;
       border-radius: 10px;
       border: none;
       font-weight: 600;
@@ -151,6 +166,7 @@
       cursor: pointer;
       color: white;
       display: inline-block;
+      white-space: nowrap;
     }
 
     .btn:disabled {
@@ -185,6 +201,16 @@
       font-size: 0.8rem;
       text-decoration: underline;
       cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+      .scene {
+        height: 300px;
+      }
+
+      .card-face {
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -251,12 +277,10 @@
         const savedOrderJson = localStorage.getItem("flashcard_order");
         let savedOrder = savedOrderJson ? JSON.parse(savedOrderJson) : null;
 
-        // 1. จัดการ Order
         if (completedIds.length === 0) {
           allCards = shuffleArray([...rawCards]);
           const newOrder = allCards.map(c => c.q);
           localStorage.setItem("flashcard_order", JSON.stringify(newOrder));
-          // ถ้าเป็นผู้ใช้ใหม่ หรือ Reset มา ให้เริ่มที่ 0
           currentIndex = 0;
         } else {
           if (savedOrder && savedOrder.length > 0) {
@@ -270,11 +294,9 @@
             allCards = rawCards;
           }
 
-          // 2. ดึง Index ล่าสุดที่เล่นค้างไว้
           const savedIndex = localStorage.getItem("flashcard_current_index");
           if (savedIndex !== null) {
             currentIndex = parseInt(savedIndex, 10);
-            // กัน Error กรณีไฟล์ JSON เปลี่ยนแล้วเลข index เกินจำนวนการ์ด
             if (currentIndex >= allCards.length || currentIndex < 0) {
               currentIndex = 0;
             }
@@ -285,7 +307,7 @@
         allCards = [{ q: "Error", a: "Check console" }];
       }
 
-      saveCurrentIndex(); // Save initial state just in case
+      saveCurrentIndex();
       updateDisplay();
     }
 
@@ -327,7 +349,6 @@
       document.getElementById("q-text").innerText = nextQ;
       cardElem.classList.remove("is-flipped");
 
-      // Update index & save
       currentIndex = nextIndex;
       saveCurrentIndex();
 
@@ -345,45 +366,63 @@
       const isFlipped = cardElem.classList.contains("is-flipped");
       const controls = document.getElementById("controls");
 
-      // Visibility Logic
+      // Visibility
       if (isCompleted) {
         controls.classList.add("visible");
       } else {
-        if (isFlipped) {
-          controls.classList.add("visible");
-        } else {
-          controls.classList.remove("visible");
-        }
+        if (isFlipped) controls.classList.add("visible");
+        else controls.classList.remove("visible");
       }
 
-      // Buttons State
+      // Buttons Reference
       document.querySelector(".btn-prev").disabled = currentIndex === 0;
       const btnNext = document.getElementById("btnNext");
-      btnNext.disabled = !isCompleted;
-
       const btnUnderstand = document.getElementById("btnUnderstand");
       const btnForget = document.getElementById("btnForget");
 
       if (isCompleted) {
+        // --- Answered Card ---
         btnUnderstand.style.display = "none";
+
         if (isLastCard) {
           btnForget.style.display = "none";
+          btnNext.style.display = "inline-block";
+          btnNext.disabled = true; // No next card
         } else {
-          btnForget.style.display = "inline-block";
           if (isFlipped) {
-            btnForget.innerText = "ถัดไป";
-            btnForget.onclick = goNextAndFlip;
-            btnForget.style.background = "var(--accent)";
+            // ** FLIPPED STATE **
+            // 1. ซ่อนปุ่มกลาง (Forget)
+            btnForget.style.display = "none";
+
+            // 2. โชว์ปุ่มขวา (Next) และให้ทำหน้าที่ Next+Flip
+            btnNext.style.display = "inline-block";
+            btnNext.onclick = goNextAndFlip;
+            btnNext.innerText = "ถัดไป"; // เผื่อมีการเปลี่ยน text
+            btnNext.disabled = false;
           } else {
+            // ** FRONT STATE **
+            // 1. โชว์ปุ่มกลาง (Forget) ปกติ
+            btnForget.style.display = "inline-block";
             btnForget.innerText = "ลืม";
             btnForget.onclick = forgetCard;
             btnForget.style.background = "var(--danger)";
+
+            // 2. โชว์ปุ่มขวา (Next) ปกติ
+            btnNext.style.display = "inline-block";
+            btnNext.onclick = nextCard;
+            btnNext.disabled = false;
           }
         }
       } else {
+        // --- New Card ---
         btnForget.style.display = "none";
         btnForget.style.background = "var(--danger)";
         btnUnderstand.style.display = "inline-block";
+
+        // ปุ่ม Next โชว์ตลอด แต่ Disabled จนกว่าจะกด Understand
+        btnNext.style.display = "inline-block";
+        btnNext.onclick = nextCard;
+        btnNext.disabled = true;
       }
     }
 
@@ -422,7 +461,7 @@
 
         setTimeout(() => {
           currentIndex--;
-          saveCurrentIndex(); // Save state
+          saveCurrentIndex();
           updateDisplay();
         }, delay);
       }
@@ -440,7 +479,7 @@
           goNextAndFlip();
         } else {
           currentIndex++;
-          saveCurrentIndex(); // Save state
+          saveCurrentIndex();
           updateDisplay();
         }
       }
