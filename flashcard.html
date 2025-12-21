@@ -20,8 +20,8 @@
       --danger: #ef4444;
       --text-main: #ffffff;
       --text-dim: #94a3b8;
-      --flip-speed: 0.6s;
-      /* ✅ slower animation */
+      --flip-speed: 0.5s;
+      /* ทำให้เร็วขึ้นเล็กน้อยเพื่อให้ flow ลื่นขึ้น */
     }
 
     * {
@@ -151,6 +151,7 @@
       font-size: 0.85rem;
       cursor: pointer;
       color: white;
+      display: inline-block;
     }
 
     .btn:disabled {
@@ -211,35 +212,62 @@
 
     <div class="controls" id="controls">
       <button class="btn btn-prev" onclick="prevCard()">ก่อนหน้า</button>
-      <button class="btn btn-forget" id="forgetBtn" onclick="forgetCard()">
-        ลืม
-      </button>
-      <button class="btn btn-understand" onclick="markCompleted()">
-        เข้าใจแล้ว
-      </button>
-      <button class="btn btn-next" onclick="nextCard()">ถัดไป</button>
+      <button class="btn btn-forget" id="btnForget">ลืม</button>
+      <button class="btn btn-understand" id="btnUnderstand" onclick="markCompleted()">เข้าใจแล้ว</button>
+      <button class="btn btn-next" id="btnNext" onclick="nextCard()">ถัดไป</button>
     </div>
   </div>
 
   <div class="footer-actions">
-    <button class="btn-text" onclick="resetAllData()">
-      ล้างข้อมูลทั้งหมด
-    </button>
+    <button class="btn-text" onclick="resetAllData()">ล้างข้อมูลทั้งหมด</button>
   </div>
 
   <script>
     let allCards = [];
     let currentIndex = 0;
     let completedIds = [];
-    const FLIP_DELAY = 600; // must match CSS flip speed
+    const FLIP_SPEED_MS = 500; // Match CSS var --flip-speed
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
 
     async function init() {
-      const res = await fetch("./data/Flashcard.json");
-      const data = await res.json();
-      allCards = data.Biology || [];
+      try {
+        const res = await fetch("./data/Flashcard.json");
+        const data = await res.json();
+        let rawCards = data.Biology || [];
 
-      const saved = localStorage.getItem("flashcard_completed_ids");
-      completedIds = saved ? JSON.parse(saved) : [];
+        const savedCompleted = localStorage.getItem("flashcard_completed_ids");
+        completedIds = savedCompleted ? JSON.parse(savedCompleted) : [];
+
+        const savedOrderJson = localStorage.getItem("flashcard_order");
+        let savedOrder = savedOrderJson ? JSON.parse(savedOrderJson) : null;
+
+        if (completedIds.length === 0) {
+          allCards = shuffleArray([...rawCards]);
+          const newOrder = allCards.map(c => c.q);
+          localStorage.setItem("flashcard_order", JSON.stringify(newOrder));
+        } else {
+          if (savedOrder && savedOrder.length > 0) {
+            const orderMap = new Map(savedOrder.map((q, i) => [q, i]));
+            allCards = rawCards.sort((a, b) => {
+              const indexA = orderMap.has(a.q) ? orderMap.get(a.q) : 9999;
+              const indexB = orderMap.has(b.q) ? orderMap.get(b.q) : 9999;
+              return indexA - indexB;
+            });
+          } else {
+            allCards = rawCards;
+          }
+        }
+      } catch (e) {
+        console.error("Error:", e);
+        allCards = [{ q: "Error", a: "Check console" }];
+      }
 
       updateDisplay();
     }
@@ -247,97 +275,187 @@
     function flipCard() {
       document.getElementById("card").classList.toggle("is-flipped");
       document.getElementById("controls").classList.add("visible");
+      updateButtons();
     }
 
-    function resetFlip(callback) {
-      const card = document.getElementById("card");
-      card.classList.remove("is-flipped");
-      document.getElementById("controls").classList.remove("visible");
+    function updateDisplay(skipTextUpdate = false) {
+      if (allCards.length === 0) return;
 
-      setTimeout(() => {
-        callback && callback();
-      }, FLIP_DELAY);
-    }
-
-    function updateDisplay() {
       const card = allCards[currentIndex];
-      document.getElementById("q-text").innerText = card.q;
-      document.getElementById("a-text").innerText = card.a;
+
+      // ถ้าเราสั่ง skipTextUpdate แปลว่าเราจัดการเปลี่ยน Text เองตอน Animation แล้ว
+      if (!skipTextUpdate) {
+        document.getElementById("q-text").innerText = card.q;
+        document.getElementById("a-text").innerText = card.a;
+      }
+
+      // Reset flip state (visually) for new card logic
+      // Note: In auto-advance, we handle remove class manually
+
       updateStats();
       updateButtons();
     }
 
+    // ฟังก์ชันพิเศษ: กดปุ่มที่หน้าเฉลย -> พลิกกลับพร้อมเปลี่ยนเป็นคำถามถัดไปทันที
+    function goNextAndFlip() {
+      const cardElem = document.getElementById("card");
+
+      if (currentIndex >= allCards.length - 1) {
+        // ถ้าเป็นการ์ดใบสุดท้าย แค่พลิกกลับปกติ
+        cardElem.classList.remove("is-flipped");
+        updateButtons();
+        return;
+      }
+
+      // 1. เตรียมข้อมูลการ์ดถัดไป
+      const nextIndex = currentIndex + 1;
+      const nextQ = allCards[nextIndex].q;
+      const nextA = allCards[nextIndex].a;
+
+      // 2. เปลี่ยน "คำถาม" (ด้านหน้า) เป็นข้อใหม่ทันที!
+      // ผู้ใช้จะไม่เห็น เพราะตอนนี้การ์ดหันหลังอยู่ (is-flipped)
+      document.getElementById("q-text").innerText = nextQ;
+
+      // 3. สั่งพลิกการ์ดกลับ (Remove is-flipped)
+      // ผู้ใช้จะเห็นการ์ดหมุนกลับมาเป็นคำถามข้อใหม่ทันที
+      cardElem.classList.remove("is-flipped");
+
+      // 4. อัปเดต Index
+      currentIndex = nextIndex;
+
+      // 5. รอให้ Animation พลิกเสร็จก่อน แล้วค่อยเปลี่ยน "คำตอบ" (ด้านหลัง)
+      // เพื่อไม่ให้ผู้ใช้เห็นคำตอบข้อใหม่แวบๆ ตอนการ์ดกำลังหมุน
+      setTimeout(() => {
+        document.getElementById("a-text").innerText = nextA;
+        // เรียก updateDisplay แต่บอกว่าไม่ต้องแก้ Text แล้วนะ (ทำไปแล้ว)
+        updateDisplay(true);
+      }, FLIP_SPEED_MS); // รอจนพลิกเสร็จ
+    }
+
     function updateButtons() {
-      document.querySelector(".btn-prev").disabled = currentIndex === 0;
-
       const currentQ = allCards[currentIndex].q;
-      document.querySelector(".btn-next").disabled =
-        !completedIds.includes(currentQ);
+      const isCompleted = completedIds.includes(currentQ);
+      const isLastCard = currentIndex === allCards.length - 1;
+      const isFlipped = document.getElementById("card").classList.contains("is-flipped");
+      const controls = document.getElementById("controls");
 
-      // ✅ hide "ลืม" on last card
-      document.getElementById("forgetBtn").style.display =
-        currentIndex === allCards.length - 1 ? "none" : "block";
+      // Visibility Logic
+      if (isCompleted) controls.classList.add("visible");
+      else {
+        if (!isFlipped) controls.classList.remove("visible");
+        else controls.classList.add("visible");
+      }
+
+      // Buttons State
+      document.querySelector(".btn-prev").disabled = currentIndex === 0;
+      const btnNext = document.getElementById("btnNext");
+      btnNext.disabled = !isCompleted;
+
+      // Manage Forget / Understand / Next Flip button
+      const btnUnderstand = document.getElementById("btnUnderstand");
+      const btnForget = document.getElementById("btnForget");
+
+      if (isCompleted) {
+        // --- Answered Card ---
+        btnUnderstand.style.display = "none";
+
+        if (isLastCard) {
+          btnForget.style.display = "none";
+        } else {
+          btnForget.style.display = "inline-block";
+
+          if (isFlipped) {
+            // **STATE: ดูคำตอบอยู่ (และเคยตอบไปแล้ว)**
+            // ปุ่มนี้จะทำหน้าที่เป็น "ถัดไป (แบบพลิกกลับ)"
+            btnForget.innerText = "ถัดไป";
+            btnForget.onclick = goNextAndFlip; // ใช้ฟังก์ชันใหม่
+
+            // เปลี่ยนสีปุ่มให้สื่อความหมายหน่อยก็ได้ (Optional)
+            btnForget.style.background = "var(--accent)";
+          } else {
+            // **STATE: ดูคำถามอยู่ (เคยตอบแล้ว)**
+            // ปุ่มนี้ทำหน้าที่ "ลืม" ตามปกติ
+            btnForget.innerText = "ลืม";
+            btnForget.onclick = forgetCard;
+            btnForget.style.background = "var(--danger)";
+          }
+        }
+
+      } else {
+        // --- New Card ---
+        btnUnderstand.style.display = "inline-block";
+        btnForget.style.display = "none";
+        // Reset color just in case
+        btnForget.style.background = "var(--danger)";
+      }
     }
 
     function markCompleted() {
       const q = allCards[currentIndex].q;
-
       if (!completedIds.includes(q)) {
         completedIds.push(q);
-        localStorage.setItem(
-          "flashcard_completed_ids",
-          JSON.stringify(completedIds)
-        );
+        localStorage.setItem("flashcard_completed_ids", JSON.stringify(completedIds));
       }
 
-      updateStats();
-      updateButtons();
-
+      // Auto Advance Logic for New Card
       if (currentIndex < allCards.length - 1) {
-        resetFlip(() => {
-          currentIndex++;
-          updateDisplay();
-        });
+        // ใช้ Logic เดียวกับ goNextAndFlip เพื่อความลื่นไหล
+        goNextAndFlip();
+      } else {
+        updateDisplay();
       }
     }
 
     function forgetCard() {
       const q = allCards[currentIndex].q;
       completedIds = completedIds.filter((id) => id !== q);
-      localStorage.setItem(
-        "flashcard_completed_ids",
-        JSON.stringify(completedIds)
-      );
-
-      updateStats();
-      updateButtons();
+      localStorage.setItem("flashcard_completed_ids", JSON.stringify(completedIds));
+      updateDisplay(); // Refresh state immediately
     }
 
     function prevCard() {
       if (currentIndex > 0) {
-        resetFlip(() => {
+        const card = document.getElementById("card");
+        const wasFlipped = card.classList.contains("is-flipped");
+
+        // Reset flip immediately
+        card.classList.remove("is-flipped");
+
+        // ถ้ามันพลิกอยู่ ต้องรอ animation นิดนึงก่อนเปลี่ยนเนื้อหา ไม่งั้นจะกระตุก
+        const delay = wasFlipped ? FLIP_SPEED_MS : 0;
+
+        setTimeout(() => {
           currentIndex--;
           updateDisplay();
-        });
+        }, delay);
       }
     }
 
     function nextCard() {
+      // ปุ่มถัดไปแบบปกติ (Manual click)
+      const currentQ = allCards[currentIndex].q;
+      if (!completedIds.includes(currentQ)) return;
+
       if (currentIndex < allCards.length - 1) {
-        resetFlip(() => {
+        const card = document.getElementById("card");
+        const wasFlipped = card.classList.contains("is-flipped");
+
+        // ถ้ามันพลิกอยู่ ใช้ Fast Transition เลยเพื่อความเท่
+        if (wasFlipped) {
+          goNextAndFlip();
+        } else {
+          // ถ้าไม่ได้พลิก ก็เลื่อนปกติ
           currentIndex++;
           updateDisplay();
-        });
+        }
       }
     }
 
     function updateStats() {
       const total = allCards.length;
       const done = completedIds.length;
-      document.getElementById("progress-fill").style.width =
-        `${(done / total) * 100}%`;
-      document.getElementById("counter").innerText =
-        `ความคืบหน้า: ${done} / ${total}`;
+      document.getElementById("progress-fill").style.width = `${(done / total) * 100}%`;
+      document.getElementById("counter").innerText = `ความคืบหน้า: ${done} / ${total}`;
     }
 
     function resetAllData() {
