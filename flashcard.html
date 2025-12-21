@@ -21,7 +21,6 @@
       --text-main: #ffffff;
       --text-dim: #94a3b8;
       --flip-speed: 0.5s;
-      /* ทำให้เร็วขึ้นเล็กน้อยเพื่อให้ flow ลื่นขึ้น */
     }
 
     * {
@@ -226,7 +225,7 @@
     let allCards = [];
     let currentIndex = 0;
     let completedIds = [];
-    const FLIP_SPEED_MS = 500; // Match CSS var --flip-speed
+    const FLIP_SPEED_MS = 500;
 
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
@@ -234,6 +233,10 @@
         [array[i], array[j]] = [array[j], array[i]];
       }
       return array;
+    }
+
+    function saveCurrentIndex() {
+      localStorage.setItem("flashcard_current_index", currentIndex);
     }
 
     async function init() {
@@ -248,10 +251,13 @@
         const savedOrderJson = localStorage.getItem("flashcard_order");
         let savedOrder = savedOrderJson ? JSON.parse(savedOrderJson) : null;
 
+        // 1. จัดการ Order
         if (completedIds.length === 0) {
           allCards = shuffleArray([...rawCards]);
           const newOrder = allCards.map(c => c.q);
           localStorage.setItem("flashcard_order", JSON.stringify(newOrder));
+          // ถ้าเป็นผู้ใช้ใหม่ หรือ Reset มา ให้เริ่มที่ 0
+          currentIndex = 0;
         } else {
           if (savedOrder && savedOrder.length > 0) {
             const orderMap = new Map(savedOrder.map((q, i) => [q, i]));
@@ -263,19 +269,32 @@
           } else {
             allCards = rawCards;
           }
+
+          // 2. ดึง Index ล่าสุดที่เล่นค้างไว้
+          const savedIndex = localStorage.getItem("flashcard_current_index");
+          if (savedIndex !== null) {
+            currentIndex = parseInt(savedIndex, 10);
+            // กัน Error กรณีไฟล์ JSON เปลี่ยนแล้วเลข index เกินจำนวนการ์ด
+            if (currentIndex >= allCards.length || currentIndex < 0) {
+              currentIndex = 0;
+            }
+          }
         }
       } catch (e) {
         console.error("Error:", e);
         allCards = [{ q: "Error", a: "Check console" }];
       }
 
+      saveCurrentIndex(); // Save initial state just in case
       updateDisplay();
     }
 
     function flipCard() {
       document.getElementById("card").classList.toggle("is-flipped");
-      document.getElementById("controls").classList.add("visible");
-      updateButtons();
+      requestAnimationFrame(() => {
+        document.getElementById("controls").classList.add("visible");
+        updateButtons();
+      });
     }
 
     function updateDisplay(skipTextUpdate = false) {
@@ -283,67 +302,58 @@
 
       const card = allCards[currentIndex];
 
-      // ถ้าเราสั่ง skipTextUpdate แปลว่าเราจัดการเปลี่ยน Text เองตอน Animation แล้ว
       if (!skipTextUpdate) {
         document.getElementById("q-text").innerText = card.q;
         document.getElementById("a-text").innerText = card.a;
       }
 
-      // Reset flip state (visually) for new card logic
-      // Note: In auto-advance, we handle remove class manually
-
       updateStats();
       updateButtons();
     }
 
-    // ฟังก์ชันพิเศษ: กดปุ่มที่หน้าเฉลย -> พลิกกลับพร้อมเปลี่ยนเป็นคำถามถัดไปทันที
     function goNextAndFlip() {
       const cardElem = document.getElementById("card");
 
       if (currentIndex >= allCards.length - 1) {
-        // ถ้าเป็นการ์ดใบสุดท้าย แค่พลิกกลับปกติ
         cardElem.classList.remove("is-flipped");
         updateButtons();
         return;
       }
 
-      // 1. เตรียมข้อมูลการ์ดถัดไป
       const nextIndex = currentIndex + 1;
       const nextQ = allCards[nextIndex].q;
       const nextA = allCards[nextIndex].a;
 
-      // 2. เปลี่ยน "คำถาม" (ด้านหน้า) เป็นข้อใหม่ทันที!
-      // ผู้ใช้จะไม่เห็น เพราะตอนนี้การ์ดหันหลังอยู่ (is-flipped)
       document.getElementById("q-text").innerText = nextQ;
-
-      // 3. สั่งพลิกการ์ดกลับ (Remove is-flipped)
-      // ผู้ใช้จะเห็นการ์ดหมุนกลับมาเป็นคำถามข้อใหม่ทันที
       cardElem.classList.remove("is-flipped");
 
-      // 4. อัปเดต Index
+      // Update index & save
       currentIndex = nextIndex;
+      saveCurrentIndex();
 
-      // 5. รอให้ Animation พลิกเสร็จก่อน แล้วค่อยเปลี่ยน "คำตอบ" (ด้านหลัง)
-      // เพื่อไม่ให้ผู้ใช้เห็นคำตอบข้อใหม่แวบๆ ตอนการ์ดกำลังหมุน
       setTimeout(() => {
         document.getElementById("a-text").innerText = nextA;
-        // เรียก updateDisplay แต่บอกว่าไม่ต้องแก้ Text แล้วนะ (ทำไปแล้ว)
         updateDisplay(true);
-      }, FLIP_SPEED_MS); // รอจนพลิกเสร็จ
+      }, FLIP_SPEED_MS);
     }
 
     function updateButtons() {
       const currentQ = allCards[currentIndex].q;
       const isCompleted = completedIds.includes(currentQ);
       const isLastCard = currentIndex === allCards.length - 1;
-      const isFlipped = document.getElementById("card").classList.contains("is-flipped");
+      const cardElem = document.getElementById("card");
+      const isFlipped = cardElem.classList.contains("is-flipped");
       const controls = document.getElementById("controls");
 
       // Visibility Logic
-      if (isCompleted) controls.classList.add("visible");
-      else {
-        if (!isFlipped) controls.classList.remove("visible");
-        else controls.classList.add("visible");
+      if (isCompleted) {
+        controls.classList.add("visible");
+      } else {
+        if (isFlipped) {
+          controls.classList.add("visible");
+        } else {
+          controls.classList.remove("visible");
+        }
       }
 
       // Buttons State
@@ -351,42 +361,29 @@
       const btnNext = document.getElementById("btnNext");
       btnNext.disabled = !isCompleted;
 
-      // Manage Forget / Understand / Next Flip button
       const btnUnderstand = document.getElementById("btnUnderstand");
       const btnForget = document.getElementById("btnForget");
 
       if (isCompleted) {
-        // --- Answered Card ---
         btnUnderstand.style.display = "none";
-
         if (isLastCard) {
           btnForget.style.display = "none";
         } else {
           btnForget.style.display = "inline-block";
-
           if (isFlipped) {
-            // **STATE: ดูคำตอบอยู่ (และเคยตอบไปแล้ว)**
-            // ปุ่มนี้จะทำหน้าที่เป็น "ถัดไป (แบบพลิกกลับ)"
             btnForget.innerText = "ถัดไป";
-            btnForget.onclick = goNextAndFlip; // ใช้ฟังก์ชันใหม่
-
-            // เปลี่ยนสีปุ่มให้สื่อความหมายหน่อยก็ได้ (Optional)
+            btnForget.onclick = goNextAndFlip;
             btnForget.style.background = "var(--accent)";
           } else {
-            // **STATE: ดูคำถามอยู่ (เคยตอบแล้ว)**
-            // ปุ่มนี้ทำหน้าที่ "ลืม" ตามปกติ
             btnForget.innerText = "ลืม";
             btnForget.onclick = forgetCard;
             btnForget.style.background = "var(--danger)";
           }
         }
-
       } else {
-        // --- New Card ---
-        btnUnderstand.style.display = "inline-block";
         btnForget.style.display = "none";
-        // Reset color just in case
         btnForget.style.background = "var(--danger)";
+        btnUnderstand.style.display = "inline-block";
       }
     }
 
@@ -397,9 +394,7 @@
         localStorage.setItem("flashcard_completed_ids", JSON.stringify(completedIds));
       }
 
-      // Auto Advance Logic for New Card
       if (currentIndex < allCards.length - 1) {
-        // ใช้ Logic เดียวกับ goNextAndFlip เพื่อความลื่นไหล
         goNextAndFlip();
       } else {
         updateDisplay();
@@ -408,31 +403,32 @@
 
     function forgetCard() {
       const q = allCards[currentIndex].q;
+
+      document.getElementById("btnForget").style.display = "none";
       completedIds = completedIds.filter((id) => id !== q);
       localStorage.setItem("flashcard_completed_ids", JSON.stringify(completedIds));
-      updateDisplay(); // Refresh state immediately
+
+      updateButtons();
+      updateStats();
     }
 
     function prevCard() {
       if (currentIndex > 0) {
         const card = document.getElementById("card");
         const wasFlipped = card.classList.contains("is-flipped");
-
-        // Reset flip immediately
         card.classList.remove("is-flipped");
 
-        // ถ้ามันพลิกอยู่ ต้องรอ animation นิดนึงก่อนเปลี่ยนเนื้อหา ไม่งั้นจะกระตุก
         const delay = wasFlipped ? FLIP_SPEED_MS : 0;
 
         setTimeout(() => {
           currentIndex--;
+          saveCurrentIndex(); // Save state
           updateDisplay();
         }, delay);
       }
     }
 
     function nextCard() {
-      // ปุ่มถัดไปแบบปกติ (Manual click)
       const currentQ = allCards[currentIndex].q;
       if (!completedIds.includes(currentQ)) return;
 
@@ -440,12 +436,11 @@
         const card = document.getElementById("card");
         const wasFlipped = card.classList.contains("is-flipped");
 
-        // ถ้ามันพลิกอยู่ ใช้ Fast Transition เลยเพื่อความเท่
         if (wasFlipped) {
           goNextAndFlip();
         } else {
-          // ถ้าไม่ได้พลิก ก็เลื่อนปกติ
           currentIndex++;
+          saveCurrentIndex(); // Save state
           updateDisplay();
         }
       }
