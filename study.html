@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="public/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+    <link rel="shortcut icon" href="public/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="public/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Nine" />
+    <link rel="manifest" href="public/site.webmanifest" />
+    <title>Study Hub</title>
+    <style>
+      :root {
+        --bg-body: #09090b;
+        --bg-card: #18181b;
+        --bg-card-hover: #27272a;
+        --text-primary: #f4f4f5;
+        --text-secondary: #a1a1aa;
+        --accent-flash: #a855f7;
+        --accent-quiz: #14b8a6;
+        --border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-body);
+        color: var(--text-primary);
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        letter-spacing: -1px;
+        margin-bottom: 10px;
+      }
+
+      p.sub {
+        color: var(--text-secondary);
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        width: 100%;
+        max-width: 1000px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      h2.flash-title::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: var(--accent-flash);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--accent-flash);
+      }
+
+      h2.quiz-title::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: var(--accent-quiz);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--accent-quiz);
+      }
+
+      .grid-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .study-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        padding: 20px;
+        border-radius: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        transition: 0.2s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .study-btn:hover {
+        background-color: var(--bg-card-hover);
+        transform: translateX(5px);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .btn-title {
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .btn-meta {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+      }
+
+      .study-btn::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        opacity: 0.5;
+      }
+
+      .type-flashcard::before {
+        background-color: var(--accent-flash);
+      }
+
+      .type-quiz::before {
+        background-color: var(--accent-quiz);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Study Dashboard</h1>
+      <p class="sub">Select a subject to start</p>
+    </header>
+
+    <div class="container">
+      <div class="column">
+        <h2 class="flash-title">Flashcards</h2>
+        <div id="flashcard-list" class="grid-list"></div>
+      </div>
+
+      <div class="column">
+        <h2 class="quiz-title">Quizzes</h2>
+        <div id="quiz-list" class="grid-list"></div>
+      </div>
+    </div>
+
+    <script>
+      const DATA = {
+        flashcards: [{ subject: "SOON", detail: "SOON", path: "" }],
+        quizzes: [
+          {
+            subject: "Economics History",
+            detail: "Sukhothai - Ayutthaya - Thonburi",
+            path: "/quiz/economicshistory",
+          },
+        ],
+      };
+
+      const flashList = document.getElementById("flashcard-list");
+      const quizList = document.getElementById("quiz-list");
+
+      function createButton(item, type) {
+        const btn = document.createElement("a");
+        btn.href = item.path;
+        btn.className = `study-btn type-${type}`;
+        btn.innerHTML = `
+                <span class="btn-title">${item.subject}</span>
+                <span class="btn-meta">${item.detail} &rarr;</span>
+            `;
+        return btn;
+      }
+
+      DATA.flashcards.forEach((item) => {
+        flashList.appendChild(createButton(item, "flashcard"));
+      });
+
+      DATA.quizzes.forEach((item) => {
+        quizList.appendChild(createButton(item, "quiz"));
+      });
+    </script>
+  </body>
+</html>
