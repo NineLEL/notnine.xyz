@@ -1030,9 +1030,15 @@
                 if (!isAns) {
                   btn.className = baseStyle;
                   btn.onclick = () => {
+                    // FIX: Loop through ALL buttons to reset style AND delete data-val
                     inputArea
                       .querySelectorAll("button")
-                      .forEach((b) => (b.className = baseStyle));
+                      .forEach((b) => {
+                        b.className = baseStyle;
+                        delete b.dataset.val;
+                      });
+                    
+                    // Set active style and data-val on clicked button
                     btn.className = activeStyle;
                     btn.dataset.val = JSON.stringify(val);
                   };
@@ -1079,7 +1085,6 @@
           render();
         };
 
-        // NEW ROBUST CHECK FUNCTION
         const check = (q, ans) => {
           if (q.type === "matching") {
             if (!ans) return false;
