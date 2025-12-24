@@ -1079,6 +1079,7 @@
           render();
         };
 
+        // NEW ROBUST CHECK FUNCTION
         const check = (q, ans) => {
           if (q.type === "matching") {
             if (!ans) return false;
@@ -1090,8 +1091,13 @@
           }
           if (q.type === "ordering")
             return JSON.stringify(ans) === JSON.stringify(q.items);
-          if (q.type === "short_answer")
-            return ans.trim().toLowerCase() === q.correct.toLowerCase();
+          
+          if (q.type === "short_answer") {
+            // FIX: Convert to String to handle numbers in JSON safely
+            if (q.correct === undefined || q.correct === null) return false;
+            return String(ans).trim().toLowerCase() === String(q.correct).trim().toLowerCase();
+          }
+          
           return ans === q.correct;
         };
 
