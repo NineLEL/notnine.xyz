@@ -273,7 +273,7 @@
     "id": 28,
     "type": "true_false",
     "question": "เงินไพและกลํ่าในสมัยอยุธยาทําจากโลหะเงิน",
-    "answer": false
+    "correct": false
   },
   {
     "id": 29,
