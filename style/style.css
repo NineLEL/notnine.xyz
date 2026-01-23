@@ -1,3 +1,4 @@
+/* Reset */
 *,
 *::before,
 *::after {
@@ -6,6 +7,7 @@
   padding: 0;
 }
 
+/* Variables */
 :root {
   --primary-color: #3f51b5;
   --secondary-color: #ff4081;
@@ -18,35 +20,7 @@
   --card-bg-dark: #2c2c2c;
 }
 
-[data-theme="dark"] {
-  background-color: var(--dark-bg);
-  color: var(--dark-text);
-}
-
-[data-theme="dark"] body {
-  background-color: var(--dark-bg);
-  color: var(--dark-text);
-}
-
-[data-theme="dark"] h1,
-[data-theme="dark"] h2 {
-  color: var(--dark-text);
-}
-
-[data-theme="dark"] .social-icons a {
-  color: var(--dark-text);
-}
-
-[data-theme="dark"] .container {
-  background-color: var(--card-bg-dark);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
-}
-
-[data-theme="dark"] .container:hover {
-  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
-}
-
-
+/* Body */
 body {
   font-family: "Poppins", "Sarabun", sans-serif;
   background-color: var(--light-bg);
@@ -61,6 +35,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Container */
 .container {
   background-color: var(--card-bg-light);
   padding: 40px 60px;
@@ -76,6 +51,7 @@ body {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
+/* Heading */
 h1 {
   font-weight: 600;
   font-size: 3em;
@@ -86,6 +62,7 @@ h1 {
   transition: color 0.3s ease;
 }
 
+/* Social Icons */
 .social-icons {
   display: flex;
   gap: 30px;
@@ -120,10 +97,7 @@ h1 {
   color: var(--secondary-color);
 }
 
-[data-theme="dark"] .fa-github:hover {
-  color: #ffffff;
-}
-
+/* Theme Switcher */
 .theme-switcher {
   position: absolute;
   top: 20px;
@@ -229,6 +203,38 @@ h1 {
   box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
 }
 
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+[data-theme="dark"] body {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+[data-theme="dark"] .container {
+  background-color: var(--card-bg-dark);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .container:hover {
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] h1 {
+  color: var(--dark-text);
+}
+
+[data-theme="dark"] .social-icons a {
+  color: var(--dark-text);
+}
+
+[data-theme="dark"] .fa-github:hover {
+  color: #ffffff;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 30px 20px;
@@ -245,7 +251,7 @@ h1 {
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 2.2;
+    font-size: 2.2em;
   }
 
   :root {
