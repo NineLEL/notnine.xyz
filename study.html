@@ -2,10 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://study.notnine.xyz">
-    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3; url=https://study.notnine.xyz">
+    <title>Study - Nine</title>
+    <link rel="icon" type="image/png" href="public/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+    <link rel="shortcut icon" href="public/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Nine" />
+    <link rel="manifest" href="public/site.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
 </head>
-<body>
-    <p>Redirecting to <a href="https://study.notnine.xyz">https://study.notnine.xyz</a>...</p>
+<body data-theme="light">
+    <header role="banner">
+      <div class="theme-switcher">
+        <input type="checkbox" id="theme-toggle" class="theme-checkbox" />
+        <label for="theme-toggle" class="theme-label">
+          <span class="toggle-icon checked"><i class="fas fa-moon"></i></span>
+          <span class="toggle-icon"><i class="fas fa-sun"></i></span>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>Welcome to Study Website 📚</h1>
+        <p>You will be redirected to <a href="https://study.notnine.xyz">study.notnine.xyz</a> in 3 seconds.</p>
+        <p>If you are not redirected, <a href="https://study.notnine.xyz">click here</a>.</p>
+        <nav class="social-icons" role="navigation">
+          <a href="index.html" title="Home"><i class="fas fa-home"></i></a>
+          <a href="https://study.notnine.xyz" title="Go to Study Now"><i class="fas fa-arrow-right"></i></a>
+        </nav>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
