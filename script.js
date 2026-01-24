@@ -7,7 +7,7 @@ function setTheme(theme) {
   themeToggle.checked = theme === "dark";
 }
 
-const savedTheme = localStorage.getItem("theme") || "light";
+const savedTheme = localStorage.getItem("theme") || "dark";
 setTheme(savedTheme);
 
 themeToggle.addEventListener("change", () => {
