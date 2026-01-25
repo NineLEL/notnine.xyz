@@ -3,62 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="3; url=index.html">
-    <title>404 - Page Not Found | Nine</title>
-    
+    <meta http-equiv="refresh" content="3; url=/">
+    <title>404 | Nine</title>
     <script>
       (function() {
         const theme = localStorage.getItem('theme') || 'dark';
         document.documentElement.setAttribute('data-theme', theme);
       })();
     </script>
-
-    <link rel="icon" type="image/png" href="public/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
-    <link rel="shortcut icon" href="public/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Nine" />
-    <link rel="manifest" href="public/site.webmanifest" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
     <link rel="stylesheet" href="./style/style.css" />
     <style>
-        .error-code {
-            font-size: 6rem;
-            font-weight: 700;
-            margin-bottom: 0;
-            color: var(--primary-color);
-        }
-        .error-message {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .redirect-text {
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
+        body { opacity: 0.9; }
+        .error-code { font-size: 5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.5rem; }
+        .redirect-text { font-size: 0.8rem; opacity: 0.6; margin-top: 2rem; }
     </style>
 </head>
 <body>
     <main>
-      <div class="container">
+      <div class="container" style="padding: 60px 20px;">
         <h1 class="error-code">404</h1>
-        <p class="error-message">Oops! This page doesn't exist.</p>
-        <p><a href="index.html" class="social-icons" style="font-size: 1.2rem; display: inline-block;">Go back home</a></p>
-        <p class="redirect-text">Redirecting you to home in 3 seconds...</p>
+        <p>Page not found</p>
+        <p class="redirect-text">Redirecting home...</p>
       </div>
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
