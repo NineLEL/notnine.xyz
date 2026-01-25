@@ -1,19 +1,24 @@
 const themeToggle = document.getElementById("theme-toggle");
-const body = document.body;
+const root = document.documentElement;
 
+/**
+ * Sets the theme and saves it to localStorage.
+ * @param {string} theme - 'light' or 'dark'
+ */
 function setTheme(theme) {
-  body.setAttribute("data-theme", theme);
+  root.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
-  themeToggle.checked = theme === "dark";
+
+  if (themeToggle) {
+    themeToggle.checked = theme === "dark";
+  }
 }
 
-const savedTheme = localStorage.getItem("theme") || "dark";
-setTheme(savedTheme);
+if (themeToggle) {
+  const currentTheme = root.getAttribute("data-theme") || localStorage.getItem("theme") || "dark";
+  themeToggle.checked = currentTheme === "dark";
 
-themeToggle.addEventListener("change", () => {
-  if (themeToggle.checked) {
-    setTheme("dark");
-  } else {
-    setTheme("light");
-  }
-});
+  themeToggle.addEventListener("change", () => {
+    setTheme(themeToggle.checked ? "dark" : "light");
+  });
+}

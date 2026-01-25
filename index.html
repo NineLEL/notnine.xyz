@@ -3,7 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nine</title>
+    <title>Nine | Portfolio</title>
+    <meta name="description" content="Personal portfolio of Nine - Developer, Student, and Enthusiast." />
+    <meta name="keywords" content="Nine, NineLEL, Developer, Portfolio, Student" />
+    <meta name="author" content="Nine" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://notnine.xyz/" />
+    <meta property="og:title" content="Nine | Portfolio" />
+    <meta property="og:description" content="Personal portfolio of Nine - Developer, Student, and Enthusiast." />
+    <meta property="og:image" content="https://notnine.xyz/public/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://notnine.xyz/" />
+    <meta property="twitter:title" content="Nine | Portfolio" />
+    <meta property="twitter:description" content="Personal portfolio of Nine - Developer, Student, and Enthusiast." />
+    <meta property="twitter:image" content="https://notnine.xyz/public/og-image.png" />
+
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+
     <link rel="icon" type="image/png" href="public/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
     <link rel="shortcut icon" href="public/favicon.ico" />
@@ -25,10 +50,10 @@
     <link rel="stylesheet" href="./style/style.css" />
   </head>
 
-  <body data-theme="dark">
+  <body>
     <header role="banner">
       <div class="theme-switcher">
-        <input type="checkbox" id="theme-toggle" class="theme-checkbox" />
+        <input type="checkbox" id="theme-toggle" class="theme-checkbox" checked />
         <label for="theme-toggle" class="theme-label">
           <span class="toggle-icon checked"><i class="fas fa-moon"></i></span>
           <span class="toggle-icon"><i class="fas fa-sun"></i></span>
@@ -41,19 +66,19 @@
         <h1>Hello, I'm Nine 👋</h1>
 
         <nav class="social-icons" role="navigation">
-          <a href="https://github.com/NineLEL" title="Github" target="_blank"
+          <a href="https://github.com/NineLEL" title="Github" target="_blank" rel="noopener noreferrer"
             ><i class="fab fa-github"></i
           ></a>
           <a
             href="https://discord.com/users/584264698367705116"
             title="Discord"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             ><i class="fab fa-discord"></i
           ></a>
-          <a href="https://me.notnine.xyz" title="About Me" target="_blank"
+          <a href="https://me.notnine.xyz" title="About Me" target="_blank" rel="noopener noreferrer"
             ><i class="fas fa-link"></i
           ></a>
-          <a href="study.html" title="Study" target="_blank"
+          <a href="study.html" title="Study" target="_blank" rel="noopener noreferrer"
             ><i class="fas fa-book"></i
           ></a>
         </nav>
